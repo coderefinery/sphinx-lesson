@@ -4,14 +4,13 @@ Test sphinx lesson
 In this lesson, we learn how to make a CR lesson using sphinx.
 
 
-.. admonition::  Prerequisites
-   :class: prereq
+.. prereq:: Required software
 
    * prereq1
    * prereq2
 
-   This has the css class 'prereq', but like all the blocks, can
-   later be simplified to::
+   This has the css class 'prereq', and like all blocks is implemented
+   like::
 
      .. prereq::
 
@@ -19,7 +18,19 @@ In this lesson, we learn how to make a CR lesson using sphinx.
 	* prereq2
 
 
+The following directives are implemented:
 
+* ``callout``
+* ``challenge``
+* ``checklist``
+* ``discussion``
+* ``keypoints``
+* ``objectives``
+* ``prereq``
+* ``solution``
+* ``testimonial``
+
+All that remains is some proper CSS
 
 .. toctree::
    :maxdepth: 2
@@ -35,8 +46,6 @@ In this lesson, we learn how to make a CR lesson using sphinx.
 
    cheatsheet
    guide
-   genindex
-   search
 
 
 * :ref:`genindex`
