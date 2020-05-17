@@ -7,24 +7,35 @@ from docutils.parsers.rst.directives.admonitions \
   import Admonition as AdmonitionDirective
 from sphinx.util.docutils import SphinxDirective
 
-class challenge(nodes.Admonition, nodes.Element):
+
+class challenge(nodes.admonition):
     pass
 
+#challenge = nodes.admonition
+
 #nodes.challenge = challenge
+
 
 # This includes a heading, to not then have
 class ChallengeDirective(AdmonitionDirective, SphinxDirective):
     #node_class = docutils.nodes.caution
-    node_class = challenge
+    #node_class = challenge
     #classes = ('task', )
-    pass
+    def run(self):
+        # Run the normal admonition class, but add in a new class
+        self.node_class = nodes.admonition
+        ret = super().run()
+        name = self.__class__.__name__.split('Directive')[0].lower()
+        ret[0].attributes['classes'].append(name)
+        return ret
 
+
+# This does work, to add
 from sphinx.writers.html5 import HTML5Translator
 def visit_node(self, node):
-    self.visit_admonition(node)
     #import pdb ; pdb.set_trace()
-#    print(node)
-#    node.attributes['classes'] += [node.__class__.__name__]
+    node.attributes['classes'] += [node.__class__.__name__]
+    self.visit_admonition(node)
 
 
 # Add our custom CSS to the headers.
