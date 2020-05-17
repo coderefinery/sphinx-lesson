@@ -1,20 +1,23 @@
-.. Test sphinx documentation master file, created by
-   sphinx-quickstart on Sun May 17 14:24:41 2020.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
-Welcome to Test sphinx's documentation!
-=======================================
+Test sphinx lesson
+==================
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Episodes
+
+   01_intro
+   02_rst_tests
+   03_md_tests
 
 
+.. toctree::
+   :caption: Other material
 
-Indices and tables
-==================
+   cheatsheet
+   guide
+   genindex
+   search
+
 
 * :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`
