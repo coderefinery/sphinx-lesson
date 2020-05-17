@@ -1,16 +1,19 @@
-ReST tests
-==========
+ReST example
+============
 
-tests
------
+Block directives
+----------------
 
-.. admonition:: heading
+.. admonition:: This is a challenge
+   :class: challenge
 
-   line1
+   It has a css class of `challenge`.
 
    line2
 
 
-.. task:: This is a task
+.. challenge:: This is native challenge, that doesn't work yet
 
    line1
+
+   Not implemented yet

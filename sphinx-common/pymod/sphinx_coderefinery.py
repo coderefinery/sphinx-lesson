@@ -38,9 +38,9 @@ def setup(app):
     "Sphinx extension setup"
     app.add_node(challenge, html=(visit_node,
                                   HTML5Translator.depart_admonition))
-    app.add_directive("task", ChallengeDirective)
+    app.add_directive("challenge", ChallengeDirective)
 
-#    nodes._add_node_class_names(('task', ))
+#    nodes._add_node_class_names(('challenge', ))
 
     # Add CSS to build
     # Hint is from https://github.com/choldgraf/sphinx-copybutton/blob/master/sphinx_copybutton/__init__.py  # pylint: ignore=E501
