@@ -50,6 +50,7 @@ class TestimonialDirective(_BaseCRDirective): pass
 # Add our custom CSS to the headers.
 def init_static_path(app):
     static_path = os.path.abspath(os.path.join(os.path.dirname(__file__),
+                                               '..',
                                                '_static'))
     app.config.html_static_path.append(static_path)
 
