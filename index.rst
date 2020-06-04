@@ -1,7 +1,10 @@
 Test sphinx lesson
 ==================
 
-In this lesson, we learn how to make a CR lesson using sphinx.
+In this lesson, we learn how to make a CodeRefinery lesson using
+sphinx.  It is designed to replace the Jekyll-based software carepntry
+templates.  The source is on `github
+<https://github.com/coderefinery/sphinx-test-lesson>`__.
 
 
 .. prereq:: Required software
