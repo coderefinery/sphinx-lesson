@@ -46,6 +46,10 @@ extensions = [
 jupyter_execute_notebooks = "auto"
 #jupyter_execute_notebooks = "force"
 
+# Make myst-nb work with the dirhtml builder
+from myst_nb.transform import RENDER_PRIORITY
+RENDER_PRIORITY['dirhtml'] = 'html'
+del RENDER_PRIORITY
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
