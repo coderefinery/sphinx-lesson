@@ -32,9 +32,20 @@ sys.path.append('sphinx-common/pymod/')
 extensions = [
     # githubpages just adds a .nojekyll file
     'sphinx.ext.githubpages',
-    'myst_parser',
+    # myst_parser is not needed, because myst_nb replaces and conflicts with it
+    # (provides all functionality and more).  But, myst_parser has fewer
+    # dependencies so could be used instead.
+    #'myst_parser',
     'sphinx_coderefinery',
+    'myst_nb',
 ]
+
+# Settings for myst_nb:
+# https://myst-nb.readthedocs.io/en/latest/use/execute.html#triggering-notebook-execution
+#jupyter_execute_notebooks = "off"
+jupyter_execute_notebooks = "auto"
+#jupyter_execute_notebooks = "force"
+
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']

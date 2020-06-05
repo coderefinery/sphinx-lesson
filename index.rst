@@ -42,7 +42,8 @@ All that remains is some proper CSS
    01_intro
    02_rst_tests
    03_md_tests
-
+   04_executing
+   05_jupyter
 
 .. toctree::
    :caption: Other material
