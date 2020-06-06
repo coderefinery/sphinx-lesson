@@ -4,8 +4,8 @@ name: sphinx
 on: [push, pull_request]
 
 jobs:
-  build-and-delpoy:
-    name: Build
+  build-and-deploy:
+    name: Build and gh-pages
     runs-on: ubuntu-latest
     steps:
       # https://github.com/marketplace/actions/checkout
@@ -19,7 +19,7 @@ jobs:
       # I don't know where the "run" thing is documented.
       - name: Install dependencies
         run: |
-          pip install -r sphinx-common/requirements.txt
+          pip install -r requirements.txt
       - name: Build Sphinx docs
         run: |
           make dirhtml

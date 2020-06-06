@@ -28,7 +28,7 @@ author = 'CodeRefinery'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 import sys
-sys.path.append('sphinx-common/pymod/')
+sys.path.append('.')
 extensions = [
     # githubpages just adds a .nojekyll file
     'sphinx.ext.githubpages',
@@ -36,8 +36,8 @@ extensions = [
     # (provides all functionality and more).  But, myst_parser has fewer
     # dependencies so could be used instead.
     #'myst_parser',
-    'sphinx_coderefinery',
-    'myst_nb',
+    'sphinx_lesson',
+    #'myst_nb',  # now done as part of sphinx_lesson
 ]
 
 # Settings for myst_nb:

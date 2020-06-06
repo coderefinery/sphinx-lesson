@@ -50,21 +50,22 @@ class TestimonialDirective(_BaseCRDirective): pass
 # Add our custom CSS to the headers.
 def init_static_path(app):
     static_path = os.path.abspath(os.path.join(os.path.dirname(__file__),
-                                               '..',
                                                '_static'))
+    #print('sphinx_lesson static path:', static_path)
     app.config.html_static_path.append(static_path)
 
 
 def setup(app):
     "Sphinx extension setup"
+    app.setup_extension('myst_nb')
 #    app.add_node(challenge, html=(visit_node,
 #                                  HTML5Translator.depart_admonition))
     for name, obj in globals().items():
-        print(name, obj)
+        #print(name, obj)
         if (name.endswith('Directive')
             and issubclass(obj, _BaseCRDirective)
             and not name.startswith('_')):
-            print(name, obj.cssname())
+            #print(name, obj.cssname())
             app.add_directive(obj.cssname(), obj)
 
 #    nodes._add_node_class_names(('challenge', ))
