@@ -28,8 +28,8 @@ jobs:
 
       # https://github.com/peaceiris/actions-gh-pages
       - name: Deploy
-        if: success()
         uses: peaceiris/actions-gh-pages@v3
+        if: ${{ success() && github.event_name == 'push' && github.ref == 'refs/heads/master' }}
         with:
           publish_branch: gh-pages
           github_token: ${{ secrets.GITHUB_TOKEN }}
