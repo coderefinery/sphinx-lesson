@@ -13,17 +13,35 @@ from sphinx.util.docutils import SphinxDirective
 
 # This includes a heading, to not then have
 class _BaseCRDirective(AdmonitionDirective, SphinxDirective):
+    """A directive to handle CodeRefinery styles
+    """
     # node_class = challenge
+    required_arguments = 0
 
     @classmethod
     def cssname(cls):
         return cls.__name__.split('Directive')[0].lower()
 
     def run(self):
-        # Run the normal admonition class, but add in a new class
-        self.node_class = nodes.admonition
-        ret = super().run()
+        """Run the normal admonition class, but add in a new features.
+
+        title_text: some old classes had a title which was added at the
+        CSS level. If this is set, then this title will be added by the
+        directive.
+        """
         name = self.__class__.__name__.split('Directive')[0].lower()
+        self.node_class = nodes.admonition
+        # Some jekyll-common nodes have CSS-generated titles, some don't.  The
+        # Admonition class requires a title.  Add one if missing.  The title is
+        # the first argument to the directive.
+        if len(self.arguments) == 0:
+            if hasattr(self, 'title_text'):
+                self.arguments = [self.title_text]
+            else:
+                self.arguments = [name]
+        # Run the upstream directive
+        ret = super().run()
+        # Set CSS classes
         ret[0].attributes['classes'].append(name)
         return ret
 
@@ -35,10 +53,11 @@ class DiscussionDirective(_BaseCRDirective): pass
 class KeypointsDirective(_BaseCRDirective): pass
 class ObjectivesDirective(_BaseCRDirective): pass
 class PrereqDirective(_BaseCRDirective): pass
+#    title_text = "Prerequisites"
 class SolutionDirective(_BaseCRDirective): pass
 class TestimonialDirective(_BaseCRDirective): pass
-class OutputDirective(_BaseCRDirective): pass
-
+class OutputDirective(_BaseCRDirective):
+    title_text = 'Output'
 
 # This does work, to add
 # from sphinx.writers.html5 import HTML5Translator
