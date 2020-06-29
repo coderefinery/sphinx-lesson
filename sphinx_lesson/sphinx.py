@@ -37,6 +37,7 @@ class ObjectivesDirective(_BaseCRDirective): pass
 class PrereqDirective(_BaseCRDirective): pass
 class SolutionDirective(_BaseCRDirective): pass
 class TestimonialDirective(_BaseCRDirective): pass
+class OutputDirective(_BaseCRDirective): pass
 
 
 # This does work, to add
