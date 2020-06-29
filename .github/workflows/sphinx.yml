@@ -20,6 +20,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
+      - uses: ammaraskar/sphinx-problem-matcher@master
       - name: Build Sphinx docs
         run: |
           make dirhtml
