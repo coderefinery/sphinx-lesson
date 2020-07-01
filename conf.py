@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Test sphinx lesson'
+project = 'Sphinx-lesson'
 copyright = '2020, CodeRefinery'
 author = 'CodeRefinery'
 
