@@ -23,6 +23,13 @@ Features
 - Jupyter includes, including executing the notebook (via
   ``myst_nb``).
 - Execute code cells in markdown (via ``myst_nb``).
+- Consists of sub-extensions for substitutions.  Adding
+  ``sphinx_lesson`` as an extension will bring in these:
+
+  - ``sphinx_lesson.directives`` (the core directives)
+  - ``sphinx_lesson.md_transforms`` (reprocess some other markdown
+    format into myst_nb format)
+  - ``myst_nb`` (not developed by us)
 
 
 To activate the github pages branch
