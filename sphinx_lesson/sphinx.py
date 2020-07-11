@@ -133,7 +133,7 @@ def setup(app):
     # Add CSS to build
     # Hint is from https://github.com/choldgraf/sphinx-copybutton/blob/master/sphinx_copybutton/__init__.py  # pylint: ignore=E501
     app.connect('builder-inited', init_static_path)
-    app.add_css_file("sphinx_coderefinery.css")
+    app.add_css_file("sphinx_lesson.css")
     #app.add_css_file("lesson.css")
     # Code frence transformation
     app.add_config_value('sphinx_lesson_transform_code_fences', True, 'env')
