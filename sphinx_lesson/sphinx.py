@@ -21,6 +21,8 @@ class _BaseCRDirective(AdmonitionDirective, SphinxDirective):
     """
     # node_class = challenge
     required_arguments = 0
+    optional_arguments = 1
+    final_argument_whitespace = True
 
     @classmethod
     def cssname(cls):
@@ -42,7 +44,7 @@ class _BaseCRDirective(AdmonitionDirective, SphinxDirective):
             if hasattr(self, 'title_text'):
                 self.arguments = [self.title_text]
             else:
-                self.arguments = [name]
+                self.arguments = [name.title()]
         # Run the upstream directive
         ret = super().run()
         # Set CSS classes
