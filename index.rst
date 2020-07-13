@@ -44,6 +44,7 @@ All that remains is some proper CSS
    03_md_tests
    04_executing
    05_jupyter
+   06_convert-old-lesson
 
 .. toctree::
    :caption: Other material
