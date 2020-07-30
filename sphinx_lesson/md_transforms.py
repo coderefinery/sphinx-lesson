@@ -9,7 +9,7 @@ from docutils.parsers.rst.directives.admonitions \
 from sphinx.util.docutils import SphinxDirective
 from sphinx.util.logging import getLogger
 
-LOG = getLogger('sphinx-lesson')
+LOG = getLogger(__name__)
 
 
 
@@ -29,7 +29,7 @@ def transform_code_fences(app, docname, source):
     """
     if not app.config.sphinx_lesson_transform_code_fences:
         return
-    print(docname)
+    LOG.debug('transform_code_fences: beginning %s', docname)
     content = source[0]
     LOG.debug(content)
     code_fence_re = re.compile(
@@ -38,8 +38,8 @@ def transform_code_fences(app, docname, source):
         )
     def sub_fence(m):
         if m.group('class'):
-            print("matched:", m.group(0))
-            print("class:", m.group('class'))
+            LOG.debug("matched: %s", m.group(0))
+            LOG.debug("class: %s", m.group('class'))
             return m.group('before') + '{%s}'%m.group('class').strip() + m.group('content') + m.group('after')
         else:
             return m.group(0)
@@ -67,7 +67,7 @@ def transform_block_quotes(app, docname, source):
     """
     if not app.config.sphinx_lesson_transform_block_quotes:
         return
-    print(docname)
+    LOG.debug('sphinx_lesson: transform_block_quotes: %s', docname)
     content = source[0]
     LOG.debug(content)
 
@@ -79,8 +79,8 @@ def transform_block_quotes(app, docname, source):
     def sub_block(m):
         """Handle each detected block quote"""
         if m.group('class'):
-            print("matched:", m.group(0))
-            print("class:", m.group('class'))
+            LOG.debug("matched: %s", m.group(0))
+            LOG.debug("class: %s", m.group('class'))
             # Extract the class, remove leading characters
             class_ = m.group('class')
             class_ = re.sub('^[ .]*', '', class_)
@@ -94,7 +94,7 @@ def transform_block_quotes(app, docname, source):
             contentlines = m.group('content').split('\n')
             contentlines = [ re.sub('^> ?', '', line) for line in contentlines ]
 
-            print(contentlines)
+            LOG.debug(contentlines)
             return ("```{%s}%s\n"%(class_, heading)
                     + '\n'.join(contentlines)
                     + "```"

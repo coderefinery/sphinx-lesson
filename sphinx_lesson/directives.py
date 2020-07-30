@@ -8,7 +8,7 @@ from docutils.parsers.rst.directives.admonitions \
 from sphinx.util.docutils import SphinxDirective
 from sphinx.util.logging import getLogger
 
-LOG = getLogger('sphinx-lesson')
+LOG = getLogger(__name__)
 
 
 # class challenge(nodes.admonition):
