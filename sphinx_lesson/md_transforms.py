@@ -16,16 +16,19 @@ LOG = getLogger(__name__)
 def transform_code_fences(app, docname, source):
     """Transform a code fence when read.
 
-    Changes:
-    ```
-    blah
-    ```
-    {: output}
+    Transform this::
 
-    Into this:
-    ```{output}
-    blah
-    ```
+        ```
+        blah
+        ```
+        {: output}
+
+    into this::
+
+        ```{output}
+        blah
+        ```
+
     """
     if not app.config.sphinx_lesson_transform_code_fences:
         return
@@ -50,19 +53,19 @@ def transform_code_fences(app, docname, source):
 
 def transform_block_quotes(app, docname, source):
     """
-    Transform this:
+    Transform this::
 
-    > ## some-heading
-    > text
-    > text
-    {: .block-class}
+        > ## some-heading
+        > text
+        > text
+        {: .block-class}
 
-    into this:
+    into this::
 
-    ```{block-class} some-heading
-    text
-    text
-    ```
+        ```{block-class} some-heading
+        text
+        text
+        ```
 
     """
     if not app.config.sphinx_lesson_transform_block_quotes:
@@ -107,6 +110,44 @@ def transform_block_quotes(app, docname, source):
     LOG.debug(newcontent)
     source[0] = newcontent
 
+def transform_html_img(app, docname, source):
+    """
+    Transform this::
+
+        <img src="/path/to/img.png">
+
+    into this::
+
+        ```{figure} /path/to/img.png
+        ```
+
+    Exclude any possible `{{ ... }}` template variables.
+
+    """
+    if not app.config.sphinx_lesson_transform_html_img:
+        return
+    LOG.debug('sphinx_lesson: transform_html_img: %s', docname)
+    content = source[0]
+    LOG.debug(content)
+
+    html_img_re = re.compile(
+        r'<img[^<>]+src="(?:{{[^\{\}\{"<>]+}})?(?P<src>[^<>"]+)"[^<>]*>',
+    )
+
+    def sub_img(m):
+        """Handle each detected block quote"""
+        repl = """
+```{figure} %(src)s
+```
+"""%{'src':m.group('src')}
+        LOG.debug(repl)
+        return repl
+
+    newcontent = html_img_re.sub(sub_img, content)
+    LOG.debug(newcontent)
+    source[0] = newcontent
+
+
 
 def setup(app):
     "Sphinx extension setup"
@@ -114,5 +155,7 @@ def setup(app):
     # Code frence transformation
     app.add_config_value('sphinx_lesson_transform_code_fences', True, 'env')
     app.add_config_value('sphinx_lesson_transform_block_quotes', True, 'env')
+    app.add_config_value('sphinx_lesson_transform_html_img', True, 'env')
     app.connect('source-read', transform_code_fences)
     app.connect('source-read', transform_block_quotes)
+    app.connect('source-read', transform_html_img)
