@@ -2,6 +2,7 @@
 
 import os
 import re
+import textwrap
 
 from docutils import nodes
 from docutils.parsers.rst.directives.admonitions \
@@ -136,10 +137,19 @@ def transform_html_img(app, docname, source):
 
     def sub_img(m):
         """Handle each detected block quote"""
-        repl = """
-```{figure} %(src)s
-```
-"""%{'src':m.group('src')}
+        raw = m.group(0)
+        if re.search(r'style="[^"]*border:', raw):
+            border = textwrap.dedent("""\
+                ---
+                class: with-border
+                ---
+                """)
+        else:
+            border = ""
+        repl = textwrap.dedent("""
+            ```{figure} %(src)s
+            %(border)s```
+            """)%{'src':m.group('src'), 'border': border}
         LOG.debug(repl)
         return repl
 
