@@ -3,3 +3,14 @@
 body.wy-body-for-nav img.with-border {
     border: 2px solid;
 }
+
+/* instructor-note */
+.rst-content .admonition-instructor-note {
+    background: #e7e7e7;
+}
+.rst-content .admonition-instructor-note .admonition-title {
+    background: #6a6a6a;
+}
+.rst-content .admonition-instructor-note .admonition-title::before {
+    content: "";
+}
