@@ -1,3 +1,5 @@
+"""Add some sphinx-docutils directives related to lessons.
+"""
 # pylint: disable=E701
 
 import os
@@ -11,9 +13,6 @@ from sphinx.util.logging import getLogger
 LOG = getLogger(__name__)
 
 
-# class challenge(nodes.admonition):
-#     pass
-
 # This includes a heading, to not then have
 class _BaseCRDirective(AdmonitionDirective, SphinxDirective):
     """A directive to handle CodeRefinery styles
@@ -25,7 +24,13 @@ class _BaseCRDirective(AdmonitionDirective, SphinxDirective):
 
     @classmethod
     def cssname(cls):
-        return cls.__name__.split('Directive')[0].lower()
+        """Return the CSS class name and Sphinx directive name.
+
+        - Remove 'Directive' from the name of the class
+        - All lowercase
+        - '_' replaced with '-'
+        """
+        return cls.__name__.split('Directive')[0].lower().replace('_', '-')
 
     def run(self):
         """Run the normal admonition class, but add in a new features.
@@ -34,7 +39,7 @@ class _BaseCRDirective(AdmonitionDirective, SphinxDirective):
         CSS level. If this is set, then this title will be added by the
         directive.
         """
-        name = self.__class__.__name__.split('Directive')[0].lower()
+        name = self.cssname()
         self.node_class = nodes.admonition
         # Some jekyll-common nodes have CSS-generated titles, some don't.  The
         # Admonition class requires a title.  Add one if missing.  The title is
@@ -64,6 +69,8 @@ class TestimonialDirective(_BaseCRDirective): pass
 class OutputDirective(_BaseCRDirective):
     title_text = 'Output'
 class QuestionsDirective(_BaseCRDirective): pass
+class Instructor_NoteDirective(_BaseCRDirective):
+    title_text = "Instructor note"
 
 # This does work, to add
 # from sphinx.writers.html5 import HTML5Translator
@@ -84,8 +91,6 @@ def init_static_path(app):
 def setup(app):
     "Sphinx extension setup"
     app.setup_extension('myst_nb')
-#    app.add_node(challenge, html=(visit_node,
-#                                  HTML5Translator.depart_admonition))
     for name, obj in globals().items():
         #print(name, obj)
         if (name.endswith('Directive')
@@ -93,8 +98,6 @@ def setup(app):
             and not name.startswith('_')):
             #print(name, obj.cssname())
             app.add_directive(obj.cssname(), obj)
-
-#    nodes._add_node_class_names(('challenge', ))
 
     # Add CSS to build
     # Hint is from https://github.com/choldgraf/sphinx-copybutton/blob/master/sphinx_copybutton/__init__.py  # pylint: ignore=E501
