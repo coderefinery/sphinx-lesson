@@ -1,76 +1,71 @@
 Test sphinx lesson
 ==================
 
-In this lesson, we learn how to make a CodeRefinery lesson using
-sphinx.  It is designed to replace the Jekyll-based software carepntry
-templates.  The source is on `github
-<https://github.com/coderefinery/sphinx-test-lesson>`__.
+.. seealso::
+
+   See a real demo lesson at
+   https://coderefinery.github.io/github-without-command-line/ or
+   https://github.com/coderefinery/sphinx-lesson-template.
+
+sphinx-lesson is a set of Sphinx extensions and themes for creating
+interactive, hands-on lessons.  It was originally made to replace the
+CodeRefinery jekyll themes, but is designed to be used by others.
+
+As the name says, it is based on the `Sphinx documentation generator
+<https://www.sphinx-doc.org/>`__.  It is also inspired by and based on
+`jupyter-book <https://jupyterbook.org/>`__, but both is jupyter-book
+and isn't.  It *is* because jupyter-book is based on Sphinx and
+modular, we reuse all of those same Sphinx extensions which
+jupyter-book has made.  It *isn't* jupyter-book because we configure
+Sphinx directly, instead of wrapping it through jupyter-book
+configuration and building.  Thus, we get full control and high
+compatibility.
+
+Features:
+
+* Separate content and presentation: easy to adjust theme or control
+  the parts independently.
+* Based on jupyter-book, cross-compatible.
+* Built with Sphinx, providing a structured, controlled output.
+* Distributed as Python pip packages
+* Markdown and ReStructured equally supported (yes, including all
+  directives), though ReStructured Text is still a bit nicer
+* Jupyter notebooks as an input format.  Can execute code (in jupyter
+  and other formats, too)
+* Transparent transformation of jekyll-style markdown styles into
+  CommonMark with directives
+
+This is in an alpha state: we use it for lessons, but there is still
+refinement work to go.
 
 
-.. prereq:: Required software
+.. prereq::
 
-   * prereq1
-   * prereq2
+   * If you know Sphinx, it helps some.  If not, it's easy to copy
+   * Markdown or ReStructured text
+   * Hosting is usually by github-pages
 
-   This has the css class 'prereq', and like all blocks is implemented
-   like::
-
-     .. prereq::
-
-	* prereq1
-	* prereq2
-
-
-The following directives are implemented:
-
-* ``callout``
-* ``challenge``
-* ``checklist``
-* ``discussion``
-* ``keypoints``
-* ``objectives``
-* ``prereq``
-* ``solution``
-* ``testimonial``
-
-All that remains is some proper CSS
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Episodes
+   :maxdepth: 1
+   :caption: Guide
 
-   01_intro
-   02_rst_tests
-   03_md_tests
-   04_executing
-   05_jupyter
-   06_convert-old-lesson
+   general
+   installation
+   building
+   md-and-rst
+   toctree
+   directives
+   md-transforms
+   jupyter
+   executing-code
+   convert-old-lessons
 
 .. toctree::
-   :caption: Other material
+   :maxdepth: 1
+   :caption: Extras
 
    cheatsheet
-   guide
-
-Installation and usage
-----------------------
-
-This is distributed as a normal Sphinx extension, so it is easy to
-use.  To use it, install ``sphinx_lesson`` via PyPI (note: it is not
-there yet, this may not be the name).
-
-Then, enable the extension in your Sphinx ``conf.py``.  This will both
-define our special directives, and load the other required extensions
-(``myst_nb``).  The ``myst_nb`` extension can be configured normally::
-
-  extensions = [
-      'sphinx_lesson',
-  ]
-
-We are in theory compatible with any theme, but are most tested with
-the sphinx_rtd_theme::
-
-  html_theme = 'sphinx_rtd_theme'
 
 
 
