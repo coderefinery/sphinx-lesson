@@ -50,7 +50,7 @@ refinement work to go.
    :maxdepth: 1
    :caption: Guide
 
-   general
+   getting-started
    installation
    building
    md-and-rst
