@@ -1,5 +1,5 @@
-Test sphinx lesson
-==================
+sphinx-lesson: structured lessons with Sphinx
+=============================================
 
 .. seealso::
 
