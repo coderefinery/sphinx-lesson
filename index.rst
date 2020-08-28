@@ -59,6 +59,7 @@ refinement work to go.
    md-transforms
    jupyter
    executing-code
+   substitutions-replacements
    convert-old-lessons
 
 .. toctree::
