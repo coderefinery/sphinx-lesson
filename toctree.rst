@@ -43,3 +43,11 @@ want.
 You can have multiple toctrees: check sphinx-test-lesson, we have one
 for the episodes, and one for extra material (like quick ref and
 instructor guide).
+
+
+See also
+--------
+
+* Read more about the `Sphinx toctree directive`__.
+
+__ https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#table-of-contents
