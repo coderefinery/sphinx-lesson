@@ -3,7 +3,9 @@ Installation
 
 This is distributed as a normal Sphinx extension, so it is easy to
 use.  To use it, install ``sphinx_lesson`` via PyPI (note: it is not
-there yet, this may not be the name).
+there yet, so use this in ``requirements.txt`` and with ``pip
+install``:
+``https://github.com/coderefinery/sphinx-lesson/archive/master.zip``).
 
 Then, enable the extension in your Sphinx ``conf.py``.  This will both
 define our special directives, and load the other required extensions
