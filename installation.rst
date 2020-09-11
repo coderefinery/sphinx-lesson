@@ -25,3 +25,22 @@ The Jupyter Book (Executable Books Project) Sphinx theme
 <https://sphinx-book-theme.readthedocs.io/en/latest/>`__) has some
 very nice features and also deserves some consideration.  Using it
 should be clear: ``html_theme = "sphinx_book_theme"``.
+
+
+Under the hood
+--------------
+
+Adding ``sphinx_lesson`` as an extension adds these sub-extensions:
+
+  * ``sphinx_lesson.directives`` - see :doc:`directives`.
+  * ``sphinx_lesson.md_transforms`` - see :doc:`md-transforms`.
+  * Enables the `myst_notebook extension
+    <https://myst-nb.readthedocs.io/en/latest/>`__, which also enables
+    `myst_parser
+    <https://myst-parser.readthedocs.io/en/latest/index.html>`__
+    (included as a dependencies)
+  * Enables the `sphinx-copybutton extension
+    <https://github.com/executablebooks/sphinx-copybutton>`__
+    (included as a dependency)
+
+Any of these can be used independently to get the same effect.
