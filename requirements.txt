@@ -1,4 +1,5 @@
 sphinx
 sphinx_rtd_theme
+sphinx_copybutton
 #myst_parser[sphinx]
 myst_nb>0.8.3
