@@ -4,8 +4,7 @@ sphinx-lesson: structured lessons with Sphinx
 .. seealso::
 
    See a real demo lesson at
-   https://coderefinery.github.io/github-without-command-line/ or
-   https://github.com/coderefinery/sphinx-lesson-template.
+   https://coderefinery.github.io/github-without-command-line/.
 
 sphinx-lesson is a set of Sphinx extensions and themes for creating
 interactive, hands-on lessons.  It was originally made to replace the
