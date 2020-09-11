@@ -8,7 +8,7 @@ def setup(app):
     app.setup_extension(__name__+'.md_transforms')
 
     return {
-        'version': '0.1',
+        'version': __version__,
         'parallel_read_safe': True,
         'parallel_write_safe': True,
     }

@@ -21,6 +21,12 @@ project = 'Sphinx-lesson'
 copyright = '2020, CodeRefinery'
 author = 'CodeRefinery'
 
+# roundabout way to get version.  "import sphinx_lesson" would be easier, but
+# then it becomes harder to have the same github action for this repo and
+# the lessons themselves.
+version_ns = { }
+exec(open('sphinx_lesson/_version.py').read(), version_ns)
+version = version_ns['__version__']
 
 # -- General configuration ---------------------------------------------------
 
