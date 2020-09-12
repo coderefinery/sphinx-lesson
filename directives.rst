@@ -10,7 +10,7 @@ We have the following directives available:
 * ``keypoints``
 * ``objectives``
 * ``prereq``
-* ``solution``
+* ``solution`` (begins collapsed)
 * ``testimonial``
 * ``output``
 * ``questions``
@@ -38,6 +38,13 @@ Example of ``challenge``:
 
 	    Some body text
 
+
+The ``solution`` directive begins collapsed (via `sphinx-togglebutton
+<https://github.com/executablebooks/sphinx-togglebutton>`__:
+
+.. solution::
+
+   This is a solution
 
 Directives are implemented in the Python package
 ``sphinx_lesson.directives`` and can be used independently of the rest

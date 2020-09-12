@@ -21,6 +21,7 @@ class _BaseCRDirective(AdmonitionDirective, SphinxDirective):
     required_arguments = 0
     optional_arguments = 1
     final_argument_whitespace = True
+    extra_classes = [ ]
 
     @classmethod
     def cssname(cls):
@@ -53,6 +54,7 @@ class _BaseCRDirective(AdmonitionDirective, SphinxDirective):
         ret = super().run()
         # Set CSS classes
         ret[0].attributes['classes'].append(name)
+        ret[0].attributes['classes'].extend(self.extra_classes)
         return ret
 
 
@@ -64,7 +66,8 @@ class KeypointsDirective(_BaseCRDirective): pass
 class ObjectivesDirective(_BaseCRDirective): pass
 class PrereqDirective(_BaseCRDirective):
     title_text = "Prerequisites"
-class SolutionDirective(_BaseCRDirective): pass
+class SolutionDirective(_BaseCRDirective):
+    extra_classes = ['dropdown'] #'toggle-shown' = visible by default
 class TestimonialDirective(_BaseCRDirective): pass
 class OutputDirective(_BaseCRDirective):
     title_text = 'Output'
