@@ -10,6 +10,7 @@ from docutils.parsers.rst.directives.admonitions \
 from sphinx.util.docutils import SphinxDirective
 from sphinx.util.logging import getLogger
 
+from . import __version__
 LOG = getLogger(__name__)
 
 
@@ -105,7 +106,7 @@ def setup(app):
     app.add_css_file("sphinx_lesson.css")
 
     return {
-        'version': '0.1',
+        'version': __version__,
         'parallel_read_safe': True,
         'parallel_write_safe': True,
     }

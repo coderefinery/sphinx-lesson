@@ -10,6 +10,7 @@ from docutils.parsers.rst.directives.admonitions \
 from sphinx.util.docutils import SphinxDirective
 from sphinx.util.logging import getLogger
 
+from . import __version__
 LOG = getLogger(__name__)
 
 
@@ -169,3 +170,9 @@ def setup(app):
     app.connect('source-read', transform_code_fences)
     app.connect('source-read', transform_block_quotes)
     app.connect('source-read', transform_html_img)
+
+    return {
+        'version': __version__,
+        'parallel_read_safe': True,
+        'parallel_write_safe': True,
+    }
