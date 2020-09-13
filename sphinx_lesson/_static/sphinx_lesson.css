@@ -4,6 +4,21 @@ body.wy-body-for-nav img.with-border {
     border: 2px solid;
 }
 
+/* challenge */
+.rst-content .challenge .admonition-title::before {
+    content: "✏️";  /* Pencil */
+}
+
+/* solution */
+.rst-content .solution .admonition-title::before {
+    content: "✔️";  /* Check mark */
+}
+
+/* questions */
+.rst-content .questions .admonition-title::before {
+    content: "❓";  /* Question mark */
+}
+
 /* instructor-note */
 .rst-content .admonition-instructor-note {
     background: #e7e7e7;
