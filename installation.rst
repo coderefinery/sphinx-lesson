@@ -42,5 +42,6 @@ Adding ``sphinx_lesson`` as an extension adds these sub-extensions:
   * Enables the `sphinx-copybutton extension
     <https://github.com/executablebooks/sphinx-copybutton>`__
     (included as a dependency)
+  * Same for `sphinx-togglebutton <https://pypi.org/project/sphinx-togglebutton/>`__
 
 Any of these can be used independently to get the same effect.
