@@ -20,12 +20,12 @@ body.wy-body-for-nav img.with-border {
 }
 
 /* instructor-note */
-.rst-content .admonition-instructor-note {
+.rst-content .instructor-note {
     background: #e7e7e7;
 }
-.rst-content .admonition-instructor-note .admonition-title {
+.rst-content .instructor-note .admonition-title {
     background: #6a6a6a;
 }
-.rst-content .admonition-instructor-note .admonition-title::before {
+.rst-content .instructor-note .admonition-title::before {
     content: "";
 }
