@@ -11,10 +11,15 @@ and other material.
   border.  Remove this if you don't want it - the examples below
   include it.
 
+.. figure:: img/sample-image.png
+   :class: with-border
+
+   This is the caption.
+
 
 In ReST, this is::
 
-    .. figure:: path/to/figure.png
+    .. figure:: img/sample-image.png
        :class: with-border
 
        This is the caption.
@@ -23,7 +28,7 @@ In ReST, this is::
 
 In MyST Markdown, this is::
 
-   ```{figure} path/to/figure.png
+   ```{figure} img/sample-image.png
    ---
    class: with-border
    ---
