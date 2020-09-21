@@ -55,6 +55,7 @@ refinement work to go.
    md-and-rst
    toctree
    directives
+   figures
    md-transforms
    jupyter
    executing-code
