@@ -47,15 +47,31 @@ refinement work to go.
 
 .. toctree::
    :maxdepth: 1
-   :caption: Guide
+   :caption: Getting started
 
    getting-started
    installation
    building
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Basic syntax
+
    md-and-rst
    toctree
    directives
    figures
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Examples
+
+   sample-episode-rst
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Advanced features
+
    md-transforms
    jupyter
    executing-code
