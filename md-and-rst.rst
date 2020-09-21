@@ -48,52 +48,65 @@ MD and ReST syntax
 
 This is a brief comparison of basic syntax:
 
-.. list-table::
-   :header-rows: 1
+ReST syntax (Sphinx has a good `restructured text primer
+<https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html>`__::
 
-   *
-     * ReST
-     * MD
+    *italic*
+    **bold**
+    ``literal``
 
-   *
+    Heading
+    -------
 
-     *
+    `inline link <https://example.com>`__
+    `out-of-line link <example_>`__
 
-       ::
+    .. _example: https://example.com
 
-        *italic*
-        **bold**
-        ``literal``
+    :doc:`page-filename`
+    :ref:`ref-name`
+    :py:mod:`multiprocessing`
 
-        Heading
-        -------
+    :doc:`link to page <page-filename>`
+    :ref:`page anchor link <ref-name>`
+    :py:mod:`intersphinx link <multiprocessing>`
 
-	`inline link <https://example.com>`__
-	`out-of-line link <example_>`__
 
-	.. _example: https://example.com
+    ::
 
-	:doc:`link to page <page-filename>`
-	:ref:`page anchor link <ref-name>`
+       code block that is standalone (two
+       colons before it and indented)
 
-     *
+    Code block after paragraph::
 
-       ::
+      The paragraph will end with
+      a single colon.
 
-        *italic*
-	**bold**
-	`literal`
-	# Heading
 
-	[inline link](https://example.com)
+MyST markdown syntax::
 
-	[link to page](relative-page-path)
+    *italic*
+    **bold**
+    `literal`
+    # Heading
+
+    [inline link](https://example.com)
+
+    [link to page](relative-page-path)
+
+    ```
+    code block
+    ```
 
 The most interesting difference is the use of single backquote for
 literals in Markdown, and double in ReST.  This is because ReST uses
 single quotes for *roles* - notice how there is a dedicated syntax for
 inter-page links, references, and so on.  This is very important for
-things like verifying referential integrity of all of our pages.
+things like verifying referential integrity of all of our pages.  But
+this is configurable with `default_role
+<https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-default_role>`__:
+set to ``any`` to automatically detect documents/references/anthing,
+or ``literal`` to automatically be the same as literal text.
 
 
 
@@ -111,7 +124,7 @@ ReST directives
 
 ReST directives are done like this::
 
-  .. exercise:: Optional title, some default otherwise
+  .. challenge:: Optional title, some default otherwise
      :option: value
 
      This is the body
