@@ -3,6 +3,9 @@ Converting an old lesson
 
 .. highlight: console
 
+First strategy
+--------------
+
 Merge the two unrelated histories::
 
    $ git remote add template https://github.com/coderefinery/sphinx-lesson-template
@@ -39,3 +42,30 @@ Do all the rest of the fixing... all the bad, non-portable,
 non-relative markdown and so on.  This is the hard part.
 
 
+Second strategy
+---------------
+
+::
+
+   git remote add s-l-t https://github.com/coderefinery/sphinx-lesson-template-empty.git
+   git fetch s-l-t
+
+These are basic files to check out::
+
+   git checkout s-l-t/master -- requirements.txt
+   git checkout s-l-t/master -- .github/workflows/sphinx.yml
+
+If you need the full template::
+
+   git checkout s-l-t/master -- .gitignore Makefile make.bat
+
+If you need the full template::
+
+   git checkout s-l-t/master -- .gitignore Makefile make.bat
+
+
+Set up github pages (first commit to trigger CI)::
+
+  git checkout -b gh-pages origin/gh-pages
+  git commit -m 'empty commit to trigger gh-pages' --allow-empty
+  git push
