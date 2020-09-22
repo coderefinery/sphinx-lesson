@@ -3,6 +3,12 @@
 name: sphinx
 on: [push, pull_request]
 
+# If these SPHINXOPTS are enabled, then be strict about the builds and
+# fail on any warnings
+#env:
+#  SPHINXOPTS: "-W --keep-going -T"
+
+
 jobs:
   build-and-deploy:
     name: Build and gh-pages
