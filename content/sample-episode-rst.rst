@@ -64,6 +64,7 @@ A code block with preceeding paragraph::
    * **Create a lesson** solution to that one.
 
 
+
 Another section
 ---------------
 
@@ -87,6 +88,15 @@ A subsection
 
    Figure caption here, which explains the content in text so that
    it's accessible to screen readers.
+
+
+
+See also
+--------
+
+* Upstream information
+* Another course
+
 
 
 .. keypoints::
