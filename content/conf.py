@@ -25,7 +25,7 @@ author = 'CodeRefinery'
 # then it becomes harder to have the same github action for this repo and
 # the lessons themselves.
 version_ns = { }
-exec(open('sphinx_lesson/_version.py').read(), version_ns)
+exec(open('../sphinx_lesson/_version.py').read(), version_ns)
 version = version_ns['__version__']
 
 # -- General configuration ---------------------------------------------------
