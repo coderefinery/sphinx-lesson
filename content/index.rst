@@ -76,6 +76,7 @@ refinement work to go.
    jupyter
    executing-code
    substitutions-replacements
+   gh-action
    convert-old-lessons
 
 .. toctree::
