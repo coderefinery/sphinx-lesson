@@ -1,6 +1,9 @@
 Installation
 ============
 
+Sphinx Python package
+---------------------
+
 This is distributed as a normal Sphinx extension, so it is easy to
 use.  To use it, install ``sphinx_lesson`` via PyPI (note: it is not
 there yet, so use this in ``requirements.txt`` and with ``pip
@@ -25,6 +28,26 @@ The Jupyter Book (Executable Books Project) Sphinx theme
 <https://sphinx-book-theme.readthedocs.io/en/latest/>`__) has some
 very nice features and also deserves some consideration.  Using it
 should be clear: ``html_theme = "sphinx_book_theme"``.
+
+
+
+Github Pages initial commit
+---------------------------
+
+The included Github Actions file will automatically push to Github
+Pages, but due to some quirk/bugs in gh-pages *the very first
+non-human gh-pages push won't enable Github Pages*.  So, you have to
+do one push yourself (or go to settings and disable-enable gh-pages
+the first time).
+
+You can make an empty commit to gh-pages this way, which will trigger
+the gh-pages deployment (and everything will be automatic after that)::
+
+  git checkout -b gh-pages origin/gh-pages
+  git commit -m 'empty commit to trigger gh-pages' --allow-empty
+  git push
+
+
 
 
 Under the hood
