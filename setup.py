@@ -35,7 +35,7 @@ setuptools.setup(name='sphinx_lesson',
       classifiers=[
         "Programming Language :: Python :: 3",
         "Development Status :: 4 - Beta",
-        "Framework :: Sphinx"
+        "Framework :: Sphinx",
         "Framework :: Sphinx :: Extension",
         "Operating System :: OS Independent",
     ],
