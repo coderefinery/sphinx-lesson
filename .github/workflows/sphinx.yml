@@ -97,6 +97,12 @@ jobs:
               fi
           done
 
+      # Add the .nojekyll file
+      - name: nojekyll
+        if: ${{ github.event_name == 'push' }}
+        run: |
+          touch _gh-pages/.nojekyll
+
       # Deploy
       # https://github.com/peaceiris/actions-gh-pages
       - name: Deploy
