@@ -46,6 +46,7 @@ extensions = [
     #'myst_nb',  # now done as part of sphinx_lesson
     #'sphinx.ext.intersphinx',
     'sphinx_rtd_theme_ext_color_contrast',
+    'sphinx_minipres',
 ]
 
 # Settings for myst_nb:
