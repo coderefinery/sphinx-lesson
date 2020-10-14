@@ -33,6 +33,8 @@ Features:
   and other formats, too)
 * Transparent transformation of jekyll-style markdown styles into
   CommonMark with directives
+* Also renders with sphinx-book-theme (theme of jupyterbook) (`preview
+  <https://coderefinery.github.io/sphinx-lesson/branch/sphinx-book-theme/>`__)
 
 This is in an alpha state: we use it for lessons, but there is still
 refinement work to go.

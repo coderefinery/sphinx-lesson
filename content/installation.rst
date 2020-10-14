@@ -27,7 +27,9 @@ The Jupyter Book (Executable Books Project) Sphinx theme
 (`sphinx-book-theme
 <https://sphinx-book-theme.readthedocs.io/en/latest/>`__) has some
 very nice features and also deserves some consideration.  Using it
-should be clear: ``html_theme = "sphinx_book_theme"``.
+should be clear: ``html_theme = "sphinx_book_theme"``.  You can see a
+preview of it `as a branch on github-pages
+<https://coderefinery.github.io/sphinx-lesson/branch/sphinx-book-theme/>`__.
 
 
 
