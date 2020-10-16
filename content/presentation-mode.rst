@@ -1,6 +1,11 @@
 Presentation mode
 =================
 
+.. note::
+
+   This is a technical demo, included by default to make it easy to
+   use.  It may be removed in a future release.
+
 Using `minipres <https://github.com/coderefinery/sphinx-minipres>`__,
 any web page can be turned into a presentation.  As usual, there is
 nothing very specific to sphinx-lesson about this, but currently
