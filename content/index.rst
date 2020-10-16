@@ -79,6 +79,7 @@ refinement work to go.
    executing-code
    substitutions-replacements
    gh-action
+   presentation-mode
    convert-old-lessons
 
 .. toctree::
