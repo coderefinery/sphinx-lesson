@@ -54,6 +54,7 @@ refinement work to go.
    getting-started
    installation
    building
+   changelog
 
 .. toctree::
    :maxdepth: 1
