@@ -5,10 +5,7 @@ Sphinx Python package
 ---------------------
 
 This is distributed as a normal Sphinx extension, so it is easy to
-use.  To use it, install ``sphinx_lesson`` via PyPI (note: it is not
-there yet, so use this in ``requirements.txt`` and with ``pip
-install``:
-``https://github.com/coderefinery/sphinx-lesson/archive/master.zip``).
+use.  To use it, install ``sphinx_lesson`` via PyPI.
 
 Then, enable the extension in your Sphinx ``conf.py``.  This will both
 define our special directives, and load the other required extensions
@@ -17,6 +14,9 @@ define our special directives, and load the other required extensions
   extensions = [
       'sphinx_lesson',
   ]
+
+HTML theme
+----------
 
 We are in theory compatible with any theme, but are most tested with
 the sphinx_rtd_theme (which you need to set yourself)::
@@ -30,25 +30,6 @@ very nice features and also deserves some consideration.  Using it
 should be clear: ``html_theme = "sphinx_book_theme"``.  You can see a
 preview of it `as a branch on github-pages
 <https://coderefinery.github.io/sphinx-lesson/branch/sphinx-book-theme/>`__.
-
-
-
-Github Pages initial commit
----------------------------
-
-The included Github Actions file will automatically push to Github
-Pages, but due to some quirk/bugs in gh-pages *the very first
-non-human gh-pages push won't enable Github Pages*.  So, you have to
-do one push yourself (or go to settings and disable-enable gh-pages
-the first time).
-
-You can make an empty commit to gh-pages this way, which will trigger
-the gh-pages deployment (and everything will be automatic after that)::
-
-  git checkout -b gh-pages origin/gh-pages
-  git commit -m 'empty commit to trigger gh-pages' --allow-empty
-  git push
-
 
 
 
