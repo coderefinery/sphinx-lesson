@@ -78,6 +78,9 @@ html_theme = 'sphinx_rtd_theme'
 # so a file named "default.css" will overwrite the builtin "default.css".
 #html_static_path = ['_static']
 
+# favicon location
+html_favicon = 'favicon.ico'
+
 # Intersphinx mapping.  For example, with this you can use
 # :py:mod:`multiprocessing` to link straight to the Python docs of that module.
 # List all available references:
