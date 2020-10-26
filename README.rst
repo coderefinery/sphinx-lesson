@@ -36,30 +36,31 @@ Features
 
 
 
+Host Site Locally for Development
+---------------------------------
+
+1. Create a virtual python environment::
+
+     python -m venv venv
+
+2. Activate the virtual environment::
+
+     source activate venv/bin/activate
+
+3. Install python packages::
+
+     pip install -r requirements.txt
+
+4. Start a live-compiled service for your compiled site for local development::
+
+     make livehtml
+
+5. View created site in your browser at `http://localhost:8000 <http://localhost:8000>`__ (follow the link in your console)
+
+
+
 Status
 ------
 
 In beta use by CodeRefinery and active development.  External users
 would be fine (but let us know so we know to keep things stable).
-
-Host Site Locally for Development
--------
-
-1. Create a virtual python environment
-
-  python -m venv venv
-
-2. Activate the virtual environment
-
-  source activate venv/bin/activate
-
-3. Install python packages
-
-  pip install -r requirements.txt
-
-4. Start a live-compiled service for your compiled site for local development
-
-  make livehtml
-
-5. View created site in your browser at `http://localhost:8000 <http://localhost:8000>`_ (follow the link in your console)
-
