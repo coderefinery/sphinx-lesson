@@ -57,9 +57,9 @@ Host Site Locally for Development
 
   ```pip install -r requirements.txt```
 
-4. Build html files
+4. Start a live-compiled service for your compiled site for local development
 
-  ```make clean html```
+  ```make livehtml```
 
-5. View created site in your browser at `http://localhost:63342/sphinx-lesson/_build/html/index.html <http://localhost:63342/sphinx-lesson/_build/html/index.html>`_
+5. View created site in your browser at `http://localhost:8000 <http://localhost:8000>`_ (follow the link in your console)
 
