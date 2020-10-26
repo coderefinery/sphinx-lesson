@@ -81,6 +81,15 @@ html_theme = 'sphinx_rtd_theme'
 # favicon location
 html_favicon = 'favicon.ico'
 
+# Github link in the theme
+html_context = {
+    'display_github': True,
+    'github_user': 'coderefinery',
+    'github_repo': 'sphinx-lesson',
+    'github_version': 'master',
+    'conf_py_path': '/content/',
+    }
+
 # Intersphinx mapping.  For example, with this you can use
 # :py:mod:`multiprocessing` to link straight to the Python docs of that module.
 # List all available references:
