@@ -46,22 +46,32 @@ A code block with preceeding paragraph::
 
      directive within a list (note indention)
 
-.. challenge:: SampleLesson-1 Getting familiar
 
-   1. **Exercise title:** Notice the exercise set has both an ID and
+Exercise: the general topic
+---------------------------
+
+Exercises get their own section, so that they can be linked and found
+in the table of contents.
+
+.. challenge:: 1.1 Exercise title
+
+   1. Notice the exercise set has both an ID and
       number ``SampleLesson-1`` and description of what it contains.
-
-   2. **Create a lesson:** Similarly, each exercise has a quick
-      description title ``Create a lesson`` in bold.  These titles are
-      useful so that helpers (and learners...) can quickly understand
-      what the point is.
-
 
 .. solution::
 
-   * **Exercise title** solution here.
+   * Solution here.
 
-   * **Create a lesson** solution to that one.
+
+.. challenge:: 1.2 Create a lesson
+
+   2. Similarly, each exercise has a quick description title ``Create
+      a lesson`` in bold.  These titles are useful so that helpers
+      (and learners...) can quickly understand what the point is.
+
+.. solution::
+
+   * Solution to that one.
 
 
 
