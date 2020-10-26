@@ -41,3 +41,25 @@ Status
 
 In beta use by CodeRefinery and active development.  External users
 would be fine (but let us know so we know to keep things stable).
+
+Host Site Locally for Development
+-------
+
+1. Create a virtual python environment
+
+  python -m venv venv
+
+2. Activate the virtual environment
+
+  source activate venv/bin/activate
+
+3. Install python packages
+
+  pip install -r requirements.txt
+
+4. Build html files
+
+  make clean html
+
+5. View created site in your browser at `http://localhost:63342/sphinx-lesson/_build/html/index.html <http://localhost:63342/sphinx-lesson/_build/html/index.html>`_
+
