@@ -46,20 +46,20 @@ Host Site Locally for Development
 -------
 
 1. Create a virtual python environment
-  
-  python -m venv venv
-  
-2. Activate the virtual environment
-  
-  source activate venv/bin/activate
-  
-3. Install python packages
-  
-  pip install -r requirements.txt
-  
-4. Build html files
- 
-  make clean html
 
-5. View created site in your browser at `http://localhost:63342/sphinx-lesson/_build/html/index.html <http://localhost:63342/sphinx-lesson/_build/html/index.html>`_
+  python -m venv venv
+
+2. Activate the virtual environment
+
+  source activate venv/bin/activate
+
+3. Install python packages
+
+  pip install -r requirements.txt
+
+4. Start a live-compiled service for your compiled site for local development
+
+  make livehtml
+
+5. View created site in your browser at `http://localhost:8000 <http://localhost:8000>`_ (follow the link in your console)
 
