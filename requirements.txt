@@ -2,6 +2,7 @@ sphinx
 sphinx_rtd_theme
 sphinx_copybutton
 sphinx_minipres
+sphinx_tabs
 sphinx_togglebutton>=0.2.0
 sphinx-autobuild
 #myst_parser[sphinx]
