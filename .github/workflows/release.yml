@@ -1,0 +1,80 @@
+name: PyPI release
+
+# Make a PyPI release.  This action:
+# - builds the release files
+# - checks the tag version matches the source version
+# - releases on PyPI using the action
+#
+# The first time, you have to upload the release yourself to get the
+# API key, to add to gh-secrets.
+#
+# I upload it with:
+#   python setup.py sdist bdist_wheel
+#   twine upload dist/*
+#
+# To configure the secrets, see steps here:
+#   https://github.com/pypa/gh-action-pypi-publish
+#   secret name= pypi_password
+
+
+# If MOD_NAME not defined, infer it from the current directory.  If
+# inferred from the directory, '-' is replaced with '_'.  This is used
+# when checking the version name.
+#env:
+#  MOD_NAME: numpy
+
+on: [push]
+
+jobs:
+  pypi:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags')
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      #with:
+      #  python-version: 3.8
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install twine wheel
+
+    - name: Build
+      run: |
+        python setup.py sdist bdist_wheel
+
+    # Verify that the git tag has the same version as the python
+    # project version.
+    - name: Check that versions match
+      run: |
+        pip install .
+        # If MOD_NAME not defined, infer it from the directory name
+        if [ -z "$MOD_NAME" ] ; then
+            # strip leading directories
+            MOD_NAME=${PWD##*/}
+            # replace '-' with '_'
+            MOD_NAME=${MOD_NAME//-/_}
+        fi
+        # Find the versions
+        MOD_VERSION=$(python -c "import $MOD_NAME ; print($MOD_NAME.__version__)")
+        echo $MOD_VERSION
+        TAG_VERSION=${{ github.ref }}
+        echo $TAG_VERSION
+        TAG_VERSION=${TAG_VERSION##refs/tags/}   # remove leading 'refs/tags/'
+        # Do the actual check
+        if [ "$MOD_VERSION" != "$TAG_VERSION" ] ; then
+          echo "::error::Module version ($MOD_VERSION) des not match tag version ($TAG_VERSION)"
+          exit 1
+        fi
+
+    - name: Publish on PyPI
+      if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags')
+      uses: pypa/gh-action-pypi-publish@v1.4.1
+      with:
+        user: __token__
+        password: ${{ secrets.pypi_password }}
+        #repository_url: https://test.pypi.org/legacy/
