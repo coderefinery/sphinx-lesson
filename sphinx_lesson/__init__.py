@@ -4,6 +4,7 @@ def setup(app):
     "Sphinx extension setup"
     app.setup_extension('myst_nb')
     app.setup_extension('sphinx_copybutton')
+    app.setup_extension('sphinx_minipres')
     app.setup_extension('sphinx_tabs.tabs')
     app.setup_extension('sphinx_togglebutton')
     app.setup_extension(__name__+'.directives')
