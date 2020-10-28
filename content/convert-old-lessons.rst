@@ -23,7 +23,7 @@ branch will **override github pages**::
 
 If you need more Sphinx files::
 
-   git checkout s-l-t/master -- conf.py
+   git checkout s-l-t/master -- content/conf.py
    git checkout s-l-t/master -- .gitignore Makefile make.bat
 
 If you need the full content (only ``index.rst`` for now)::
