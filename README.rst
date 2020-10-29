@@ -5,9 +5,10 @@ This is a Sphinx extension for software-carpentry style
 lessons.  It is designed as a replacement for the Jekyll-based software
 templates.
 
-`View it on github pages
-<https://coderefinery.github.io/sphinx-lesson/>`__.
-
+* `View the documentation (and example) on github pages
+  <https://coderefinery.github.io/sphinx-lesson/>`__.
+* `Template repository, to copy from
+  <https://github.com/coderefinery/sphinx-lesson-template/>`__.
 
 
 Features
