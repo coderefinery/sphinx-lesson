@@ -46,6 +46,18 @@ A code block with preceeding paragraph::
 
      directive within a list (note indention)
 
+.. tabs::
+
+   .. code-tab:: py
+
+      import bisect
+      a = 1 + 2
+
+   .. code-tab:: r R
+
+      library(x)
+      a <- 1 + 2
+
 
 Exercise: the general topic
 ---------------------------
@@ -84,6 +96,23 @@ Another section
    in a later style.  You should use it for things that the instructor
    should see while teaching, but should be de-emphasized for the
    learners.
+
+
+These tab synchronize with those above:
+
+.. tabs::
+
+   .. code-tab:: py
+
+      import cmath
+      a = 10 / 2
+
+   .. code-tab:: r R
+
+      library(x)
+      a <- 10 / 2
+
+
 
 A subsection
 ~~~~~~~~~~~~
