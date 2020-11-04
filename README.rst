@@ -52,11 +52,17 @@ Host Site Locally for Development
 
      pip install -r requirements.txt
 
-4. Start a live-compiled service for your compiled site for local development::
+4. Build local files (this can also be used for deployment)::
+
+     make html
+     # Output in _build/html/
+     make clean html             # clean + full rebuild
+
+5. Or, start a live-compiled service for your compiled site for local development::
 
      make livehtml
 
-5. View created site in your browser at `http://localhost:8000 <http://localhost:8000>`__ (follow the link in your console)
+   Then view created site in your browser at `http://localhost:8000 <http://localhost:8000>`__ (follow the link in your console).
 
 
 
