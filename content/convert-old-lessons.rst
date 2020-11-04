@@ -56,6 +56,12 @@ problems:
 * Weird relative links (most work though)
 
 
+You can also update your local view of the default branch::
+
+  git remote set-head origin --auto
+
+
+
 Joint history
 -------------
 
