@@ -129,6 +129,21 @@ A subsection
    it's accessible to screen readers.
 
 
+Other directives
+----------------
+
+.. important::
+
+   Test
+
+.. warning::
+
+   Test
+
+.. seealso::
+
+   Test
+
 
 See also
 --------
