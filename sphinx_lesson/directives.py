@@ -60,7 +60,8 @@ class _BaseCRDirective(AdmonitionDirective, SphinxDirective):
 
 
 class CalloutDirective(_BaseCRDirective): pass
-class ChallengeDirective(_BaseCRDirective): pass
+class ChallengeDirective(_BaseCRDirective):
+    extra_classes = ['important']
 class ChecklistDirective(_BaseCRDirective): pass
 class DiscussionDirective(_BaseCRDirective): pass
 class KeypointsDirective(_BaseCRDirective): pass
@@ -68,7 +69,7 @@ class ObjectivesDirective(_BaseCRDirective): pass
 class PrereqDirective(_BaseCRDirective):
     title_text = "Prerequisites"
 class SolutionDirective(_BaseCRDirective):
-    extra_classes = ['dropdown'] #'toggle-shown' = visible by default
+    extra_classes = ['important', 'dropdown'] #'toggle-shown' = visible by default
 class TestimonialDirective(_BaseCRDirective): pass
 class OutputDirective(_BaseCRDirective):
     title_text = 'Output'
