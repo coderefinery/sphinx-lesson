@@ -8,3 +8,4 @@ sphinx-autobuild
 #myst_parser[sphinx]
 myst_nb>0.8.3
 sphinx_rtd_theme_ext_color_contrast
+pydata-sphinx-theme

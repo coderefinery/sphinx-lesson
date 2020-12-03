@@ -45,7 +45,6 @@ extensions = [
     'sphinx_lesson',
     #'myst_nb',  # now done as part of sphinx_lesson
     #'sphinx.ext.intersphinx',
-    'sphinx_rtd_theme_ext_color_contrast',
 ]
 
 # Settings for myst_nb:
@@ -70,7 +69,11 @@ exclude_patterns = ['README*', '_build', 'Thumbs.db', '.DS_Store',
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'sphinx_rtd_theme'
+html_theme = 'pydata_sphinx_theme'
+html_theme_options = {
+    "github_url": "https://github.com/coderefinery/sphinx-lesson",
+    "use_edit_page_button": True,
+}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -82,12 +85,11 @@ html_favicon = 'favicon.ico'
 
 # Github link in the theme
 html_context = {
-    'display_github': True,
     'github_user': 'coderefinery',
     'github_repo': 'sphinx-lesson',
     'github_version': 'master',
-    'conf_py_path': '/content/',
-    }
+    "doc_path": "content/",
+}
 
 # Intersphinx mapping.  For example, with this you can use
 # :py:mod:`multiprocessing` to link straight to the Python docs of that module.
