@@ -6,17 +6,17 @@ body.wy-body-for-nav img.with-border {
 
 /* challenge */
 .rst-content .challenge > .admonition-title::before {
-    content: "✏️";  /* Pencil */
+    content: "\01F4DD";  /* Memo */
 }
 
 /* solution */
 .rst-content .solution > .admonition-title::before {
-    content: "✔️";  /* Check mark */
+    content: "\02714";  /* Check mark */
 }
 
 /* questions */
 .rst-content .questions > .admonition-title::before {
-    content: "❓";  /* Question mark */
+    content: "\02753";  /* Question mark */
 }
 
 /* instructor-note */
