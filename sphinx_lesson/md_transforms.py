@@ -158,6 +158,55 @@ def transform_html_img(app, docname, source):
     LOG.debug(newcontent)
     source[0] = newcontent
 
+def transform_colon_directive(app, docname, source):
+    """Transform ::: into ``` in markdown
+
+    Transforms these directives::
+
+        :::{important}
+        body
+        :::
+
+    into this::
+
+        ```{important}
+        body
+        ```
+
+    Taking into account number of colons and inferring if it is needed.
+
+    """
+    if not app.config.sphinx_lesson_transform_colon_directives:
+        return
+    LOG.debug('sphinx_lesson: transform_colon_directive: %s', docname)
+    content = source[0]
+    LOG.debug(content)
+
+    # This function gets applied to all sources, regardless of if it is .md or
+    # other formats.  So, first make a check to guess if it is markdown by
+    # checking if it seems to have any of these directives at all.
+    html_colon_directive_check_re = re.compile(
+        r'^:::+{[^}]+}',
+        re.MULTILINE,
+    )
+    if not html_colon_directive_check_re.search(content):
+        # This does not have colon directives, so ignore
+        return
+
+    # Make the substitution
+    html_colon_directive_re = re.compile(
+        r'^(:::+)(?=(?: *$)|\{)',
+        re.MULTILINE,
+    )
+    def sub_colon_directive(m):
+        """Handle each detected block quote"""
+        raw = m.group(1)
+        LOG.debug(m.group(0))
+        return '`'*len(raw)
+
+    newcontent = html_colon_directive_re.sub(sub_colon_directive, content)
+    LOG.debug(newcontent)
+    source[0] = newcontent
 
 
 def setup(app):
@@ -167,9 +216,11 @@ def setup(app):
     app.add_config_value('sphinx_lesson_transform_code_fences', True, 'env')
     app.add_config_value('sphinx_lesson_transform_block_quotes', True, 'env')
     app.add_config_value('sphinx_lesson_transform_html_img', True, 'env')
+    app.add_config_value('sphinx_lesson_transform_colon_directives', True, 'env')
     app.connect('source-read', transform_code_fences)
     app.connect('source-read', transform_block_quotes)
     app.connect('source-read', transform_html_img)
+    app.connect('source-read', transform_colon_directive)
 
     return {
         'version': __version__,
