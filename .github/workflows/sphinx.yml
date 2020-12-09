@@ -49,6 +49,13 @@ jobs:
       - name: Build Sphinx docs
         run: |
           make dirhtml
+          # This fixes broken copy button icons, as explained in
+          #   https://github.com/executablebooks/sphinx-copybutton/issues/110
+          # This can be removed once these PRs are accepted (but the
+          # fixes also need to propagate to other themes):
+          #   https://github.com/sphinx-doc/sphinx/pull/8524
+          #   https://github.com/readthedocs/sphinx_rtd_theme/pull/1025
+          sed -i 's/url_root="#"/url_root=""/' _build/dirhtml/index.html || true
 
 
       # The following supports building all branches and combining on
