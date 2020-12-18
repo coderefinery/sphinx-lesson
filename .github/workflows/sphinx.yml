@@ -50,6 +50,7 @@ jobs:
         run: |
           make dirhtml
           # This fixes broken copy button icons, as explained in
+          #   https://github.com/coderefinery/sphinx-lesson/issues/50
           #   https://github.com/executablebooks/sphinx-copybutton/issues/110
           # This can be removed once these PRs are accepted (but the
           # fixes also need to propagate to other themes):
