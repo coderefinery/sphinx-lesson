@@ -75,6 +75,7 @@ refinement work to go.
    :maxdepth: 1
    :caption: Advanced features
 
+   intersphinx
    md-transforms
    jupyter
    executing-code
