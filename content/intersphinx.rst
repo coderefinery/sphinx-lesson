@@ -52,18 +52,7 @@ or method like this:
 
 Note that this is structured information, and thus has no concept in
 Markdown, only MyST "markdown".  This is, in fact, a major reason why
-plan markdown is hardly suitable for complex docs.
-
-You can list all available reference targets at some doc using a
-command line command (but they are usually obvious).  You can get the
-URL from the conf.py file (and use this to verify URLs before you put
-it in the conf.py file):
-
-.. code-block:: shell
-
-   # Note we need to append `objects.inv`:
-   python -m sphinx.ext.intersphinx https://docs.python.org/3/objects.inv
-   # In conf.py: 'python': ('https://docs.python.org/3', None),
+plain markdown is hardly suitable for serious documentation.
 
 
 
@@ -84,6 +73,16 @@ common roles in the Python domain are:
 * There are also built-in domains for C, C++, JavaScript (see
   :std:doc:`usage/restructuredtext/domains` for what the roles are).
   Others are  added by Sphinx extensions.
+
+You can list all available reference targets at some doc using a
+command line command.  You can get the URL from the conf.py file (and
+use this to verify URLs before you put it in the conf.py file):
+
+.. code-block:: shell
+
+   # Note we need to append `objects.inv`:
+   python -m sphinx.ext.intersphinx https://docs.python.org/3/objects.inv
+   # In conf.py: 'python': ('https://docs.python.org/3', None),
 
 You usually use the fully qualified name of an object, for example
 ``matplotlib.pyplot.plot``.  In Python this is usually pretty obvious,
