@@ -22,6 +22,10 @@ commented out.  Enable it:
     'python': ('https://docs.python.org/3', None),
     }
 
+Configuration details and how to link to other sites are found at
+:std:doc:`the docs for intersphinx <usage/extensions/intersphinx>`.
+For most Sphinx-documented projects, use the URL of the documentation
+base.  See "Usage" below for how to verify the URLs.
 
 
 Usage
@@ -49,6 +53,42 @@ or method like this:
 Note that this is structured information, and thus has no concept in
 Markdown, only MyST "markdown".  This is, in fact, a major reason why
 plan markdown is hardly suitable for complex docs.
+
+You can list all available reference targets at some doc using a
+command line command (but they are usually obvious).  You can get the
+URL from the conf.py file (and use this to verify URLs before you put
+it in the conf.py file):
+
+.. code-block:: shell
+
+   # Note we need to append `objects.inv`:
+   python -m sphinx.ext.intersphinx https://docs.python.org/3/objects.inv
+   # In conf.py: 'python': ('https://docs.python.org/3', None),
+
+
+
+Available linking domains and roles
+-----------------------------------
+
+Of course, the domains are extendable.  Presumably, when you use
+sphinx-lesson, you will be referring to other things.  The most
+common roles in the Python domain are:
+
+* ``:py:mod:``: modules, e.g. :py:mod:`multiprocessing`
+* ``:py:func:``: modules, e.g. :py:func:`itertools.combinations`
+* ``:py:class:``: modules, e.g. :py:class:`list`
+* ``:py:meth:``: modules, e.g. :py:meth:`list.sort`
+* ``:py:attr:``: modules, e.g. :py:attr:`re.Pattern.groups`
+* ``:py:data:``: modules, e.g. :py:data:`datetime.MINYEAR`
+* Also ``:py:exc:``, ``:py:data:``, ``:py:obj:``, ``::``, ``::``
+* There are also built-in domains for C, C++, JavaScript (see
+  :std:doc:`usage/restructuredtext/domains` for what the roles are).
+  Others are  added by Sphinx extensions.
+
+You usually use the fully qualified name of an object, for example
+``matplotlib.pyplot.plot``.  In Python this is usually pretty obvious,
+due to clear namespacing.  You'll have to look at other languages
+yourself.
 
 
 
