@@ -59,8 +59,8 @@ jobs:
 
       - name: Find name of default branch
         run: |
-          local remoteUrl="$(git remote get-url origin)"
-          local defaultBranch=$(git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@')
+          remoteUrl="$(git remote get-url origin)"
+          defaultBranch=$(git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@')
           if [ -z "$defaultBranch" ]; then
               defaultBranch=$(git ls-remote --symref "$remoteUrl" HEAD | grep "^ref: " | sed 's@^ref: refs/heads/\([^[:space:]]*\).*@\1@')
           fi
