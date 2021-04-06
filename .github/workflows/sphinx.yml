@@ -16,18 +16,30 @@ jobs:
     steps:
       # https://github.com/marketplace/actions/checkout
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          lfs: true
       # https://github.com/marketplace/actions/setup-python
       # ^-- This gives info on matrix testing.
       - name: Install Python
-        uses: actions/setup-python@v1
+        uses: actions/setup-python@v2
         with:
           python-version: 3.8
-      - name: Fetch all refs
-        run: |
-          git fetch
-      # I don't know where the "run" thing is documented.
+      # https://docs.github.com/en/actions/guides/building-and-testing-python#caching-dependencies
+      # ^-- How to set up caching for pip on Ubuntu
+      - name: Cache pip
+        uses: actions/cache@v2
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+            ${{ runner.os }}-
+      # https://docs.github.com/en/actions/guides/building-and-testing-python#installing-dependencies
+      # ^-- This gives info on installing dependencies with pip
       - name: Install dependencies
         run: |
+          python -m pip install --upgrade pip
           pip install -r requirements.txt
       - name: Debugging information
         run: |
@@ -43,6 +55,16 @@ jobs:
           python -V
           pip list --not-required
           pip list
+
+
+      - name: Find name of default branch
+        run: |
+          remoteUrl="$(git remote get-url origin)"
+          defaultBranch=$(git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@')
+          if [ -z "$defaultBranch" ]; then
+              defaultBranch=$(git ls-remote --symref "$remoteUrl" HEAD | grep "^ref: " | sed 's@^ref: refs/heads/\([^[:space:]]*\).*@\1@')
+          fi
+          echo "defaultBranch=$defaultBranch" >> $GITHUB_ENV
 
       # Build
       - uses: ammaraskar/sphinx-problem-matcher@master
@@ -71,10 +93,10 @@ jobs:
           ( git branch gh-pages remotes/origin/gh-pages && git clone . --branch=gh-pages _gh-pages/ ) || mkdir _gh-pages
           rm -rf _gh-pages/.git/
           mkdir -p _gh-pages/branch/
-      # If a push and master, copy build to _gh-pages/ as the "main"
+      # If a push and default branch, copy build to _gh-pages/ as the "main"
       # deployment.
-      - name: Copy new build (master)
-        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
+      - name: Copy new build (default branch)
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/$defaultBranch' }}
         run: |
           set -x
           # Delete everything under _gh-pages/ that is from the
@@ -83,10 +105,10 @@ jobs:
           # _gh-pages itself.
           find _gh-pages/ -mindepth 1 ! -path '_gh-pages/branch*' -delete
           rsync -a _build/dirhtml/ _gh-pages/
-      # If a push and not on master, then copy the build to
+      # If a push and not on default branch, then copy the build to
       # _gh-pages/branch/$brname (transforming '/' into '--')
       - name: Copy new build (branch)
-        if: ${{ github.event_name == 'push' && github.ref != 'refs/heads/master' }}
+        if: ${{ github.event_name == 'push' && github.ref != 'refs/heads/$defaultBranch' }}
         run: |
           set -x
           #brname=$(git rev-parse --abbrev-ref HEAD)
@@ -120,7 +142,7 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.event_name == 'push' }}
-        #if: ${{ success() && github.event_name == 'push' && github.ref == 'refs/heads/master' }}
+        #if: ${{ success() && github.event_name == 'push' && github.ref == 'refs/heads/$defaultBranch' }}
         with:
           publish_branch: gh-pages
           github_token: ${{ secrets.GITHUB_TOKEN }}
