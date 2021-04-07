@@ -53,6 +53,7 @@ refinement work to go.
 
    getting-started
    installation
+   contributing-to-a-lesson
    building
    changelog
 
