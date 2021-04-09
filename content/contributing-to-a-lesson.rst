@@ -53,7 +53,7 @@ different extensions of it).
 
 * :doc:`md-and-rst`
 * :ref:`ReStructured Text reference <sphinx:rst-primer>`
-* :ref:`MyST reference <>`
+* `MyST reference <https://myst-parser.readthedocs.io/en/latest/using/syntax.html>`__
 * :doc:`sphinx-lesson directives for markup <directives>`
 
 *Do not worry about getting syntax right*.  Send your improvement, and
