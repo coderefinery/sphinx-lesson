@@ -1,5 +1,5 @@
-Building the site
-=================
+Building the lesson
+===================
 
 It is built the normal Sphinx way::
 
