@@ -106,8 +106,9 @@ They all render as green ("important" class:
 
 Other miscellaneous directives:
 
-* ``prerequisites``
+* ``discussion``
 * ``instructor-note``
+* ``prerequisites``
 
 The following are Sphinx default directives that may be especially
 useful to lessons.  These do *not* accept an optional Title argument,
@@ -125,7 +126,6 @@ The following are available, for compatibility with Carpentries styles:
 * ``callout``
 * ``challenge`` (alias to ``exercise``)
 * ``checklist``
-* ``discussion``
 * ``keypoints`` (bottom of lesson)
 * ``objectives`` (top of lesson)
 * ``prereq`` (use ``prerequisites`` instead)
@@ -167,6 +167,10 @@ sphinx-lesson
 .. homework::
 
    homework
+
+.. discussion::
+
+   discussion
 
 .. instructor-note::
 
@@ -229,10 +233,6 @@ Carpentries holdovers
 .. prereq::
 
    prereq
-
-.. discussion::
-
-   discussion
 
 .. testimonial::
 

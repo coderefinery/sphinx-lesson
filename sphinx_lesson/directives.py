@@ -100,6 +100,8 @@ class Instructor_NoteDirective(_BaseCRDirective):
     title_text = "Instructor note"
 class PrerequisitesDirective(_BaseCRDirective):
     title_text = "Prerequisites"
+class DiscussionDirective(_BaseCRDirective):
+    extra_classes = ['attention']
 
 # These are hold-over for carpentries
 class QuestionsDirective(_BaseCRDirective):
@@ -115,7 +117,6 @@ class CalloutDirective(_BaseCRDirective): pass
 ChallengeDirective = ExerciseDirective
 class ChecklistDirective(_BaseCRDirective): pass
 PrereqDirective = PrerequisitesDirective
-class DiscussionDirective(_BaseCRDirective): pass
 class TestimonialDirective(_BaseCRDirective): pass
 class OutputDirective(_BaseCRDirective):
     title_text = 'Output'
