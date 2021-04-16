@@ -71,7 +71,7 @@ class _BaseCRDirective(AdmonitionDirective, SphinxDirective):
     def assert_has_content(self):
         """Allow empty directive blocks.
 
-        This override skis the content check, if self.allow_empty is set
+        This override skips the content check, if self.allow_empty is set
         to True.  This adds the admonition-no-content to the CSS
         classes, which reduces a bit of the empty space.  This is a hack
         of docutils, and may need fixing later on.
