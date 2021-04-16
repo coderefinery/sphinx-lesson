@@ -10,9 +10,9 @@ body.wy-body-for-nav img.with-border {
 
 /* challenge */
 .rst-content .demo > .admonition-title::before {
-    content: "\1F441\FE0F";  /* Keyboard */ }
+    content: "\01F441\0FE0F";  /* Eye */ }
 .rst-content .type-along > .admonition-title::before {
-    content: "\02328";  /* Keyboard */ }
+    content: "\02328\0FE0F";  /* Keyboard */ }
 .rst-content .exercise > .admonition-title::before {
     content: "\0270D\0FE0F";  /* Hand */ }
 .rst-content .solution > .admonition-title::before {
