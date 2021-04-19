@@ -49,7 +49,9 @@ MD and ReST syntax
 This is a brief comparison of basic syntax:
 
 ReST syntax (Sphinx has a good `restructured text primer
-<https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html>`__::
+<https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html>`__:
+
+.. code:: rst
 
     *italic*
     **bold**
@@ -83,7 +85,9 @@ ReST syntax (Sphinx has a good `restructured text primer
       a single colon.
 
 
-MyST markdown syntax::
+MyST markdown syntax:
+
+.. code:: md
 
     *italic*
     **bold**
@@ -122,9 +126,11 @@ build phase (but in practice we don't do such complex things).
 ReST directives
 ~~~~~~~~~~~~~~~
 
-ReST directives are done like this::
+ReST directives are done like this:
 
-  .. challenge:: Optional title, some default otherwise
+.. code:: rst
+
+  .. exercise:: Optional title, some default otherwise
      :option: value
 
      This is the body
@@ -134,7 +140,9 @@ ReST directives are done like this::
 MyST directives
 ~~~~~~~~~~~~~~~
 
-MyST-parser directives are done like this::
+MyST-parser directives are done like this:
+
+.. code:: md
 
   ```{exercise}
   :option: value
@@ -153,14 +161,18 @@ be as simple as styling or do arbitrary transformations in Python.
 ReST roles
 ~~~~~~~~~~
 
-Like this::
+Like this:
+
+.. code:: rst
 
   :rolename:`interpreted text`
 
 MyST roles
 ~~~~~~~~~~
 
-Like this::
+Like this:
+
+.. code:: md
 
   {rolename}`interpreted text`
 
