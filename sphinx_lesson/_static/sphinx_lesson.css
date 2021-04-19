@@ -23,7 +23,7 @@ body.wy-body-for-nav img.with-border {
 .rst-content .questions > .admonition-title::before {
     content: "\02753\0FE0E";  /* Question mark */ }
 .rst-content .prerequisites > .admonition-title::before {
-    content: "\02699\0FE0F";  /* Gear */ }
+    content: "\02699";  /* Gear */ }
 .rst-content .seealso > .admonition-title::before {
     content: "\027A1\0FE0E";  /* Question mark */ }
 
