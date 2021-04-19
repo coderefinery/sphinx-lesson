@@ -90,9 +90,7 @@ in the table of contents.
 Another section
 ---------------
 
-.. sidebar:: Title
-
-   .. instructor-note::
+.. instructor-note::
 
    This is an instructor note.  It may be hidden or put to the sidebar
    in a later style.  You should use it for things that the instructor
