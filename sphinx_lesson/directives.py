@@ -87,7 +87,7 @@ class _BaseCRDirective(AdmonitionDirective, SphinxDirective):
 
 # These are the priamirly recommend directives
 class DemoDirective(_BaseCRDirective):
-    title_text = "Demo: just watch"
+    title_text = "Demo"
 class Type_AlongDirective(_BaseCRDirective):
     extra_classes = ['important']
 class ExerciseDirective(_BaseCRDirective):
