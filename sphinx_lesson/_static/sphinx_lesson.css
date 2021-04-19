@@ -8,9 +8,8 @@ body.wy-body-for-nav img.with-border {
     padding-bottom: 0px;
 }
 
-/* challenge */
 .rst-content .demo > .admonition-title::before {
-    content: "\01F441\0FE0F";  /* Eye */ }
+    content: "\01F440";  /* Eyes */ }
 .rst-content .type-along > .admonition-title::before {
     content: "\02328\0FE0F";  /* Keyboard */ }
 .rst-content .exercise > .admonition-title::before {
@@ -19,8 +18,12 @@ body.wy-body-for-nav img.with-border {
     content: "\02714\0FE0E";  /* Check mark */ }
 .rst-content .homework > .admonition-title::before {
     content: "\01F4DD";  /* Memo */ }
+.rst-content .discussion > .admonition-title::before {
+    content: "\01F4AC";  /* Speech balloon */ }
 .rst-content .questions > .admonition-title::before {
     content: "\02753\0FE0E";  /* Question mark */ }
+.rst-content .prerequisites > .admonition-title::before {
+    content: "\02699\0FE0F";  /* Gear */ }
 .rst-content .seealso > .admonition-title::before {
     content: "\027A1\0FE0E";  /* Question mark */ }
 
