@@ -14,6 +14,15 @@ from . import __version__
 LOG = getLogger(__name__)
 
 
+def class_name_to_slug(name):
+    """Strip Directive and turn name into slug
+
+    Example:
+      Hands_OnDirective --> hands-on
+    """
+    return name.split('Directive')[0].lower().replace('_', '-')
+
+
 # This includes a heading, to not then have
 class _BaseCRDirective(AdmonitionDirective, SphinxDirective):
     """A directive to handle CodeRefinery styles
@@ -23,16 +32,17 @@ class _BaseCRDirective(AdmonitionDirective, SphinxDirective):
     optional_arguments = 1
     final_argument_whitespace = True
     extra_classes = [ ]
+    allow_empty = True
 
     @classmethod
-    def cssname(cls):
+    def get_cssname(cls):
         """Return the CSS class name and Sphinx directive name.
 
         - Remove 'Directive' from the name of the class
         - All lowercase
         - '_' replaced with '-'
         """
-        return cls.__name__.split('Directive')[0].lower().replace('_', '-')
+        return class_name_to_slug(cls.__name__)
 
     def run(self):
         """Run the normal admonition class, but add in a new features.
@@ -41,7 +51,7 @@ class _BaseCRDirective(AdmonitionDirective, SphinxDirective):
         CSS level. If this is set, then this title will be added by the
         directive.
         """
-        name = self.cssname()
+        name = self.get_cssname()
         self.node_class = nodes.admonition
         # Some jekyll-common nodes have CSS-generated titles, some don't.  The
         # Admonition class requires a title.  Add one if missing.  The title is
@@ -58,24 +68,58 @@ class _BaseCRDirective(AdmonitionDirective, SphinxDirective):
         ret[0].attributes['classes'].extend(self.extra_classes)
         return ret
 
+    def assert_has_content(self):
+        """Allow empty directive blocks.
 
-class CalloutDirective(_BaseCRDirective): pass
-class ChallengeDirective(_BaseCRDirective):
+        This override skips the content check, if self.allow_empty is set
+        to True.  This adds the admonition-no-content to the CSS
+        classes, which reduces a bit of the empty space.  This is a hack
+        of docutils, and may need fixing later on.
+        """
+        if not self.allow_empty:
+            return super().assert_has_content()
+        if not self.content:
+            #if not hasattr(self, 'extra_classes'):
+            #    self.extra_classes = [ ]
+            self.extra_classes = list(self.extra_classes) + ['admonition-no-content']
+        return
+
+
+# These are the priamirly recommend directives
+class DemoDirective(_BaseCRDirective):
+    title_text = "Demo"
+class Type_AlongDirective(_BaseCRDirective):
     extra_classes = ['important']
-class ChecklistDirective(_BaseCRDirective): pass
-class DiscussionDirective(_BaseCRDirective): pass
-class KeypointsDirective(_BaseCRDirective): pass
-class ObjectivesDirective(_BaseCRDirective): pass
-class PrereqDirective(_BaseCRDirective):
-    title_text = "Prerequisites"
+class ExerciseDirective(_BaseCRDirective):
+    extra_classes = ['important']
 class SolutionDirective(_BaseCRDirective):
     extra_classes = ['important', 'dropdown'] #'toggle-shown' = visible by default
+class HomeworkDirective(_BaseCRDirective):
+    extra_classes = ['important']
+class Instructor_NoteDirective(_BaseCRDirective):
+    title_text = "Instructor note"
+class PrerequisitesDirective(_BaseCRDirective):
+    title_text = "Prerequisites"
+class DiscussionDirective(_BaseCRDirective):
+    extra_classes = ['attention']
+
+# These are hold-over for carpentries
+class QuestionsDirective(_BaseCRDirective):
+    """Used at top of lesson for questions which will be answered"""
+    pass
+class ObjectivesDirective(_BaseCRDirective):
+    """Used at top of lesson"""
+    pass
+class KeypointsDirective(_BaseCRDirective):
+    """Used at bottom of lesson"""
+    pass
+class CalloutDirective(_BaseCRDirective): pass
+ChallengeDirective = ExerciseDirective
+class ChecklistDirective(_BaseCRDirective): pass
+PrereqDirective = PrerequisitesDirective
 class TestimonialDirective(_BaseCRDirective): pass
 class OutputDirective(_BaseCRDirective):
     title_text = 'Output'
-class QuestionsDirective(_BaseCRDirective): pass
-class Instructor_NoteDirective(_BaseCRDirective):
-    title_text = "Instructor note"
 
 # This does work, to add
 # from sphinx.writers.html5 import HTML5Translator
@@ -101,8 +145,9 @@ def setup(app):
         if (name.endswith('Directive')
             and issubclass(obj, _BaseCRDirective)
             and not name.startswith('_')):
-            #print(name, obj.cssname())
-            app.add_directive(obj.cssname(), obj)
+            #print(name, obj.get_cssname())
+            directive_name = class_name_to_slug(name)
+            app.add_directive(directive_name, obj)
 
     # Add CSS to build
     # Hint is from https://github.com/choldgraf/sphinx-copybutton/blob/master/sphinx_copybutton/__init__.py  # pylint: ignore=E501
