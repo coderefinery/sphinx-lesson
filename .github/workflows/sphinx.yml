@@ -3,11 +3,10 @@
 name: sphinx
 on: [push, pull_request]
 
-# If these SPHINXOPTS are enabled, then be strict about the builds and
-# fail on any warnings
-#env:
-#  SPHINXOPTS: "-W --keep-going -T"
-
+env:
+  DEFAULT_BRANCH: "master"
+  #SPHINXOPTS: "-W --keep-going -T"
+  # ^-- If these SPHINXOPTS are enabled, then be strict about the builds and fail on any warnings
 
 jobs:
   build-and-deploy:
@@ -56,16 +55,6 @@ jobs:
           pip list --not-required
           pip list
 
-
-      - name: Find name of default branch
-        run: |
-          remoteUrl="$(git remote get-url origin)"
-          defaultBranch=$(git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@')
-          if [ -z "$defaultBranch" ]; then
-              defaultBranch=$(git ls-remote --symref "$remoteUrl" HEAD | grep "^ref: " | sed 's@^ref: refs/heads/\([^[:space:]]*\).*@\1@')
-          fi
-          echo "defaultBranch=$defaultBranch" >> $GITHUB_ENV
-
       # Build
       - uses: ammaraskar/sphinx-problem-matcher@master
       - name: Build Sphinx docs
@@ -96,7 +85,9 @@ jobs:
       # If a push and default branch, copy build to _gh-pages/ as the "main"
       # deployment.
       - name: Copy new build (default branch)
-        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/$defaultBranch' }}
+        if: |
+          contains(github.event_name, 'push') &&
+          contains(github.ref, env.DEFAULT_BRANCH)
         run: |
           set -x
           # Delete everything under _gh-pages/ that is from the
@@ -108,7 +99,9 @@ jobs:
       # If a push and not on default branch, then copy the build to
       # _gh-pages/branch/$brname (transforming '/' into '--')
       - name: Copy new build (branch)
-        if: ${{ github.event_name == 'push' && github.ref != 'refs/heads/$defaultBranch' }}
+        if: |
+          contains(github.event_name, 'push') &&
+          !contains(github.ref, env.DEFAULT_BRANCH)
         run: |
           set -x
           #brname=$(git rev-parse --abbrev-ref HEAD)
