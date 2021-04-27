@@ -8,7 +8,7 @@ that contains a Github Action that:
 * Builds the project with Sphinx
 * Deploys it
 
-  * If branch = ``master``, deploy to gethub pages normally
+  * If branch = ``master`` (to be renamed to ``main``), deploy to gethub pages normally
 
   * For other branches, deploy to github-pages but put the result in
     the ``branch/{branch-name}`` subdirectory.  If the branch name has
