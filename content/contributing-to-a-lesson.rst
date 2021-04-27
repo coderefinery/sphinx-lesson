@@ -88,6 +88,10 @@ environment would work just as well)::
   $ python3 -m venv venv/
   $ source venv/bin/activate
 
+.. note::
+
+   if ``python3 -m venv venv/``does not work, try with ``python -m venv venv/
+
 Then install dependencies inside::
 
   $ pip install -r requirements.txt
