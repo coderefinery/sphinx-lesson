@@ -92,8 +92,9 @@ environment would work just as well)::
 
    if ``python3 -m venv venv/`` does not work, try with ``python -m venv venv/``
 
-Then install dependencies inside::
+Then upgrade pip inside the virtual environment and install dependencies::
 
+  $ pip install --upgrade pip
   $ pip install -r requirements.txt
 
 You can build it using either of these commands::
