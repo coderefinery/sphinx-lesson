@@ -92,7 +92,7 @@ environment would work just as well)::
 
    if ``python3 -m venv venv/`` does not work, try with ``python -m venv venv/``
 
-Then upgrade pip inside the virtual environment and install dependencies::
+Then upgrade pip inside the virtual environment and install dependencies (it is recommended that conda base environment is deactivated)::
 
   $ pip install --upgrade pip
   $ pip install -r requirements.txt
