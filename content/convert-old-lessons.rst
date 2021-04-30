@@ -18,17 +18,17 @@ Check out some basic files into your working directory.  Warning: if
 you add a ``.github/workflows/sphinx.yml`` file, even a push to a
 branch will **override github pages**::
 
-   git checkout s-l-t/master -- requirements.txt
-   git checkout s-l-t/master -- .github/workflows/sphinx.yml
+   git checkout s-l-t/main -- requirements.txt
+   git checkout s-l-t/main -- .github/workflows/sphinx.yml
 
 If you need more Sphinx files::
 
-   git checkout s-l-t/master -- content/conf.py
-   git checkout s-l-t/master -- .gitignore Makefile make.bat
+   git checkout s-l-t/main -- content/conf.py
+   git checkout s-l-t/main -- .gitignore Makefile make.bat
 
 If you need the full content (only ``index.rst`` for now)::
 
-   git checkout s-l-t/master -- content/
+   git checkout s-l-t/main -- content/
 
 (if jekyll conversion) Move content over::
 
@@ -74,7 +74,7 @@ Merge the two unrelated histories::
 
    $ git remote add template https://github.com/coderefinery/sphinx-lesson-template
    $ git fetch template
-   $ git merge template/master --allow-unrelated-histories
+   $ git merge template/main --allow-unrelated-histories
    # Resolve any possible merge conflicts
    $ git checkout --theirs .gitignore
    $ git checkout --ours LICENSE
