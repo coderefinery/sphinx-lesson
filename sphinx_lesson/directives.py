@@ -3,6 +3,7 @@
 # pylint: disable=E701
 
 import os
+import warnings
 
 from docutils import nodes
 from docutils.parsers.rst.directives.admonitions \
