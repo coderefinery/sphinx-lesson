@@ -3,6 +3,7 @@
 # pylint: disable=E701
 
 import os
+import warnings
 
 from docutils import nodes
 from docutils.parsers.rst.directives.admonitions \
@@ -43,6 +44,14 @@ class _BaseCRDirective(AdmonitionDirective, SphinxDirective):
         - '_' replaced with '-'
         """
         return class_name_to_slug(cls.__name__)
+    @classmethod
+    def cssname(cls):
+        """Backwards compatibility for get_cssname, do not use."""
+        warnings.warn(
+            "You should use `get_cssname` (#71, 2021-08-22) and update old code to use it. This may be removed someday.\n",
+            category=FutureWarning,
+            stacklevel=2)
+        return get_cssname(cls)
 
     def run(self):
         """Run the normal admonition class, but add in a new features.
