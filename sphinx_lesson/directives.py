@@ -51,7 +51,7 @@ class _BaseCRDirective(AdmonitionDirective, SphinxDirective):
             "You should use `get_cssname` (#71, 2021-08-22) and update old code to use it. This may be removed someday.\n",
             category=FutureWarning,
             stacklevel=2)
-        return get_cssname(cls)
+        return class_name_to_slug(cls.__name__)
 
     def run(self):
         """Run the normal admonition class, but add in a new features.
