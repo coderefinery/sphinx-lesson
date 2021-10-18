@@ -21,6 +21,9 @@ setuptools.setup(name='sphinx_lesson',
       long_description=long_description,
       long_description_content_type="text/x-rst",  # ReST is the default
       url="https://github.com/coderefinery/sphinx-lesson",
+      project_urls={
+          "Documentation": "https://coderefinery.github.io/sphinx-lesson/",
+          },
       author='Richard Darst',
       #author_email='',
       packages=['sphinx_lesson'],           # packages
