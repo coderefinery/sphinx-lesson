@@ -1,6 +1,13 @@
 Directives
 ==========
 
+.. seealso::
+
+   In `Sphinx/Docutils, directives have a different meaning
+   <https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html>`__.
+   Directives in sphinx-lesson are actually the special case of the
+   generic directive class called **admonitions**.
+
 **Directives** are used to set off a certain block of text.  They can
 be used as an aside or block (e.g. ``exercise``, ``instructor-note``).
 If the content of the box would be long (e.g. an entire episode is a
