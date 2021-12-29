@@ -44,3 +44,8 @@ body.wy-body-for-nav img.with-border {
 .rst-content .toggle.admonition button.toggle-button {
     color: white;
 }
+
+/* sphinx-togglebutton, remove underflow when toggled to hidden mode */
+.rst-content .admonition.toggle-hidden {
+    padding-bottom: 0px;
+}
