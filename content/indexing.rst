@@ -42,7 +42,7 @@ entries.  The semicolon (``;``) character separates entries and
 subentries.
 
 .. index::
-   pair: index, ReST
+   pair: index; ReST
 
 
 Index a block with the directive, with ReST::
