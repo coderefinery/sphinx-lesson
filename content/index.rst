@@ -83,6 +83,7 @@ refinement work to go.
    substitutions-replacements
    gh-action
    presentation-mode
+   indexing
    convert-old-lessons
 
 .. toctree::
