@@ -4,7 +4,7 @@ Indexing
 An index lets you efficiently look up any topic.  In the age of
 full-text search, you are right to wonder what the point of indexes
 are.  They could be seen as companion of cheatsheet: instead of
-searching and hoping you find the right place, you can index the
+searching and hoping you find the hright place, you can index the
 actual locations to which one would refer.
 
 As you might expect, there is nothing special to in sphinx-lesson
