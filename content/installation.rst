@@ -40,6 +40,7 @@ Adding ``sphinx_lesson`` as an extension adds these sub-extensions:
 
   * ``sphinx_lesson.directives`` - see :doc:`directives`.
   * ``sphinx_lesson.md_transforms`` - see :doc:`md-transforms`.
+  * ``sphinx_lesson.exerciselist`` - see :doc:`exercise-list`.
   * Enables the `myst_notebook extension
     <https://myst-nb.readthedocs.io/en/latest/>`__, which also enables
     `myst_parser
