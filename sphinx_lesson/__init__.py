@@ -9,6 +9,7 @@ def setup(app):
     app.setup_extension('sphinx_togglebutton')
     app.setup_extension(__name__+'.directives')
     app.setup_extension(__name__+'.md_transforms')
+    app.setup_extension(__name__+'.exerciselist')
 
     return {
         'version': __version__,

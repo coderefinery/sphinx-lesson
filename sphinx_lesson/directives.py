@@ -75,6 +75,12 @@ class _BaseCRDirective(AdmonitionDirective, SphinxDirective):
         # Set CSS classes
         ret[0].attributes['classes'].append(name)
         ret[0].attributes['classes'].extend(self.extra_classes)
+        # Give it a reference
+        target_id = name+'-%d' % self.env.new_serialno(name)
+        targetnode = nodes.target('', '', ids=[target_id])
+        ret[0].target_id = target_id
+        ret[0].target_docname = self.env.docname
+        ret.insert(0, targetnode)
         return ret
 
     def assert_has_content(self):
