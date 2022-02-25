@@ -79,7 +79,7 @@ def process_exerciselist_nodes(app, doctree, fromdocname):
             par = nodes.paragraph()
 
             # Create a reference
-            newnode = nodes.reference(f'At {filename}:', f'At {filename}:')
+            newnode = nodes.reference(f'In {filename}:', f'In {filename}:')
             newnode['refdocname'] = exercise_node.target_docname
             newnode['refuri'] = app.builder.get_relative_uri(
                 fromdocname, exercise_node.target_docname)
