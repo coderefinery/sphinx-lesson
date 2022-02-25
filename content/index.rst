@@ -84,6 +84,7 @@ refinement work to go.
    gh-action
    presentation-mode
    indexing
+   exercise-list
    convert-old-lessons
 
 .. toctree::
