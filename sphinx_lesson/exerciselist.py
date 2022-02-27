@@ -2,8 +2,13 @@ import re
 
 from docutils import nodes
 from docutils.parsers.rst import Directive
+import sphinx.util
 
 class exerciselist(nodes.General, nodes.Element):
+    """Node for exercise list
+
+    Gets replaced with contents in the second pass.
+    """
     pass
 
 class ExerciselistDirective(Directive):
@@ -23,7 +28,6 @@ def find_exerciselist_nodes(app, env):
 
     # Find all docnames in toctree order.
     docnames = [ ]
-    root_docname = next(iter(env.toctree_includes))
     def process_docname(docname):
         """Process this doc and children"""
         if docname in docnames: # already visited
@@ -31,7 +35,12 @@ def find_exerciselist_nodes(app, env):
         docnames.append(docname)
         for docname2 in env.toctree_includes.get(docname, []):  # children
             process_docname(docname2)
-    process_docname(root_docname)
+    root_doc = app.config.root_doc
+    if root_doc not in env.toctree_includes:
+        logger = sphinx.util.logging.getLogger(__name__)
+        logger.error(f'sphinx_lesson.exerciselist could not find root doc {root_doc}')
+        return
+    process_docname(root_doc)
 
     # The list of all the exercises will be stored here.
     if not hasattr(env, 'sphinx_lesson_all_exercises'):
