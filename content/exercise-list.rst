@@ -13,17 +13,37 @@ MyST::
 
   ```{exerciselist}```
 
-Note that it includes the page names, links to the exercises, and the
-exercise directive contents itself.  Note that the context is missing,
-so it is important to give a good name to the exercise so that it
-makes sense to a reader.  An example of an exercise with a title::
-
-  .. exercise:: Demonstrate basic addition
-
-     What is 1+1?
 
 This feature is new as of early 2022, there may be possible problems
 in it still - please report.
+
+
+
+Recommendations to make a useful list
+-------------------------------------
+
+- Context is important!  Give your exercises a name other than the
+  default of "Exercise", so that someone quickly scanning the exercise
+  list can follow the overall flow.
+
+  - It could include not just what you do, but a bit about why you are
+    doing it and what you are learning.
+
+  - Think of an exercise leader or helper coming to help someone, seeing
+    the exercise, and needing to help someone: not just what to do,
+    but what the core lesson and task is, so that they can focus on
+    giving the right help (and telling the learners what they don't
+    need to worry about).
+
+  Example:
+
+  .. exercise:: Demonstrate basic operators
+
+     What is 1+1?
+
+
+- The list includes only ``exercise``, ``type-along``, and ``solution``.  For
+  backwards compatibility, ``challenge`` is also included.
 
 
 
