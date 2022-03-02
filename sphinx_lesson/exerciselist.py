@@ -4,6 +4,12 @@ from docutils import nodes
 from docutils.parsers.rst import Directive
 import sphinx.util
 
+DEFAULT_EXERCISELIST_CLASSES = {
+    'exercise',
+    'solution',
+    'challenge',   # backwards compatibility
+    }
+
 class exerciselist(nodes.General, nodes.Element):
     """Node for exercise list
 
@@ -52,7 +58,7 @@ def find_exerciselist_nodes(app, env):
         doctree = env.get_doctree(docname)
         for node in doctree.traverse(nodes.admonition):
             classes = node.attributes.get('classes', ())
-            if {'exercise', 'solution'}.intersection(classes):
+            if DEFAULT_EXERCISELIST_CLASSES.intersection(classes):
                 all_exercises.append(node)
 
 
