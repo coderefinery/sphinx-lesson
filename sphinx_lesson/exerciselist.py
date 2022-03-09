@@ -22,6 +22,24 @@ class ExerciselistDirective(Directive):
         return [exerciselist('')]
 
 
+def is_exercise_node(node):
+    """Should a single node be included in the exercise list?"""
+    # If not an admonition, never include
+    if not isinstance(node, nodes.admonition):
+        return False
+    # If wrong classes, exclude
+    if not hasattr(node, 'attributes'):
+        return False
+    classes = node.attributes.get('classes', ())
+    if not DEFAULT_EXERCISELIST_CLASSES.intersection(classes):
+        return False
+    # If parent is included, we don't need to include us.
+    # TODO: higher level parents
+    if hasattr(node, 'parent') and is_exercise_node(node.parent):
+        #import pdb ; pdb.set_trace()
+        return False
+    return True
+
 def find_exerciselist_nodes(app, env):
     """Find all nodes for the exercise list, in order.
 
@@ -57,8 +75,7 @@ def find_exerciselist_nodes(app, env):
     for docname in docnames:
         doctree = env.get_doctree(docname)
         for node in doctree.traverse(nodes.admonition):
-            classes = node.attributes.get('classes', ())
-            if DEFAULT_EXERCISELIST_CLASSES.intersection(classes):
+            if is_exercise_node(node):
                 all_exercises.append(node)
 
 

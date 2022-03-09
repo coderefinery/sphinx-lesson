@@ -86,6 +86,18 @@ in the table of contents.
    * Solution to that one.
 
 
+.. challenge:: Exercise with embedded solution
+
+   2. Similarly, each exercise has a quick description title ``Create
+      a lesson`` in bold.  These titles are useful so that helpers
+      (and learners...) can quickly understand what the point is.
+
+   .. solution::
+
+      * Solution to that one.
+
+
+
 
 Another section
 ---------------
