@@ -59,7 +59,8 @@ def find_exerciselist_nodes(app, env):
         docnames.append(docname)
         for docname2 in env.toctree_includes.get(docname, []):  # children
             process_docname(docname2)
-    root_doc = app.config.root_doc
+    # Sphinx 4.0 renamed master_doc > root_doc
+    root_doc = app.config.root_doc if hasattr(app.config, 'root_doc') else app.config.master_doc
     if root_doc not in env.toctree_includes:
         logger = sphinx.util.logging.getLogger(__name__)
         logger.error(f'sphinx_lesson.exerciselist could not find root doc {root_doc}')

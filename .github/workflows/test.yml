@@ -3,7 +3,7 @@
 name: test
 on: [push, pull_request]
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
 
     strategy:
@@ -21,9 +21,7 @@ jobs:
           python-version: ${{ matrix.python_version }}
       - name: Install dependencies
         run: |
-          pip install -r requirements.txt
-          pip install sphinx${{matrix.sphinx_version}}
-          pip install .
+          pip install sphinx${{matrix.sphinx_version}} -r requirements.txt .
       - name: List dependency versions
         run: |
           python -V
