@@ -19,6 +19,8 @@ in it still - please report.
 
 
 
+.. _exerciselist_recommendations:
+
 Recommendations to make a useful list
 -------------------------------------
 

@@ -119,7 +119,7 @@ def process_exerciselist_nodes(app, doctree, fromdocname):
             newnode['refuri'] += '#' + exercise_node.target_id
             par += newnode
             section.append(par)
-            section.append(exercise_node)
+            section.append(exercise_node.copy())
 
         exerciselist_node.replace_self(content)
 

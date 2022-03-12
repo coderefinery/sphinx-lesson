@@ -65,7 +65,7 @@ Exercise: the general topic
 Exercises get their own section, so that they can be linked and found
 in the table of contents.
 
-.. challenge:: 1.1 Exercise title
+.. exercise:: 1.1 Exercise title
 
    1. Notice the exercise set has both an ID and
       number ``SampleLesson-1`` and description of what it contains.
@@ -75,7 +75,7 @@ in the table of contents.
    * Solution here.
 
 
-.. challenge:: 1.2 Create a lesson
+.. exercise:: 1.2 Create a lesson
 
    2. Similarly, each exercise has a quick description title ``Create
       a lesson`` in bold.  These titles are useful so that helpers
@@ -86,7 +86,7 @@ in the table of contents.
    * Solution to that one.
 
 
-.. challenge:: Exercise with embedded solution
+.. exercise:: Exercise with embedded solution
 
    2. Similarly, each exercise has a quick description title ``Create
       a lesson`` in bold.  These titles are useful so that helpers
@@ -96,6 +96,10 @@ in the table of contents.
 
       * Solution to that one.
 
+.. exercise:: Exercise with embedded solution
+
+   3. Exercise with a :doc:`link <index>`, or :ref:`internal reference
+      <exerciselist_recommendations>`.
 
 
 
