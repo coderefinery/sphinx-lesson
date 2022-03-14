@@ -2,6 +2,7 @@ import re
 
 from docutils import nodes
 from docutils.parsers.rst import Directive
+import sphinx.addnodes
 import sphinx.util
 
 DEFAULT_EXERCISELIST_CLASSES = {
@@ -119,7 +120,25 @@ def process_exerciselist_nodes(app, doctree, fromdocname):
             newnode['refuri'] += '#' + exercise_node.target_id
             par += newnode
             section.append(par)
-            section.append(exercise_node.copy())
+            for node_ in exercise_node.traverse():
+                if isinstance(node_, sphinx.addnodes.pending_xref):
+                    print('XREF')
+                    print(node_.__class__)#, node_)
+                    print(node_.attributes)
+                    # TODO: Cross-references do not necessarily work here, and
+                    # you get an error for a node type 'pending_xref`.  This is
+                    # somehow caused by copying the exercise node, and it
+                    # doesn't have time to resolve it before it is re-inserted
+                    # here.  Relevant things to check:
+                    # - sphinx.environment.__init__.apply_post_transforms
+                    # - sphinx.transforms.post_transforms.ReferencesResolver
+                    # - myst_parser.myst_refs.MystReferenceResolver
+                    #
+                    # This workaround removes the link and replaces it with
+                    # only the text.  While not great, I don't see an easy way
+                    # to fix it (hopefully someone does later).
+                    node_.replace_self(node_.children)
+            section.append(exercise_node)
 
         exerciselist_node.replace_self(content)
 
