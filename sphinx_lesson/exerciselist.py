@@ -119,15 +119,41 @@ def process_exerciselist_nodes(app, doctree, fromdocname):
             newnode['refuri'] += '#' + exercise_node.target_id
             par += newnode
             section.append(par)
-            section.append(exercise_node.copy())
+            section.append(exercise_node)
 
         exerciselist_node.replace_self(content)
+
+
+
+from sphinx.transforms import SphinxTransform
+# Find the transform priority of MystReferenceResolver and be less than it.
+# But don't fail if use this extension without myst_parser
+try:
+    from myst_parser.myst_refs import MystReferenceResolver
+    # This is 8 in 2022 (thus the default value below)
+    el_transform_priority = MystReferenceResolver.default_priority - 1
+except ImportError:
+    el_transform_priority = 8
+
+class ExerciseListTransform(SphinxTransform):
+    """Expand exerciselist nodes into the list of the exercises.
+
+    This has to run before references are resolved
+    """
+    # myst_parser.myst_refs.MystReferenceResolver is priority 9
+    default_priority = el_transform_priority
+    def apply(self):
+        doctree = self.document
+        #import IPython ; IPython.embed()
+        process_exerciselist_nodes(self.app, doctree, self.env.docname)
+
+
 
 def setup(app):
     app.add_node(exerciselist)
     app.add_directive('exerciselist', ExerciselistDirective)
     app.connect('env-check-consistency', find_exerciselist_nodes)
-    app.connect('doctree-resolved', process_exerciselist_nodes)
+    app.add_post_transform(ExerciseListTransform)
     return {
         'version': '0.1',
         'parallel_read_safe': True,
