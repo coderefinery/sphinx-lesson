@@ -22,6 +22,13 @@ jobs:
       - name: Install dependencies
         run: |
           pip install sphinx${{matrix.sphinx_version}} -r requirements.txt .
+          # jinja2 broke on 2022-03-24
+          # https://github.com/sphinx-doc/sphinx/issues/10291
+          # https://github.com/sphinx-doc/sphinx/issues/10289
+          # Unsure of long-term plan here.
+          if [ -n "{{matrix.sphinx_version}}" ] ; then
+              pip install "jinja2<3.1"
+          fi
       - name: List dependency versions
         run: |
           python -V
