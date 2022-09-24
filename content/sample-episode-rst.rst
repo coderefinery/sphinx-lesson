@@ -73,6 +73,10 @@ A code block with preceeding paragraph::
       library(x)
       a <- 1 + 2
 
+.. discussion:: This is a `discussion` directive
+
+   Discussion content.
+
 
 Exercise: [the general topic]
 -----------------------------
