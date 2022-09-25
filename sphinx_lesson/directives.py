@@ -116,7 +116,7 @@ class Instructor_NoteDirective(_BaseCRDirective):
 class PrerequisitesDirective(_BaseCRDirective):
     title_text = "Prerequisites"
 class DiscussionDirective(_BaseCRDirective):
-    extra_classes = ['attention']
+    extra_classes = ['important']
 
 # These are hold-over for carpentries
 class QuestionsDirective(_BaseCRDirective):
