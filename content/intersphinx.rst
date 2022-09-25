@@ -5,8 +5,8 @@ There is a common problem: you want to link to documentation in other
 sites, for example the documentation of ``list.sort``.  Isn't it nice
 to have a structured way to do this so you don't have to a) look up a
 URL yourself b) risk having links break?  Well, what do you know,
-Sphinx has a native solution for this: :std:doc:`Intersphinx
-<usage/extensions/intersphinx>`.
+Sphinx has a native solution for this: :py:mod:`Intersphinx
+<sphinx.ext.intersphinx>`.
 
 
 
@@ -23,7 +23,7 @@ commented out.  Enable it:
     }
 
 Configuration details and how to link to other sites are found at
-:std:doc:`the docs for intersphinx <usage/extensions/intersphinx>`.
+:py:mod:`the docs for intersphinx <sphinx.ext.intersphinx>`.
 For most Sphinx-documented projects, use the URL of the documentation
 base.  See "Usage" below for how to verify the URLs.
 
@@ -71,7 +71,7 @@ common roles in the Python domain are:
 * ``:py:data:``: modules, e.g. :py:data:`datetime.MINYEAR`
 * Also ``:py:exc:``, ``:py:data:``, ``:py:obj:``, ``::``, ``::``
 * There are also built-in domains for C, C++, JavaScript (see
-  :std:doc:`usage/restructuredtext/domains` for what the roles are).
+  :external+sphinx:std:doc:`usage/restructuredtext/domains` for what the roles are).
   Others are  added by Sphinx extensions.
 
 You can list all available reference targets at some doc using a
@@ -94,6 +94,6 @@ yourself.
 See also
 --------
 
-* :std:doc:`Sphinx: domains <usage/restructuredtext/domains>` - how to
+* :external+sphinx:std:doc:`Sphinx: domains <usage/restructuredtext/domains>` - how to
   document classes/functions to be referrable this way, and link to them.
-* :std:doc:`Intersphinx <usage/extensions/intersphinx>`.
+* :py:mod:`Intersphinx <sphinx.ext.intersphinx>`.
