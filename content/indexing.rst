@@ -104,7 +104,7 @@ There are different styles:
 Glossaries
 ----------
 
-If you make a glossary using the :std:doc:`glossary directive
+If you make a glossary using the :rst:dir:`glossary directive
 <glossary>`, the terms automatically get added to the index
 
 
@@ -113,4 +113,4 @@ See also
 --------
 
 * :rst:dir:`index` directive
-* Sphinx :std:doc:`glossary`
+* Sphinx :rst:dir:`glossary`

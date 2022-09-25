@@ -8,8 +8,8 @@ jobs:
 
     strategy:
       matrix:
-        sphinx_version: ["", "~=3.0.0", "~=2.4.0", "~=2.1.0"]
-        python_version: ["3.6", "3.8"]
+        sphinx_version: ["", "~=4.0.0" "~=3.0.0"]
+        python_version: ["3.6", "3.8", '3.x']
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
