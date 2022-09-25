@@ -71,7 +71,7 @@ common roles in the Python domain are:
 * ``:py:data:``: modules, e.g. :py:data:`datetime.MINYEAR`
 * Also ``:py:exc:``, ``:py:data:``, ``:py:obj:``, ``::``, ``::``
 * There are also built-in domains for C, C++, JavaScript (see
-  :std:doc:`usage/restructuredtext/domains` for what the roles are).
+  :external+sphinx:std:doc:`usage/restructuredtext/domains` for what the roles are).
   Others are  added by Sphinx extensions.
 
 You can list all available reference targets at some doc using a
@@ -94,6 +94,6 @@ yourself.
 See also
 --------
 
-* :std:doc:`Sphinx: domains <usage/restructuredtext/domains>` - how to
+* :external+sphinx:std:doc:`Sphinx: domains <usage/restructuredtext/domains>` - how to
   document classes/functions to be referrable this way, and link to them.
 * :py:mod:`Intersphinx <sphinx.ext.intersphinx>`.
