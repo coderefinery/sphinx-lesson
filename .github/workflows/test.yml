@@ -10,6 +10,9 @@ jobs:
       matrix:
         sphinx_version: ["", "~=4.0.0", "~=3.0.0"]
         python_version: ["3.6", "3.8", '3.x']
+        exclude:
+          - {sphinx_version: "~=4.0.0", python_version: '3.x'}
+          - {sphinx_version: "~=3.0.0", python_version: '3.x'}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
