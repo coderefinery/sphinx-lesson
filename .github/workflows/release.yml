@@ -23,7 +23,10 @@ name: PyPI release
 #env:
 #  MOD_NAME: numpy
 
-on: [push]
+on:
+  push:
+    tags:
+      - '*'
 
 jobs:
   pypi:
