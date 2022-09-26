@@ -4,6 +4,9 @@ from docutils import nodes
 from docutils.parsers.rst import Directive
 import sphinx.util
 
+# Currently only sphinx-lesson admonitions can be included. Hint to fix:
+# nodes.admonition to nodes.Admonition and then you have to examine the Python
+# object class name.
 DEFAULT_EXERCISELIST_CLASSES = {
     'exercise',
     'solution',
@@ -35,9 +38,9 @@ class ExerciselistDirective(Directive):
     def run(self):
         kwargs = { }
         if 'include' in self.options:
-            kwargs['include_clasess'] = self.options['include'].split()
+            kwargs['include_classes'] = re.split('[ ,]+', self.options['include'])
         if 'exclude' in self.options:
-            kwargs['exclude_classes'] = self.options['exclude'].split()
+            kwargs['exclude_classes'] = re.split('[ ,]+', self.options['exclude'])
         el = exerciselist('', **kwargs)
         return [el]
 

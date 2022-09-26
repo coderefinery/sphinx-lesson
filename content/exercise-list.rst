@@ -32,7 +32,9 @@ admonition classes to include (default: ``exercise``, ``solution``,
      :class: exclude-this
 
 This feature is new as of early 2022, there may be possible problems
-in it still - please report.
+in it still - please report.  Currently, only sphinx-lesson
+admonitions can be included due to technical considerations (see
+source for hint on fixing).
 
 
 
