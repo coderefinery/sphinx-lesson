@@ -62,7 +62,12 @@ def is_exercise_node(node,
         return False
     # If parent is included, we don't need to include us.
     # TODO: higher level parents
-    if hasattr(node, 'parent') and is_exercise_node(node.parent):
+    if (hasattr(node, 'parent')
+        and is_exercise_node(
+              node.parent,
+              include_classes=include_classes,
+              exclude_classes=exclude_classes,
+       )):
         #import pdb ; pdb.set_trace()
         return False
     return True
