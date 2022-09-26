@@ -1,9 +1,13 @@
 Exercise list
 =============
 
-The ``exercise-list`` directive inserts a list of all exercises.  This
-can be useful as an overall summary of the entire lesson flow,
-onboarding new instructors and helpers, and more.
+The ``exercise-list`` directive inserts a list of all exercise and
+solution :doc:`directives <directives>` (and maybe more).  This can be
+useful as an overall summary of the entire lesson flow, onboarding new
+instructors and helpers, and more.
+
+Usage
+-----
 
 ReST::
 
@@ -13,9 +17,24 @@ MyST::
 
   ```{exerciselist}```
 
+One can give the optional directive arguments to specify lists of
+admonition classes to include (default: ``exercise``, ``solution``,
+``exerciselist-include``) or exclude (default:
+``exerciselist-exclude``) if you want to (any :doc:`directives
+<directives>` which match any ``include``, and do not match any
+``exclude`` are included).  Specify the options this way (ReST)::
+
+  .. exerciselist::
+     :include: exercise solution instructor-note
+     :exclude: exclude-this
+
+  .. exercise::
+     :class: exclude-this
 
 This feature is new as of early 2022, there may be possible problems
-in it still - please report.
+in it still - please report.  Currently, only sphinx-lesson
+admonitions can be included due to technical considerations (see
+source for hint on fixing).
 
 
 
@@ -72,6 +91,11 @@ Recommendations to make a useful list
 - Optional or advanced exercises should clearly state it in the
   exercise title, since people will browse the list separate from the
   main lesson material.
+
+- Try to minimize use of ``:include:`` and ``:exclude:`` and use the
+  defaults and adjust your directives to match sphinx-lesson
+  semantics.  Excess use of this may over-optimize for particular
+  workshops
 
 
 Example

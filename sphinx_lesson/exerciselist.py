@@ -4,10 +4,18 @@ from docutils import nodes
 from docutils.parsers.rst import Directive
 import sphinx.util
 
+# Currently only sphinx-lesson admonitions can be included. Hint to fix:
+# nodes.admonition to nodes.Admonition and then you have to examine the Python
+# object class name.
 DEFAULT_EXERCISELIST_CLASSES = {
     'exercise',
     'solution',
     'challenge',   # backwards compatibility
+    'exerciselist-include',
+    }
+
+DEFAULT_EXERCISELIST_CLASSES_EXCLUDE = {
+    'exerciselist-exclude',
     }
 
 class exerciselist(nodes.General, nodes.Element):
@@ -15,14 +23,31 @@ class exerciselist(nodes.General, nodes.Element):
 
     Gets replaced with contents in the second pass.
     """
-    pass
+    def __init__(self, *args,
+                 include_classes=DEFAULT_EXERCISELIST_CLASSES,
+                 exclude_classes=DEFAULT_EXERCISELIST_CLASSES_EXCLUDE):
+        super().__init__(*args)
+        self.include_classes = set(include_classes)
+        self.exclude_classes = set(exclude_classes)
 
 class ExerciselistDirective(Directive):
+    """Run when a directive is parsed, returns the node (which is handled later)
+    """
+    option_spec = {'include': str, 'exclude': str}
+
     def run(self):
-        return [exerciselist('')]
+        kwargs = { }
+        if 'include' in self.options:
+            kwargs['include_classes'] = re.split('[ ,]+', self.options['include'])
+        if 'exclude' in self.options:
+            kwargs['exclude_classes'] = re.split('[ ,]+', self.options['exclude'])
+        el = exerciselist('', **kwargs)
+        return [el]
 
 
-def is_exercise_node(node):
+def is_exercise_node(node,
+                     include_classes=DEFAULT_EXERCISELIST_CLASSES,
+                     exclude_classes=DEFAULT_EXERCISELIST_CLASSES_EXCLUDE):
     """Should a single node be included in the exercise list?"""
     # If not an admonition, never include
     if not isinstance(node, nodes.admonition):
@@ -31,7 +56,9 @@ def is_exercise_node(node):
     if not hasattr(node, 'attributes'):
         return False
     classes = node.attributes.get('classes', ())
-    if not DEFAULT_EXERCISELIST_CLASSES.intersection(classes):
+    if not include_classes.intersection(classes):
+        return False
+    if exclude_classes.intersection(classes):
         return False
     # If parent is included, we don't need to include us.
     # TODO: higher level parents
@@ -68,16 +95,15 @@ def find_exerciselist_nodes(app, env):
     process_docname(root_doc)
 
     # The list of all the exercises will be stored here.
-    if not hasattr(env, 'sphinx_lesson_all_exercises'):
-        env.sphinx_lesson_all_exercises = [ ]
-    all_exercises = env.sphinx_lesson_all_exercises
+    if not hasattr(env, 'sphinx_lesson_all_admonitions'):
+        env.sphinx_lesson_all_admonitions = [ ]
+    all_admonitions = env.sphinx_lesson_all_admonitions
 
     # Now go through and collect all admonitions from these docnames, in order.
     for docname in docnames:
         doctree = env.get_doctree(docname)
         for node in doctree.traverse(nodes.admonition):
-            if is_exercise_node(node):
-                all_exercises.append(node)
+            all_admonitions.append(node)
 
 
 def process_exerciselist_nodes(app, doctree, fromdocname):
@@ -85,14 +111,17 @@ def process_exerciselist_nodes(app, doctree, fromdocname):
     """
     env = app.builder.env
     # List of exercises
-    if not hasattr(env, 'sphinx_lesson_all_exercises'):
-        env.sphinx_lesson_all_exercises = [ ]
-    all_exercises = env.sphinx_lesson_all_exercises
+    if not hasattr(env, 'sphinx_lesson_all_admonitions'):
+        env.sphinx_lesson_all_admonitions = [ ]
+    all_admonitions = env.sphinx_lesson_all_admonitions
 
     for exerciselist_node in doctree.traverse(exerciselist):
         content = []  # This new content in place of 'exerciselist'
         last_docname = None
-        for exercise_node in all_exercises:
+        for exercise_node in all_admonitions:
+            # Skipp all admonitions which don't match our criteria
+            if not is_exercise_node(exercise_node, include_classes=exerciselist_node.include_classes, exclude_classes=exerciselist_node.exclude_classes):
+                continue
             # Set title of the document.  We need to make a new section with a
             # 'title' node for this.
             if exercise_node.target_docname != last_docname:
@@ -155,7 +184,7 @@ def setup(app):
     app.connect('env-check-consistency', find_exerciselist_nodes)
     app.add_post_transform(ExerciseListTransform)
     return {
-        'version': '0.1',
+        'version': '0.2',
         'parallel_read_safe': True,
         'parallel_write_safe': True,
     }
