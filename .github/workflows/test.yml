@@ -8,20 +8,21 @@ jobs:
 
     strategy:
       matrix:
-        sphinx_version: ["", "~=4.0.0", "~=3.0.0"]
-        python_version: ["3.6", "3.8", '3.x']
+        sphinx_version: ["", "~=6.0.0",]
+        python_version: ["3.9", '3.x']
         exclude:
-          - {sphinx_version: "~=4.0.0", python_version: '3.x'}
-          - {sphinx_version: "~=3.0.0", python_version: '3.x'}
+          - {sphinx_version: "~=5.0.0", python_version: '3.x'}
+          - {sphinx_version: "~=6.0.0", python_version: '3.x'}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Install Python
-        uses: actions/setup-python@v1
+        uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python_version }}
+          cache: pip
       - name: Install dependencies
         run: |
           pip install sphinx${{matrix.sphinx_version}} -r requirements.txt .
