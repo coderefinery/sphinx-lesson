@@ -71,6 +71,7 @@ refinement work to go.
    :caption: Examples
 
    sample-episode-rst
+   sample-episode-md
 
 .. toctree::
    :maxdepth: 1
