@@ -10,6 +10,7 @@ def setup(app):
     app.setup_extension(__name__+'.directives')
     app.setup_extension(__name__+'.md_transforms')
     app.setup_extension(__name__+'.exerciselist')
+    app.setup_extension(__name__+'.term_role_formatting')
 
     return {
         'version': __version__,
