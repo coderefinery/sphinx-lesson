@@ -36,3 +36,21 @@ dependencies = [
     "sphinx_rtd_theme_ext_color_contrast",
 ]
 
+#[project.optional-dependencies]
+#test = [
+#    # FIXME
+#    "pytest",
+#]
+
+[project.urls]
+Repository = "https://github.com/coderefinery/sphinx-lesson"
+Documentation = "https://coderefinery.github.io/sphinx-lesson/"
+
+
+# https://flit.pypa.io/en/latest/upload.html
+# flit build
+# You need to configure a .pypirc file for test upload, or use environment variables:
+# https://flit.pypa.io/en/latest/upload.html#using-pypirc
+# flit publish --repository testpypi
+# or:   FLIT_INDEX_URL=https://test.pypi.org/legacy/ FLIT_USERNAME=xxx and FLIT_PASSWORD=xxx flit publish
+# flit publish
