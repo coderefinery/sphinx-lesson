@@ -1,3 +1,4 @@
+"""Sphinx extension for CodeRefinery lessons"""
 from ._version import __version__
 
 def setup(app):

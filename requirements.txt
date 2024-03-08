@@ -1,10 +1,1 @@
-sphinx!=5.2.0.post0    # remove after next release
-sphinx_rtd_theme
-sphinx_copybutton
-sphinx_minipres
-sphinx_tabs
-sphinx_togglebutton>=0.2.0
-sphinx-autobuild
-#myst_parser[sphinx]
-myst_nb>0.8.3
-sphinx_rtd_theme_ext_color_contrast
+.
