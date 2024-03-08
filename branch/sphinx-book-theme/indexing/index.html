@@ -1,0 +1,635 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Indexing &#8212; Sphinx-lesson  documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx_lesson.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx_rtd_theme_ext_color_contrast.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/minipres.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="next" title="Exercise list" href="../exercise-list/" />
+    <link rel="prev" title="Presentation mode" href="../presentation-mode/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Sphinx-lesson  documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search/" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p class="caption" role="heading">
+ <span class="caption-text">
+  Getting started
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../getting-started/">
+   Getting started
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../installation/">
+   Installation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../contributing-to-a-lesson/">
+   Quickstart: Contributing to a lesson
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../building/">
+   Building the lesson
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../changelog/">
+   Changelog
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Basic syntax
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../md-and-rst/">
+   Markdown and ReST
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../toctree/">
+   Table of Contents tree
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../directives/">
+   Directives
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../figures/">
+   Figures
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Examples
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sample-episode-rst/">
+   Sample episode in ReST
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Advanced features
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intersphinx/">
+   Intersphinx: easy linking
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../md-transforms/">
+   Markdown transforms
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../jupyter/">
+   Jupyter notebook page
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../executing-code/">
+   Try executing code cells in markdown
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../substitutions-replacements/">
+   Substitutions and replacement variables
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../gh-action/">
+   Deployment with Github Actions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../presentation-mode/">
+   Presentation mode
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Indexing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../exercise-list/">
+   Exercise list
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../convert-old-lessons/">
+   Converting an old lesson
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Extras
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cheatsheet/">
+   Cheatsheet
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/coderefinery/sphinx-lesson/"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/coderefinery/sphinx-lesson//issues/new?title=Issue%20on%20page%20%2Findexing.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/coderefinery/sphinx-lesson/edit/master/indexing.rst"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/indexing.rst.txt"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.rst</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#basic-concepts">
+   Basic concepts
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#syntax">
+   Syntax
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#glossaries">
+   Glossaries
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#see-also">
+   See also
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Indexing</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#basic-concepts">
+   Basic concepts
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#syntax">
+   Syntax
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#glossaries">
+   Glossaries
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#see-also">
+   See also
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="indexing">
+<h1>Indexing<a class="headerlink" href="#indexing" title="Permalink to this headline">#</a></h1>
+<p>An index lets you efficiently look up any topic.  In the age of
+full-text search, you are right to wonder what the point of indexes
+are.  They could be seen as companion of cheatsheet: instead of
+searching and hoping you find the hright place, you can index the
+actual locations to which one would refer.</p>
+<p>As you might expect, there is nothing special to in sphinx-lesson
+about indexing: see the Sphinx documentation on <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-index" title="(in Sphinx v6.0.0)"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">index</span></code></a>.</p>
+<section id="basic-concepts">
+<span id="index-0"></span><h2>Basic concepts<a class="headerlink" href="#basic-concepts" title="Permalink to this headline">#</a></h2>
+<p><strong>Headings</strong> are the terms which can be looked up in the index.  When
+choosing headings, consider:</p>
+<ul class="simple">
+<li><p>What is useful to a reader to locate</p></li>
+<li><p>How would a reader look it up? For example, <code class="docutils literal notranslate"><span class="pre">commit</span></code> or
+<code class="docutils literal notranslate"><span class="pre">committing</span></code> is useful, but <code class="docutils literal notranslate"><span class="pre">how</span> <span class="pre">to</span> <span class="pre">commit</span></code> is not.  Phrase it
+with the most important terms first (big-endian)</p></li>
+<li><p>And index can have sub-entries.  For example, under the entry
+<code class="docutils literal notranslate"><span class="pre">git</span></code>, there can be subentries for each git command, such as
+<code class="docutils literal notranslate"><span class="pre">commit</span></code>.</p></li>
+</ul>
+</section>
+<section id="syntax">
+<h2>Syntax<a class="headerlink" href="#syntax" title="Permalink to this headline">#</a></h2>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>The Sphinx documentation on <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-index" title="(in Sphinx v6.0.0)"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">index</span></code></a>.</p>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">index</span></code> directive and role are the main ways to add index
+entries.  The semicolon (<code class="docutils literal notranslate"><span class="pre">;</span></code>) character separates entries and
+subentries.</p>
+<p id="index-1">Index a block with the directive, with ReST:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">index</span><span class="p">::</span> commit; amend
+</pre></div>
+</div>
+<p>Or ReST, multiple:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">index</span><span class="p">::</span>
+   commit
+   commit; message
+   pair: commit; amend
+</pre></div>
+</div>
+<p>MyST:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="gh">```{index} commit; amend</span>
+<span class="gh">```</span>
+
+<span class="s">```{index}</span>
+<span class="s">commit</span>
+<span class="s">commit; mesage</span>
+<span class="s">pair: commit; amend</span>
+<span class="s">```</span>
+</pre></div>
+</div>
+<p>Or index a single term with the role:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>This sentence has an index entry for <span class="na">:index:</span><span class="nv">`commit`</span>.  If you want the
+indexed term to be different, standard syntax applies such as
+<span class="na">:index:</span><span class="nv">`loop variables &lt;pair: commit; amend&gt;`</span>.
+</pre></div>
+</div>
+<p id="index-2">MyST:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>Simple entry: {index}<span class="nv">`commit`</span>
+Pair entry: {index}<span class="nv">`loop variables &lt;pair: commit; amend&gt;`</span>
+</pre></div>
+</div>
+<p id="index-3">There are different styles:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">TERM</span></code>, same as below</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">single:</span> <span class="pre">TERM</span></code> (the default): create just a single entry</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pair:</span> <span class="pre">TERM;</span> <span class="pre">TERM</span></code>: create entries for <code class="docutils literal notranslate"><span class="pre">x;</span> <span class="pre">y</span></code> and <code class="docutils literal notranslate"><span class="pre">y;</span> <span class="pre">x</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">see:</span> <span class="pre">TOPIC;</span> <span class="pre">OTHER</span></code>: creates a “see other” entry for “topic”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seealso:</span> <span class="pre">TOPIC;</span> <span class="pre">OTHER</span></code>: creates a “seealso” entry, like above</p></li>
+</ul>
+</section>
+<section id="glossaries">
+<h2>Glossaries<a class="headerlink" href="#glossaries" title="Permalink to this headline">#</a></h2>
+<p>If you make a glossary using the <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-glossary" title="(in Sphinx v6.0.0)"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">glossary</span> <span class="pre">directive</span></code></a>, the terms automatically get added to the index</p>
+</section>
+<section id="see-also">
+<h2>See also<a class="headerlink" href="#see-also" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-index" title="(in Sphinx v6.0.0)"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">index</span></code></a> directive</p></li>
+<li><p>Sphinx <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-glossary" title="(in Sphinx v6.0.0)"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">glossary</span></code></a></p></li>
+</ul>
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../presentation-mode/" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Presentation mode</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../exercise-list/" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Exercise list</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By CodeRefinery<br/>
+  
+      &copy; Copyright 2020, CodeRefinery.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

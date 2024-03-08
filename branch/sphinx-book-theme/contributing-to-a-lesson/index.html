@@ -1,0 +1,698 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Quickstart: Contributing to a lesson &#8212; Sphinx-lesson  documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx_lesson.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx_rtd_theme_ext_color_contrast.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/minipres.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="next" title="Building the lesson" href="../building/" />
+    <link rel="prev" title="Installation" href="../installation/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Sphinx-lesson  documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search/" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p class="caption" role="heading">
+ <span class="caption-text">
+  Getting started
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../getting-started/">
+   Getting started
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../installation/">
+   Installation
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Quickstart: Contributing to a lesson
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../building/">
+   Building the lesson
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../changelog/">
+   Changelog
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Basic syntax
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../md-and-rst/">
+   Markdown and ReST
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../toctree/">
+   Table of Contents tree
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../directives/">
+   Directives
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../figures/">
+   Figures
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Examples
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sample-episode-rst/">
+   Sample episode in ReST
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Advanced features
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intersphinx/">
+   Intersphinx: easy linking
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../md-transforms/">
+   Markdown transforms
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../jupyter/">
+   Jupyter notebook page
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../executing-code/">
+   Try executing code cells in markdown
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../substitutions-replacements/">
+   Substitutions and replacement variables
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../gh-action/">
+   Deployment with Github Actions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../presentation-mode/">
+   Presentation mode
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../indexing/">
+   Indexing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../exercise-list/">
+   Exercise list
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../convert-old-lessons/">
+   Converting an old lesson
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Extras
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cheatsheet/">
+   Cheatsheet
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/coderefinery/sphinx-lesson/"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/coderefinery/sphinx-lesson//issues/new?title=Issue%20on%20page%20%2Fcontributing-to-a-lesson.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/coderefinery/sphinx-lesson/edit/master/contributing-to-a-lesson.rst"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/contributing-to-a-lesson.rst.txt"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.rst</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#get-the-lesson-material">
+   Get the lesson material
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#edit-the-material">
+   Edit the material
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#restructured-text-and-myst-markdown">
+     ReStructured Text and MyST Markdown
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#jupyter-notebooks">
+     Jupyter notebooks
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#build-and-test-locally">
+   Build and test locally
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sending-your-changes-back">
+   Sending your changes back
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#other-things-to-keep-in-mind">
+   Other things to keep in mind
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Quickstart: Contributing to a lesson</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#get-the-lesson-material">
+   Get the lesson material
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#edit-the-material">
+   Edit the material
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#restructured-text-and-myst-markdown">
+     ReStructured Text and MyST Markdown
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#jupyter-notebooks">
+     Jupyter notebooks
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#build-and-test-locally">
+   Build and test locally
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sending-your-changes-back">
+   Sending your changes back
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#other-things-to-keep-in-mind">
+   Other things to keep in mind
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="quickstart-contributing-to-a-lesson">
+<h1>Quickstart: Contributing to a lesson<a class="headerlink" href="#quickstart-contributing-to-a-lesson" title="Permalink to this headline">#</a></h1>
+<p>If you are at this page, you might want to quickly contribute to some
+existing material using the <code class="docutils literal notranslate"><span class="pre">sphinx-lesson</span></code> format.  Luckily, this
+is fairly easy:</p>
+<ul class="simple">
+<li><p>Get the source</p></li>
+<li><p>Edit the material in the <code class="docutils literal notranslate"><span class="pre">content/</span></code> directory</p></li>
+<li><p>(optional) Set up the Python environment and preview</p></li>
+<li><p>Send your contribution</p></li>
+</ul>
+<p>In summary, each lesson is a Python project, with content in the
+<code class="docutils literal notranslate"><span class="pre">content/</span></code> directory.  It uses the Sphinx documentation system,
+which is a popular, extendable tool.  We have only minor extensions to
+make it suitable to lessons.</p>
+<p>Instead of going through this process, you can also open an issue
+instead with your proposed change, and let someone else add it.</p>
+<section id="get-the-lesson-material">
+<h2>Get the lesson material<a class="headerlink" href="#get-the-lesson-material" title="Permalink to this headline">#</a></h2>
+<p>You need to consult with the lesson you would like to edit.  If this
+is using the <code class="docutils literal notranslate"><span class="pre">git</span></code> version control system on Github, you could clone
+it like this:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git clone git://github.com/ORGANIZATION/LESSON.git
+</pre></div>
+</div>
+<p><a class="reference external" href="https://coderefinery.github.io/git-intro/">CodeRefinery’s git-intro lesson</a> explains more.</p>
+</section>
+<section id="edit-the-material">
+<h2>Edit the material<a class="headerlink" href="#edit-the-material" title="Permalink to this headline">#</a></h2>
+<p>The material is in the <code class="docutils literal notranslate"><span class="pre">content/</span></code> directory.  Depending on the
+lesson, in may be in ReStructured Text, MyST Markdown, or Jupyter
+notebooks.</p>
+<section id="restructured-text-and-myst-markdown">
+<h3>ReStructured Text and MyST Markdown<a class="headerlink" href="#restructured-text-and-myst-markdown" title="Permalink to this headline">#</a></h3>
+<p>You will probably copy existing examples, but you can also see
+<a class="reference internal" href="../md-and-rst/"><span class="doc">our quick guide</span></a>.  The main thing to note is that
+this is not unstructured Markdown, but there are particular
+(non-display) <strong>directives</strong> and <strong>roles</strong> to tag blocks and inline
+text.  (In fact, “markdown” is a broad concept and everyone uses some
+different extensions of it).</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../md-and-rst/"><span class="doc">Markdown and ReST</span></a></p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#rst-primer" title="(in Sphinx v6.0.0)"><span class="xref std std-ref">ReStructured Text reference</span></a></p></li>
+<li><p><a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/using/syntax.html">MyST reference</a></p></li>
+<li><p><a class="reference internal" href="../directives/"><span class="doc">sphinx-lesson directives for markup</span></a></p></li>
+</ul>
+<p><em>Do not worry about getting syntax right</em>.  Send your improvement, and
+editing is easy and you will learn something.</p>
+</section>
+<section id="jupyter-notebooks">
+<h3>Jupyter notebooks<a class="headerlink" href="#jupyter-notebooks" title="Permalink to this headline">#</a></h3>
+<p>Jupyter notebooks are a common format for computational narratives,
+and can be natively used with Sphinx via <a class="reference external" href="https://myst-nb.readthedocs.io/">myst-nb</a>.  Note that you should use MyST
+Markdown directives and roles (see previous section) in the notebook
+to give structure to the material.</p>
+<p>Again, <em>do not worry about getting the syntax right</em>.  This is the
+least important part of things.</p>
+</section>
+</section>
+<section id="build-and-test-locally">
+<h2>Build and test locally<a class="headerlink" href="#build-and-test-locally" title="Permalink to this headline">#</a></h2>
+<p>Generic: The <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> file includes all Python dependencies
+to build the lesson.  The lesson can be built with <code class="docutils literal notranslate"><span class="pre">sphinx-build</span> <span class="pre">-M</span>
+<span class="pre">html</span> <span class="pre">content/</span> <span class="pre">_build</span></code>, or <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code> if you have Make installed.</p>
+<p>Or in more detail:</p>
+<p>Create a virtual environment to install the requirements (a conda
+environment would work just as well):</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3 -m venv venv/
+<span class="gp">$ </span><span class="nb">source</span> venv/bin/activate
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>if <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">-m</span> <span class="pre">venv</span> <span class="pre">venv/</span></code> does not work, try with <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">venv</span> <span class="pre">venv/</span></code></p>
+</div>
+<p>Then upgrade pip inside the virtual environment and install dependencies (it is recommended that conda base environment is deactivated):</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pip install --upgrade pip
+<span class="gp">$ </span>pip install -r requirements.txt
+</pre></div>
+</div>
+<p>You can build it using either of these commands:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sphinx-build -M html content/ _build
+<span class="gp">$ </span>make html    <span class="c1"># if you have make installed</span>
+</pre></div>
+</div>
+<p>And then view it with your web browser.  Remove the <code class="docutils literal notranslate"><span class="pre">_build</span></code>
+directory to force a clean rebuild (or <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">clean</span></code>).</p>
+<p>Or you can use the <strong>Sphinx autobuilder</strong>, which will start a process
+that rebuilds it on every change, and starts a web server to view it.
+It will tell you how to access the server:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sphinx-autobuild content/ _build/
+<span class="go">...</span>
+<span class="go">[I ...] Serving on http://127.0.0.1:8000</span>
+</pre></div>
+</div>
+</section>
+<section id="sending-your-changes-back">
+<h2>Sending your changes back<a class="headerlink" href="#sending-your-changes-back" title="Permalink to this headline">#</a></h2>
+<p>This depends on the project, but can be done using Github pull
+requests.  <a class="reference external" href="https://coderefinery.github.io/git-collaborative/">CodeRefinery’s git-collaborative lesson</a> goes into
+details about pull requests.</p>
+</section>
+<section id="other-things-to-keep-in-mind">
+<h2>Other things to keep in mind<a class="headerlink" href="#other-things-to-keep-in-mind" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Make sure that you have rights to submit your change.  In general,
+if you reuse anything else that already exists, explain this in your
+pull request.</p></li>
+<li><p><em>Content and ideas are more important than markup</em>.  Don’t worry
+about doing something wrong, that is why we have review!</p></li>
+<li><p>Many different people use the lessons.  Ask before doing things that
+make the lesson too specific to your use case.</p></li>
+</ul>
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../installation/" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Installation</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../building/" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Building the lesson</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By CodeRefinery<br/>
+  
+      &copy; Copyright 2020, CodeRefinery.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
