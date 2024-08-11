@@ -41,7 +41,6 @@ admonitions can be included due to technical considerations (see
 source for hint on fixing).
 
 (exerciselist-recommendations)=
-
 ## Recommendations to make a useful list
 
 - Context is important!  Give your exercises a name other than the

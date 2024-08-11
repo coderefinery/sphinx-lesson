@@ -140,7 +140,7 @@ commit message and knowing the command line arguments!)
    figuring out stuff on your own.  Can also be `(advanced,
    optional)` but that's sort of implied.
 2. This also demonstrates an exercise with a {doc}`link <index>`,
-   or {ref}`internal reference <exerciselist_recommendations>`.
+   or {ref}`internal reference <exerciselist-recommendations>`.
 :::
 
 ## This entire section is an exercise
