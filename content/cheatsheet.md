@@ -1,4 +1,3 @@
-Cheatsheet
-==========
+# Cheatsheet
 
 This is the cheatsheet.
