@@ -1,0 +1,56 @@
+# This is a config that can be used with rst2myst.  It may need
+# adjusting to your needs, but covers the most common CodeRefinery
+# extensions:
+#
+#  $ convert --config ../sphinx-lesson/rst-to-myst-config.yaml -S -W content/**.rst
+#
+# https://rst-to-myst.readthedocs.io/en/latest/usage.html
+#
+# To verify it got everything, run:
+#  $ grep -ri eval-rst content/
+#
+# To add more roles, you can find the internal name using this
+# command.  Make sure you specify the right extension to load, both in
+# this command and added to this list:
+#  $ rst2myst directives show -e sphinx_tabs.tabs list-table
+
+extensions:
+  - sphinx_lesson
+  - sphinx_tabs.tabs
+  - sphinx_lesson.directives
+  - sphinx_lesson.exerciselist
+sphinx: true
+conversions:
+  prereq: parse_all
+  sphinx.directives.patches.CSVTable: direct
+  docutils.parsers.rst.directives.tables.ListTable: direct
+
+  sphinx_lesson.directives._BaseCRDirective: parse_all
+  sphinx_lesson.directives.PrerequisitesDirective: parse_all
+  sphinx_lesson.directives.DemoDirective: parse_all
+  sphinx_lesson.directives.Type_AlongDirective: parse_all
+  sphinx_lesson.directives.ExerciseDirective: parse_all
+  sphinx_lesson.directives.SolutionDirective: parse_all
+  sphinx_lesson.directives.HomeworkDirective: parse_all
+  sphinx_lesson.directives.Instructor_NoteDirective: parse_all
+  sphinx_lesson.directives.PrerequisitesDirective: parse_all
+  sphinx_lesson.directives.DiscussionDirective: parse_all
+  sphinx_lesson.directives.QuestionsDirective: parse_all
+  sphinx_lesson.directives.ObjectivesDirective: parse_all
+  sphinx_lesson.directives.KeypointsDirective: parse_all
+  sphinx_lesson.directives.CalloutDirective: parse_all
+  sphinx_lesson.directives.ChecklistDirective: parse_all
+  sphinx_lesson.directives.TestimonialDirective: parse_all
+  sphinx_lesson.directives.OutputDirective: parse_all
+  sphinx_lesson.directives.: parse_all
+  sphinx_lesson.directives.: parse_all
+  sphinx_lesson.directives.: parse_all
+  sphinx_lesson.directives.: parse_all
+
+  sphinx_lesson.exerciselist.ExerciselistDirective: parse_all
+
+  sphinx_tabs.tabs.TabsDirective: parse_all
+  sphinx_tabs.tabs.TabDirective: parse_all
+  sphinx_tabs.tabs.GroupTabDirective: parse_all
+  sphinx_tabs.tabs.CodeTabDirective: parse_argument
+
