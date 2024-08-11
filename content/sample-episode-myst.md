@@ -61,7 +61,7 @@ import multiprocessing
   directive within a list (note indention)
   :::
 
-:::{tabs}
+````{tabs}
 ```{code-tab} py
 import bisect
 a = 1 + 2
@@ -71,7 +71,7 @@ a = 1 + 2
 library(x)
 a <- 1 + 2
 ```
-:::
+````
 
 :::{discussion} This is a `discussion` directive
 Discussion content.
@@ -178,7 +178,7 @@ learners (instructors often present from the same view.)
 
 These tab synchronize with those above:
 
-:::{tabs}
+````{tabs}
 ```{code-tab} py
 import cmath
 a = 10 / 2
@@ -188,7 +188,7 @@ a = 10 / 2
 library(x)
 a <- 10 / 2
 ```
-:::
+````
 
 :::{admonition} Advanced info that should be hidden
 :class: dropdown
