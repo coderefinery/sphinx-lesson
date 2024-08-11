@@ -33,5 +33,7 @@ In presentation mode:
 
 Examples:
 
-- [View this page as an example of minipres](../sample-episode-rst/?minipres).
-- [View this page in "plain" mode](../sample-episode-rst/?plain).
+```{eval-rst}
+- `View this page as an example of minipres <../sample-episode-rst/?minipres>`__.
+- `View this page in "plain" mode <../sample-episode-rst/?plain>`__.
+```
