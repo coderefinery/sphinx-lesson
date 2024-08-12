@@ -9,10 +9,11 @@ is fairly easy:
 - (optional) Set up the Python environment and preview
 - Send your contribution
 
-In summary, each lesson is a Python project, with content in the
-`content/` directory.  It uses the Sphinx documentation system,
-which is a popular, extendable tool.  We have only minor extensions to
-make it suitable to lessons.
+In summary, each lesson is like a Python project, with the lesson
+content as its documentation in the `content/` directory (and no
+Python code).  Everything is fairly standard: it uses the Sphinx
+documentation system, which is a popular, extendable tool.  We have
+only minor extensions to make it suitable to lessons.
 
 Instead of going through this process, you can also open an issue
 instead with your proposed change, and let someone else add it.
@@ -35,7 +36,7 @@ $ git clone git://github.com/ORGANIZATION/LESSON.git
 ## Edit the material
 
 The material is in the `content/` directory.  Depending on the
-lesson, in may be in ReStructured Text, MyST Markdown, or Jupyter
+lesson, in may be in MyST Markdown, ReStructured Text, or Jupyter
 notebooks.
 
 ### ReStructured Text and MyST Markdown
@@ -47,10 +48,10 @@ this is not unstructured Markdown, but there are particular
 text.  (In fact, "markdown" is a broad concept and everyone uses some
 different extensions of it).
 
-- {doc}`md-and-rst`
-- {ref}`ReStructured Text reference <sphinx:rst-primer>`
-- [MyST reference](https://myst-parser.readthedocs.io/en/latest/using/syntax.html)
 - {doc}`sphinx-lesson directives for markup <directives>`
+- {doc}`md-and-rst`
+- [MyST reference](https://myst-parser.readthedocs.io/en/latest/using/syntax.html)
+- {ref}`ReStructured Text reference <sphinx:rst-primer>`
 
 *Do not worry about getting syntax right*.  Send your improvement, and
 editing is easy and you will learn something.

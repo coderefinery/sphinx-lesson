@@ -1,10 +1,15 @@
 Markdown transforms
 ===================
 
-To ease the transition from other Markdown dialects(like the one used
-in software-carpentry), we implement some transformations in sphinx.
-These are implemented in the ``sphinx_lessons.md_transforms`` Python
-package and are implemented using regular expressions, so they are a
+**This is mostly obsolete and unmaintained now that almost everything
+is transitioned to MyST-markdown.  If this is important for you, get
+in touch and we can revive it.**
+
+To ease the transition from other Markdown dialects (like the one used
+in software-carpentry), we implement some transformations in Sphinx
+which happen as source preprocessing.
+These are implemented in the ``sphinx_lessons.md_transforms`` module
+and are implemented using regular expressions, so they are a
 bit fragile.
 
 Code fences
@@ -49,14 +54,14 @@ Raw HTML images
 
 Raw HTML isn't a good idea in portable formats.  Plus, in the old
 jekyll formats, bad relative path handling caused absolute paths to be
-embedded a lot.Transform this::
+embedded a lot.  Transform this::
 
-        <img src="/path/to/img.png">
+  <img src="/path/to/img.png">
 
 into this::
 
-        ```{figure} /path/to/img.png
-        ```
+   ```{figure} /path/to/img.png
+   ```
 
 Exclude any possible ``{{ ... }}`` template variables used to
 semi-hard code absolute paths.

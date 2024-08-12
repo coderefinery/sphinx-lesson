@@ -32,19 +32,18 @@ preview of it [as a branch on github-pages](https://coderefinery.github.io/sphin
 
 ## Under the hood
 
-Adding `sphinx_lesson` as an extension adds these sub-extensions:
+Adding `sphinx_lesson` as an extension adds these sub-extensions, and
+you could selectively enable only the parts you want:
 
-> - `sphinx_lesson.directives` - see {doc}`directives`.
-> - `sphinx_lesson.md_transforms` - see {doc}`md-transforms`.
-> - `sphinx_lesson.exerciselist` - see {doc}`exercise-list`.
-> - `sphinx_lesson.term_role_formatting` - makes glossary term
->   references bold
-> - Enables the [myst_notebook extension](https://myst-nb.readthedocs.io/en/latest/), which also enables
->   [myst_parser](https://myst-parser.readthedocs.io/en/latest/index.html)
->   (included as a dependencies)
-> - Enables the [sphinx-copybutton extension](https://github.com/executablebooks/sphinx-copybutton)
->   (included as a dependency)
-> - Same for [sphinx-tabs](https://sphinx-tabs.readthedocs.io/)
-> - Same for [sphinx-togglebutton](https://pypi.org/project/sphinx-togglebutton/)
-
-Any of these can be used independently to get the same effect.
+- `sphinx_lesson.directives` - see {doc}`directives`.
+- `sphinx_lesson.md_transforms` - see {doc}`md-transforms`.
+- `sphinx_lesson.exerciselist` - see {doc}`exercise-list`.
+- `sphinx_lesson.term_role_formatting` - makes glossary term
+  references bold
+- Enables the [myst_notebook extension](https://myst-nb.readthedocs.io/en/latest/), which also enables
+  [myst_parser](https://myst-parser.readthedocs.io/en/latest/index.html)
+  (included as a dependencies)
+- Enables the [sphinx-copybutton extension](https://github.com/executablebooks/sphinx-copybutton)
+  (included as a dependency)
+- Same for [sphinx-tabs](https://sphinx-tabs.readthedocs.io/)
+- Same for [sphinx-togglebutton](https://pypi.org/project/sphinx-togglebutton/)

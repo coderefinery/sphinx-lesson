@@ -2,7 +2,7 @@
 
 Like most languages, ReST and MyST both have direct ways to substitute
 variables to locally customize lessons.  While this works for simple
-cases, this can quickly become difficult to manage with the "master
+cases, this can quickly become difficult to manage with the "main
 copy" of possibly important content being separated from the main
 body, and keeping the substitutions up to date.
 

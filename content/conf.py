@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Sphinx-lesson'
-copyright = '2020, CodeRefinery'
+copyright = '2020-2024, CodeRefinery'
 author = 'CodeRefinery'
 
 # roundabout way to get version.  "import sphinx_lesson" would be easier, but
@@ -46,6 +46,9 @@ extensions = [
     #'myst_nb',  # now done as part of sphinx_lesson
     'sphinx_rtd_theme_ext_color_contrast',
 ]
+
+# Sphinx-lesson config:
+sphinx_lesson_transform_html_img = False
 
 # Settings for myst_nb:
 # https://myst-nb.readthedocs.io/en/latest/computation/execute.html#notebook-execution-modes

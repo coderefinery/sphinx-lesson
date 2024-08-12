@@ -5,21 +5,6 @@ table of contents list.  There must be one master toctree in the index
 document, but then they can be nested down.  For the purposes of
 sphinx-lesson, we probably don't need such features
 
-ReST:
-
-```
-.. toctree::
-caption: Episodes
-maxdepth: 1
-
-basics
-creating-using-web
-creating-using-desktop
-contributing
-doi
-websites
-```
-
 MyST:
 
 ````
@@ -37,6 +22,22 @@ doi
 websites
 ```
 ````
+
+
+ReST:
+
+```
+.. toctree::
+caption: Episodes
+maxdepth: 1
+
+basics
+creating-using-web
+creating-using-desktop
+contributing
+doi
+websites
+```
 
 The pages are added by filename (no extension needed).  The name by
 default comes from the document title, but you can override it if you
