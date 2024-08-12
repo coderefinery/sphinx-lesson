@@ -4,32 +4,43 @@ Sites can be written in Markdown on ReStructured Text.  Actually, in
 theory any format that has a Sphinx parser could be used, however you
 will be slightly limited without directive support.
 
+The most important thing to note is that: To make a structured lesson,
+one needs to write in something a bit more structured than HTML.
+
 ## Markdown
 
-Let's start off with a basic fact: Markdown isn't a language.  It's
-some html-like markup that is not structured enough for the purposes
-of structured sites such as sphinx-lesson.  There are many different
+Markdown is the most common syntax for CodeRefinery lessons.  It's not
+raw markdown but the MyST flavor, which has *much* more structured
+directives than plain markdown.  These come straight from Sphinx and
+what we use to
+
+[MyST syntax reference](https://myst-parser.readthedocs.io/en/latest/using/syntax.html)
+
+
+:::{note}
+What is Markdown?  Markdown isn't a single language.  Its native form
+is a simple syntax for HTML, and isn't very structured.  There are many different
 flavors, some of which add extra syntax which gets it closer to
 enough, but for our purposes these are different enough that they
 should count as different languages (as similar as "markdown" and
 ReST).  Since the Markdown creator says that [Markdown shouldn't
 evolve or be strictly defined](https://en.wikipedia.org/wiki/Markdown#CommonMark), Markdown is
-essentially a dead syntax: you should always specific which living
+essentially a dead syntax: we should always specific which living
 sub-syntax you are referring to.
 
-sphinx-lesson uses the [MyST-parser] (markedly structured text),
+sphinx-lesson uses the [MyST-parser] (MarkedlY Structured Text),
 which is both completely compatible with CommonMark, and also supports
 *all ReStructured Text directives*, unlike most other non-ReST Sphinx
 parsers.  Thus, we finally have a way to write equivalent ReST and
 Markdown without any compromises (though other CommonMark parsers
 aren't expected to know Sphinx directives).
-
-[MyST syntax reference](https://myst-parser.readthedocs.io/en/latest/using/syntax.html)
+:::
 
 ## ReStructured Text
 
 ReStructured Text has native support for roles and directives, which
 makes it a more structured language such as LaTeX, rather than HTML.
+It came before Sphinx, but Sphinx made it even more popular.
 
 [ReST reference (from Sphinx)](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html)
 
@@ -38,6 +49,28 @@ makes it a more structured language such as LaTeX, rather than HTML.
 This is a brief comparison of basic syntax:
 
 ReST syntax (Sphinx has a good [restructured text primer](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html):
+
+MyST markdown syntax:
+
+````md
+*italic*
+**bold**
+`literal`
+# Heading
+
+[inline link](https://example.com)
+[link to page](relative-page-path)
+
+structured links:
+{doc}`link to page <page-filename>`
+{ref}`page anchor link <ref-name>`
+{py:mod}`intersphinx link <multiprocessing>`
+
+
+```
+code block
+```
+````
 
 ```rst
 *italic*
@@ -72,27 +105,11 @@ Code block after paragraph::
   a single colon.
 ```
 
-MyST markdown syntax:
-
-````md
-*italic*
-**bold**
-`literal`
-# Heading
-
-[inline link](https://example.com)
-
-[link to page](relative-page-path)
-
-```
-code block
-```
-````
-
 The most interesting difference is the use of single backquote for
 literals in Markdown, and double in ReST.  This is because ReST uses
 single quotes for *roles* - notice how there is a dedicated syntax for
-inter-page links, references, and so on.  This is very important for
+inter-page links, references, and so on (it can be configured to
+"figure it out" if you want).  This is very important for
 things like verifying referential integrity of all of our pages.  But
 this is configurable with [default_role](https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-default_role):
 set to `any` to automatically detect documents/references/anthing,
@@ -105,6 +122,19 @@ structured parsing for blocks of text.  For example, we have an
 `exercise` directive, which formats a text block into an exercise
 callout.  This is not just a CSS class, it can do anything during the
 build phase (but in practice we don't do such complex things).
+
+### MyST directives
+
+MyST-parser directives are done like this:
+
+````md
+:::{exercise}
+:option: value
+
+content
+:::
+````
+
 
 ### ReST directives
 
@@ -119,17 +149,6 @@ ReST directives are done like this:
    You can put *arbitrary syntax* here.
 ```
 
-### MyST directives
-
-MyST-parser directives are done like this:
-
-````md
-```{exercise}
-:option: value
-
-content
-```
-````
 
 ## Roles
 

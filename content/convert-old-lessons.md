@@ -1,5 +1,8 @@
 # Converting an old lesson
 
+**This was the old CodeRefinery procedure.  It is now unmaintained
+but might be useful for someone.  Let us know if you need it revived.**
+
 % highlight: console
 
 ## Convert a Jekyll lesson

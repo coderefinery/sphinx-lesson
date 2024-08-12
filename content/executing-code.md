@@ -8,7 +8,7 @@ kernelspec:
 ---
 
 
-# Try executing code cells in markdown
+# Executing code cells in MyST markdown
 
 This is a `.md` file that has a special header and a `{code-cell}`
 directive, that lets it

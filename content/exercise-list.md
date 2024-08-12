@@ -7,17 +7,17 @@ instructors and helpers, and more.
 
 ## Usage
 
-ReST:
-
-```
-.. exerciselist::
-```
-
 MyST:
 
 ````
 ```{exerciselist}```
 ````
+
+ReST:
+
+```
+.. exerciselist::
+```
 
 One can give the optional directive arguments to specify lists of
 admonition classes to include (default: `exercise`, `solution`,
@@ -26,13 +26,33 @@ admonition classes to include (default: `exercise`, `solution`,
 <directives>` which match any `include`, and do not match any
 `exclude` are included).  Specify the options this way (ReST):
 
+MyST:
+
+````md
+```{exerciselist}
+:include: exercise solution instructor-note
+:exclude: exclude-this
 ```
+
+:::{exercise} Exercise title
+:class: exclude-this
+
+Exercise content
+:::
+````
+
+
+ReST:
+
+```rst
 .. exerciselist::
    :include: exercise solution instructor-note
    :exclude: exclude-this
 
-.. exercise::
+.. exercise:: Exercise title
    :class: exclude-this
+
+   Exercise content
 ```
 
 This feature is new as of early 2022, there may be possible problems
@@ -74,8 +94,9 @@ source for hint on fixing).
   (advanced) Also create packaging using pyproject.toml and compare (20 min)
   ```
 
-- Consider giving your exercises permanent identifiers.  They are not
-  auto-numbered yet for a reason (what happens when more exercises are
+- Consider giving your exercises permanent identifiers.  They are
+  intentionally not
+  auto-numbered yet (what happens when more exercises are
   added/removed?), but if you give them an ID, they will be findable
   even later.  Suggestion is `Episodetopic-N`:
 
@@ -103,10 +124,13 @@ source for hint on fixing).
 
 ## Example
 
-This section contains the exercise list of sphinx-lesson.  Note that
-the directives occur many times in random contexts, so many of them
-don't really make sense.  Keep in mind how to ensure that your cases
-are better.
+**This section contains the exercise list of sphinx-lesson.  Since
+sphinx-lesson has many examples of exercises, the list below is
+confusing and doesn't make a lot of sense.  You can see a better
+example at [git-intro's exercise
+list](https://coderefinery.github.io/git-intro/exercises/).**
+
+**Example begins:**
 
 :::{exerciselist}
 :::

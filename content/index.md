@@ -9,6 +9,10 @@ sphinx-lesson is a set of Sphinx extensions and themes for creating
 interactive, hands-on lessons.  It was originally made to replace the
 CodeRefinery jekyll themes, but is designed to be used by others.
 
+The broad idea is that making teaching materials should be quite
+similar to good software documentation.  Sphinx-lesson adds a model
+and a few nice extras to bring them closer together.
+
 As the name says, it is based on the [Sphinx documentation generator](https://www.sphinx-doc.org/).  It is also inspired by and based on
 [jupyter-book](https://jupyterbook.org/), but both is jupyter-book
 and isn't.  It *is* because jupyter-book is based on Sphinx and
@@ -25,16 +29,18 @@ Features:
 - Based on jupyter-book, cross-compatible.
 - Built with Sphinx, providing a structured, controlled output.
 - Distributed as Python pip packages
-- Markdown and ReStructured equally supported (yes, including all
-  directives), though ReStructured Text is still a bit nicer
+- Markdown and ReStructured equally supported as input formats (yes, including all
+  directives).
 - Jupyter notebooks as an input format.  Can execute code (in jupyter
   and other formats, too)
 - Transparent transformation of jekyll-style markdown styles into
-  CommonMark with directives
-- Also renders with sphinx-book-theme (theme of jupyterbook) ([preview](https://coderefinery.github.io/sphinx-lesson/branch/sphinx-book-theme/))
+  CommonMark with directives (mainly of use for old CodeRefinery lessons)
+- Also renders with sphinx-book-theme (theme of jupyterbook)
+  ([preview](https://coderefinery.github.io/sphinx-lesson/branch/sphinx-book-theme/))
+  and other Sphinx themes.
 
-This is in an alpha state: we use it for lessons, but there is still
-refinement work to go.
+This is in heavy internal use, and about ready for other users who are
+interested.
 
 :::{prereq}
 - If you know Sphinx, it helps some.  If not, it's easy to copy

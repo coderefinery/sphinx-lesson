@@ -47,7 +47,7 @@ The {py:class}`list` class {py:meth}`sort <list.sort>` method.
 
 Note that this is structured information, and thus has no concept in
 Markdown, only MyST "markdown".  This is, in fact, a major reason why
-plain markdown is hardly suitable for serious documentation.
+plain markdown is not that great for structured documentation.
 
 ## Available linking domains and roles
 

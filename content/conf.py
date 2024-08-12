@@ -47,6 +47,9 @@ extensions = [
     'sphinx_rtd_theme_ext_color_contrast',
 ]
 
+# Sphinx-lesson config:
+sphinx_lesson_transform_html_img = False
+
 # Settings for myst_nb:
 # https://myst-nb.readthedocs.io/en/latest/computation/execute.html#notebook-execution-modes
 #nb_execution_mode = "off"

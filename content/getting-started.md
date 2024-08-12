@@ -11,7 +11,8 @@ the lesson develops - you might want to check back for them, later.
 
 ## Convert an existing jekyll lesson
 
-See {doc}`convert-old-lessons`.
+See {doc}`convert-old-lessons`.  This hasn't been used in years so may
+be out of date.
 
 ## From scratch
 

@@ -41,7 +41,22 @@ subentries.
 ```{index} pair: index; ReST
 ```
 
-Index a block with the directive, with ReST:
+### Index a block with a directive
+
+MyST:
+
+````md
+```{index} commit; amend
+```
+
+```{index}
+commit
+commit; mesage
+pair: commit; amend
+```
+````
+
+ReST:
 
 ```
 .. index:: commit; amend
@@ -56,26 +71,8 @@ Or ReST, multiple:
    pair: commit; amend
 ```
 
-MyST:
 
-````
-```{index} commit; amend
-```
-
-```{index}
-commit
-commit; mesage
-pair: commit; amend
-```
-````
-
-Or index a single term with the role:
-
-```
-This sentence has an index entry for :index:`commit`.  If you want the
-indexed term to be different, standard syntax applies such as
-:index:`loop variables <pair: commit; amend>`.
-```
+### Index a single word with the role
 
 ```{index} pair: index; MyST
 ```
@@ -90,7 +87,16 @@ Pair entry: {index}`loop variables <pair: commit; amend>`
 ```{index} index; single index; pair index; see index; seealso
 ```
 
-There are different styles:
+ReST:
+
+```
+This sentence has an index entry for :index:`commit`.  If you want the
+indexed term to be different, standard syntax applies such as
+:index:`loop variables <pair: commit; amend>`.
+```
+
+
+### Styles of indexes
 
 - `TERM`, same as below
 - `single: TERM` (the default): create just a single entry
