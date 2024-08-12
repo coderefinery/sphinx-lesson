@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Sphinx-lesson'
-copyright = '2020, CodeRefinery'
+copyright = '2020-2024, CodeRefinery'
 author = 'CodeRefinery'
 
 # roundabout way to get version.  "import sphinx_lesson" would be easier, but
