@@ -32,42 +32,45 @@ Some body text
 :::
 
 ````{list-table}
-* * Markdown::
+* * Markdown
 
+      ````
       ```{exercise}
 
       Some body text
       ```
+	  ````
 
-    ::
-
+      ````
       ```{exercise} Custom title
 
       Some body text
       ```
+	  ````
 
-    ::
-
+      ````
       ```{exercise}
       ```
+      ````
 
 
+  * ReST:
 
-  * ReST::
-
+      ````
       .. exercise::
 
          Some body text
+      ````
 
-    ::
-
+      ````
       .. exercise:: Custom title
 
          Some body text
+      ````
 
-    ::
-
+      ````
       .. exercise::
+      ````
 ````
 
 You notice these directives can have optional a custom title.  This is
