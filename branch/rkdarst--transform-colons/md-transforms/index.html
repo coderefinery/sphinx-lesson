@@ -1,0 +1,365 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Markdown transforms &mdash; Sphinx-lesson  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/mystnb.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/segment.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/menu.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_lesson.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_rtd_theme_ext_color_contrast.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/togglebutton.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/minipres.js"></script>
+        <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="next" title="Jupyter notebook page" href="../jupyter/" />
+    <link rel="prev" title="Sample episode in ReST" href="../sample-episode-rst/" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../" class="icon icon-home" alt="Documentation Home"> Sphinx-lesson
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.8.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation/">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../building/">Building the site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog/">Changelog</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Basic syntax</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../md-and-rst/">Markdown and ReST</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../toctree/">Table of Contents tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../directives/">Directives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../figures/">Figures</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../sample-episode-rst/">Sample episode in ReST</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Advanced features</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Markdown transforms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#code-fences">Code fences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#block-quotes">Block quotes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#raw-html-images">Raw HTML images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#triple-colons">Triple colons</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../jupyter/">Jupyter notebook page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../executing-code/">Try executing code cells in markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../substitutions-replacements/">Substitutions and replacement variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gh-action/">Deployment with Github Actions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../presentation-mode/">Presentation mode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../convert-old-lessons/">Converting an old lesson</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Extras</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cheatsheet/">Cheatsheet</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Sphinx-lesson</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Markdown transforms</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://github.com/coderefinery/sphinx-lesson/blob/master/content/md-transforms.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="markdown-transforms">
+<h1>Markdown transforms<a class="headerlink" href="#markdown-transforms" title="Permalink to this headline">¶</a></h1>
+<p>To ease the transition from other Markdown dialects(like the one used
+in software-carpentry), we implement some transformations in sphinx.
+These are implemented in the <code class="docutils literal notranslate"><span class="pre">sphinx_lessons.md_transforms</span></code> Python
+package and are implemented using regular expressions, so they are a
+bit fragile.</p>
+<div class="section" id="code-fences">
+<h2>Code fences<a class="headerlink" href="#code-fences" title="Permalink to this headline">¶</a></h2>
+<p>Code fence syntax is translated to CommonMark.  Input:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```
+blah
+```
+{: output}
+</pre></div>
+</div>
+<p>Output:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{output}
+blah
+```
+</pre></div>
+</div>
+</div>
+<div class="section" id="block-quotes">
+<h2>Block quotes<a class="headerlink" href="#block-quotes" title="Permalink to this headline">¶</a></h2>
+<p>Transform CSS styles into MyST directives (implemented as code
+fences.  Input:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="c1">## some-heading</span>
+<span class="o">&gt;</span> <span class="n">text</span>
+<span class="o">&gt;</span> <span class="n">text</span>
+<span class="p">{:</span> <span class="o">.</span><span class="n">block</span><span class="o">-</span><span class="n">class</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Output:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{block-class} some-heading
+text
+text
+```
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">block-class</span></code> is the directive name (we maintain compatibility
+with old jekyll-common)</p>
+</div>
+<div class="section" id="raw-html-images">
+<h2>Raw HTML images<a class="headerlink" href="#raw-html-images" title="Permalink to this headline">¶</a></h2>
+<p>Raw HTML isn’t a good idea in portable formats.  Plus, in the old
+jekyll formats, bad relative path handling caused absolute paths to be
+embedded a lot.Transform this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{figure} /path/to/img.png
+```
+</pre></div>
+</div>
+<p>into this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{figure} /path/to/img.png
+```
+</pre></div>
+</div>
+<p>Exclude any possible <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">...</span> <span class="pre">}}</span></code> template variables used to
+semi-hard code absolute paths.</p>
+</div>
+<div class="section" id="triple-colons">
+<h2>Triple colons<a class="headerlink" href="#triple-colons" title="Permalink to this headline">¶</a></h2>
+<p>Since MyST directive blocks are actually literal code blocks, other
+markdown parsers will show the text inside as literal text, not
+interpreted markdown.  This may be inconvenient.  This is why there is
+a “colon” syntax for directives, so that any other markdown parser
+(for example, Github preview) <em>will</em> process the embedded text as
+markdown.</p>
+<p>For example, this text will <em>not</em> have the link work on GitHub
+preview, and the text won’t wrap well:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{seealso}
+
+See the [sphinx-lesson](https://github.com/coderefinery/sphinx-lesson/) documentation for more information.
+```
+</pre></div>
+</div>
+<p>While this will have a good preview:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">:::{</span><span class="n">seealso</span><span class="p">}</span>
+
+<span class="n">See</span> <span class="n">the</span> <span class="p">[</span><span class="n">sphinx</span><span class="o">-</span><span class="n">lesson</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">coderefinery</span><span class="o">/</span><span class="n">sphinx</span><span class="o">-</span><span class="n">lesson</span><span class="o">/</span><span class="p">)</span> <span class="n">documentation</span> <span class="k">for</span> <span class="n">more</span> <span class="n">information</span><span class="o">.</span>
+<span class="p">:::</span>
+</pre></div>
+</div>
+<p>MyST parser [can do this
+mapping](<a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/using/syntax-optional.html#admonition-directives">https://myst-parser.readthedocs.io/en/latest/using/syntax-optional.html#admonition-directives</a>),
+but it <em>only</em> does it for certain directives, which doesn’t include
+sphinx-lesson directives.</p>
+<p>The version included in <code class="docutils literal notranslate"><span class="pre">sphinx_lesson.md_transforms</span></code> also handles
+embedded directives.</p>
+<p>If you set the <code class="docutils literal notranslate"><span class="pre">sphinx_lesson_transform_colon_directives</span></code> to
+<code class="docutils literal notranslate"><span class="pre">True</span></code> (default: <code class="docutils literal notranslate"><span class="pre">True</span></code>), then any leading colons like this will
+be transformed to backquotes transparently, which will work for any
+directive.  There are some risks of false positives if a line starts
+with more than three colons, but we have some heuristics to prevent
+this: At least one line in the file must start with the regex
+<code class="docutils literal notranslate"><span class="pre">^:::+\{[^}]+}</span></code> for this to be used (unfortunately, we can’t
+filter based on whether the source is a <code class="docutils literal notranslate"><span class="pre">.md</span></code> file or not).</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../jupyter/" class="btn btn-neutral float-right" title="Jupyter notebook page" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../sample-episode-rst/" class="btn btn-neutral float-left" title="Sample episode in ReST" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, CodeRefinery
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

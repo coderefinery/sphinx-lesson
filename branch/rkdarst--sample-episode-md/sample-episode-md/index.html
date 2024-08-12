@@ -1,0 +1,480 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Sample episode in MyST Markdown &mdash; Sphinx-lesson  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/mystnb.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_lesson.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_rtd_theme_ext_color_contrast.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/togglebutton.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/minipres.js"></script>
+        <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="next" title="Intersphinx: easy linking" href="../intersphinx/" />
+    <link rel="prev" title="Sample episode in ReST" href="../sample-episode-rst/" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../" class="icon icon-home"> Sphinx-lesson
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.8.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation/">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing-to-a-lesson/">Quickstart: Contributing to a lesson</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../building/">Building the site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog/">Changelog</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Basic syntax</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../md-and-rst/">Markdown and ReST</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../toctree/">Table of Contents tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../directives/">Directives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../figures/">Figures</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Examples</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../sample-episode-rst/">Sample episode in ReST</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Sample episode in MyST Markdown</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Advanced features</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intersphinx/">Intersphinx: easy linking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../md-transforms/">Markdown transforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jupyter/">Jupyter notebook page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../executing-code/">Try executing code cells in markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../substitutions-replacements/">Substitutions and replacement variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gh-action/">Deployment with Github Actions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../presentation-mode/">Presentation mode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../convert-old-lessons/">Converting an old lesson</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Extras</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cheatsheet/">Cheatsheet</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Sphinx-lesson</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Sample episode in MyST Markdown</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/coderefinery/sphinx-lesson/blob/master/content/sample-episode-md.md" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="sample-episode-in-myst-markdown">
+<h1>Sample episode in MyST Markdown<a class="headerlink" href="#sample-episode-in-myst-markdown" title="Permalink to this headline">¶</a></h1>
+<p>:::{important}
+test <em>with markdown</em></p>
+<p>:::</p>
+<p>:::::{important}
+test
+:::{challenge}
+Some <code class="docutils literal notranslate"><span class="pre">content</span></code> in here.
+:::</p>
+<p>:::::</p>
+<p>::: {important}
+test
+:::</p>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># Configuration file for the Sphinx documentation builder.</span>
+<span class="c1">#</span>
+<span class="c1"># This file only contains a selection of the most common options. For a full</span>
+<span class="c1"># list see the documentation:</span>
+<span class="hll"><span class="c1"># https://www.sphinx-doc.org/en/master/usage/configuration.html</span>
+</span><span class="hll">
+</span><span class="hll"><span class="c1"># -- Path setup --------------------------------------------------------------</span>
+</span><span class="hll">
+</span><span class="hll"><span class="c1"># If extensions (or modules to document with autodoc) are in another directory,</span>
+</span><span class="hll"><span class="c1"># add these directories to sys.path here. If the directory is relative to the</span>
+</span><span class="c1"># documentation root, use os.path.abspath to make it absolute, like shown here.</span>
+<span class="c1">#</span>
+<span class="c1"># import os</span>
+<span class="c1"># import sys</span>
+<span class="c1"># sys.path.insert(0, os.path.abspath(&#39;.&#39;))</span>
+
+
+<span class="c1"># -- Project information -----------------------------------------------------</span>
+
+<span class="n">project</span> <span class="o">=</span> <span class="s1">&#39;Sphinx-lesson&#39;</span>
+<span class="n">copyright</span> <span class="o">=</span> <span class="s1">&#39;2020, CodeRefinery&#39;</span>
+<span class="n">author</span> <span class="o">=</span> <span class="s1">&#39;CodeRefinery&#39;</span>
+
+<span class="c1"># roundabout way to get version.  &quot;import sphinx_lesson&quot; would be easier, but</span>
+<span class="c1"># then it becomes harder to have the same github action for this repo and</span>
+<span class="c1"># the lessons themselves.</span>
+<span class="n">version_ns</span> <span class="o">=</span> <span class="p">{</span> <span class="p">}</span>
+<span class="n">exec</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;../sphinx_lesson/_version.py&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">(),</span> <span class="n">version_ns</span><span class="p">)</span>
+<span class="n">version</span> <span class="o">=</span> <span class="n">version_ns</span><span class="p">[</span><span class="s1">&#39;__version__&#39;</span><span class="p">]</span>
+
+<span class="c1"># -- General configuration ---------------------------------------------------</span>
+
+<span class="c1"># Add any Sphinx extension module names here, as strings. They can be</span>
+<span class="c1"># extensions coming with Sphinx (named &#39;sphinx.ext.*&#39;) or your custom</span>
+<span class="c1"># ones.</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
+<span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="c1"># githubpages just adds a .nojekyll file</span>
+    <span class="s1">&#39;sphinx.ext.githubpages&#39;</span><span class="p">,</span>
+    <span class="c1"># myst_parser is not needed, because myst_nb replaces and conflicts with it</span>
+    <span class="c1"># (provides all functionality and more).  But, myst_parser has fewer</span>
+    <span class="c1"># dependencies so could be used instead.</span>
+    <span class="c1">#&#39;myst_parser&#39;,</span>
+    <span class="s1">&#39;sphinx_lesson&#39;</span><span class="p">,</span>
+    <span class="c1">#&#39;myst_nb&#39;,  # now done as part of sphinx_lesson</span>
+    <span class="s1">&#39;sphinx_rtd_theme_ext_color_contrast&#39;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="c1"># Settings for myst_nb:</span>
+<span class="c1"># https://myst-nb.readthedocs.io/en/latest/use/execute.html#triggering-notebook-execution</span>
+<span class="c1">#jupyter_execute_notebooks = &quot;off&quot;</span>
+<span class="c1">#jupyter_execute_notebooks = &quot;auto&quot;   # *only* execute if at least one output is missing.</span>
+<span class="c1">#jupyter_execute_notebooks = &quot;force&quot;</span>
+<span class="n">jupyter_execute_notebooks</span> <span class="o">=</span> <span class="s2">&quot;cache&quot;</span>
+
+<span class="c1"># Add any paths that contain templates here, relative to this directory.</span>
+<span class="n">templates_path</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;_templates&#39;</span><span class="p">]</span>
+
+<span class="c1"># List of patterns, relative to source directory, that match files and</span>
+<span class="c1"># directories to ignore when looking for source files.</span>
+<span class="c1"># This pattern also affects html_static_path and html_extra_path.</span>
+<span class="n">exclude_patterns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;README*&#39;</span><span class="p">,</span> <span class="s1">&#39;_build&#39;</span><span class="p">,</span> <span class="s1">&#39;Thumbs.db&#39;</span><span class="p">,</span> <span class="s1">&#39;.DS_Store&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;jupyter_execute&#39;</span><span class="p">,</span> <span class="s1">&#39;*venv*&#39;</span><span class="p">]</span>
+
+
+<span class="c1"># -- Options for HTML output -------------------------------------------------</span>
+
+<span class="c1"># The theme to use for HTML and HTML Help pages.  See the documentation for</span>
+<span class="c1"># a list of builtin themes.</span>
+<span class="c1">#</span>
+<span class="n">html_theme</span> <span class="o">=</span> <span class="s1">&#39;sphinx_rtd_theme&#39;</span>
+
+<span class="c1"># Add any paths that contain custom static files (such as style sheets) here,</span>
+<span class="c1"># relative to this directory. They are copied after the builtin static files,</span>
+<span class="c1"># so a file named &quot;default.css&quot; will overwrite the builtin &quot;default.css&quot;.</span>
+<span class="c1">#html_static_path = [&#39;_static&#39;]</span>
+
+<span class="c1"># favicon location</span>
+<span class="n">html_favicon</span> <span class="o">=</span> <span class="s1">&#39;favicon.ico&#39;</span>
+
+<span class="c1"># Github link in the theme</span>
+<span class="n">html_context</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;display_github&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s1">&#39;github_user&#39;</span><span class="p">:</span> <span class="s1">&#39;coderefinery&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;github_repo&#39;</span><span class="p">:</span> <span class="s1">&#39;sphinx-lesson&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;github_version&#39;</span><span class="p">:</span> <span class="s1">&#39;master&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;conf_py_path&#39;</span><span class="p">:</span> <span class="s1">&#39;/content/&#39;</span><span class="p">,</span>
+    <span class="p">}</span>
+
+<span class="c1"># Intersphinx mapping.  For example, with this you can use</span>
+<span class="c1"># :py:mod:`multiprocessing` to link straight to the Python docs of that module.</span>
+<span class="c1"># List all available references:</span>
+<span class="c1">#   python -msphinx.ext.intersphinx https://docs.python.org/3/objects.inv</span>
+<span class="n">extensions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;sphinx.ext.intersphinx&#39;</span><span class="p">)</span>
+<span class="n">intersphinx_mapping</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;python&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;https://docs.python.org/3&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+    <span class="s1">&#39;sphinx&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;https://www.sphinx-doc.org/&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+<span class="c1">#    #&#39;numpy&#39;: (&#39;https://numpy.org/doc/stable/&#39;, None),</span>
+<span class="c1">#    #&#39;scipy&#39;: (&#39;https://docs.scipy.org/doc/scipy/reference/&#39;, None),</span>
+<span class="c1">#    #&#39;pandas&#39;: (&#39;https://pandas.pydata.org/docs/&#39;, None),</span>
+<span class="c1">#    #&#39;matplotlib&#39;: (&#39;https://matplotlib.org/&#39;, None),</span>
+<span class="c1">#    &#39;seaborn&#39;: (&#39;https://seaborn.pydata.org/&#39;, None),</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../intersphinx/" class="btn btn-neutral float-right" title="Intersphinx: easy linking" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../sample-episode-rst/" class="btn btn-neutral float-left" title="Sample episode in ReST" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, CodeRefinery.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
