@@ -1,6 +1,7 @@
 /* sphinx_lesson.css */
 :root {
   --sphinx-lesson-selection-bg-color: #fce762;
+  --sphinx-lesson-selection-fg-color: #242424;
 }
 
 body.wy-body-for-nav img.with-border {
@@ -57,23 +58,28 @@ body.wy-body-for-nav img.with-border {
 /*** Works on common browsers ***/
 ::selection {
     background-color: var(--sphinx-lesson-selection-bg-color);
+    color: var(--sphinx-lesson-selection-fg-color);
 }
 
 /*** Mozilla based browsers ***/
 ::-moz-selection {
     background-color: var(--sphinx-lesson-selection-bg-color);
+    color: var(--sphinx-lesson-selection-fg-color);
 }
 
 /***For Other Browsers ***/
 ::-o-selection {
     background-color: var(--sphinx-lesson-selection-bg-color);
+    color: var(--sphinx-lesson-selection-fg-color);
 }
 
 ::-ms-selection {
     background-color: var(--sphinx-lesson-selection-bg-color);
+    color: var(--sphinx-lesson-selection-fg-color);
 }
 
 /*** For Webkit ***/
 ::-webkit-selection {
     background-color: var(--sphinx-lesson-selection-bg-color);
+    color: var(--sphinx-lesson-selection-fg-color);
 }
