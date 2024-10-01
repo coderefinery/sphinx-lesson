@@ -1,4 +1,7 @@
 /* sphinx_lesson.css */
+:root {
+  --sphinx-lesson-selection-bg-color: #fce762;
+}
 
 body.wy-body-for-nav img.with-border {
     border: 2px solid;
@@ -48,4 +51,29 @@ body.wy-body-for-nav img.with-border {
 /* sphinx-togglebutton, remove underflow when toggled to hidden mode */
 .rst-content .admonition.toggle-hidden {
     padding-bottom: 0px;
+}
+
+/* selection / highlight colour uses a yellow background and a black text */
+/*** Works on common browsers ***/
+::selection {
+    background-color: var(--sphinx-lesson-selection-bg-color);
+}
+
+/*** Mozilla based browsers ***/
+::-moz-selection {
+    background-color: var(--sphinx-lesson-selection-bg-color);
+}
+
+/***For Other Browsers ***/
+::-o-selection {
+    background-color: var(--sphinx-lesson-selection-bg-color);
+}
+
+::-ms-selection {
+    background-color: var(--sphinx-lesson-selection-bg-color);
+}
+
+/*** For Webkit ***/
+::-webkit-selection {
+    background-color: var(--sphinx-lesson-selection-bg-color);
 }
