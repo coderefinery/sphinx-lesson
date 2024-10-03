@@ -1,7 +1,7 @@
 /* sphinx_lesson.css */
 :root {
   --sphinx-lesson-selection-bg-color: #fce762;
-  --sphinx-lesson-selection-fg-color: #242424;
+  --sphinx-lesson-selection-fg-color: #000000;
 }
 
 body.wy-body-for-nav img.with-border {
