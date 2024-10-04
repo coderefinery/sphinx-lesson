@@ -1,7 +1,25 @@
-/* sphinx_lesson.css */
+/* sphinx_lesson.css
+ * https://webaim.org/resources/contrastchecker/?fcolor=00000&bcolor=FCE762
+ * */
 :root {
-  --sphinx-lesson-selection-bg-color: #fce762;
-  --sphinx-lesson-selection-fg-color: #000000;
+    --sphinx-lesson-selection-bg-color: #fce762;
+    --sphinx-lesson-selection-fg-color: #000000;
+}
+
+/* https://webaim.org/resources/contrastchecker/?fcolor=FFFFFF&bcolor=745315
+ * when dark theme is selected the some themes use this attirbute
+ */
+html[data-theme='dark'], body[data-theme='dark'] {
+    --sphinx-lesson-selection-bg-color: #745315;
+    --sphinx-lesson-selection-fg-color: #ffffff;
+}
+
+/* when browser/system theme is dark and no theme is selected */
+@media (prefers-color-scheme: dark) {
+  html[data-theme='auto'], body[data-theme='auto'] {
+      --sphinx-lesson-selection-bg-color: #745315;
+      --sphinx-lesson-selection-fg-color: #ffffff;
+  }
 }
 
 body.wy-body-for-nav img.with-border {
