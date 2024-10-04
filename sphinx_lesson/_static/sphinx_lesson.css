@@ -1,4 +1,26 @@
-/* sphinx_lesson.css */
+/* sphinx_lesson.css
+ * https://webaim.org/resources/contrastchecker/?fcolor=00000&bcolor=FCE762
+ * */
+:root {
+    --sphinx-lesson-selection-bg-color: #fce762;
+    --sphinx-lesson-selection-fg-color: #000000;
+}
+
+/* https://webaim.org/resources/contrastchecker/?fcolor=FFFFFF&bcolor=745315
+ * when dark theme is selected the some themes use this attirbute
+ */
+html[data-theme='dark'], body[data-theme='dark'] {
+    --sphinx-lesson-selection-bg-color: #745315;
+    --sphinx-lesson-selection-fg-color: #ffffff;
+}
+
+/* when browser/system theme is dark and no theme is selected */
+@media (prefers-color-scheme: dark) {
+  html[data-theme='auto'], body[data-theme='auto'] {
+      --sphinx-lesson-selection-bg-color: #745315;
+      --sphinx-lesson-selection-fg-color: #ffffff;
+  }
+}
 
 body.wy-body-for-nav img.with-border {
     border: 2px solid;
@@ -48,4 +70,34 @@ body.wy-body-for-nav img.with-border {
 /* sphinx-togglebutton, remove underflow when toggled to hidden mode */
 .rst-content .admonition.toggle-hidden {
     padding-bottom: 0px;
+}
+
+/* selection / highlight colour uses a yellow background and a black text */
+/*** Works on common browsers ***/
+::selection {
+    background-color: var(--sphinx-lesson-selection-bg-color);
+    color: var(--sphinx-lesson-selection-fg-color);
+}
+
+/*** Mozilla based browsers ***/
+::-moz-selection {
+    background-color: var(--sphinx-lesson-selection-bg-color);
+    color: var(--sphinx-lesson-selection-fg-color);
+}
+
+/***For Other Browsers ***/
+::-o-selection {
+    background-color: var(--sphinx-lesson-selection-bg-color);
+    color: var(--sphinx-lesson-selection-fg-color);
+}
+
+::-ms-selection {
+    background-color: var(--sphinx-lesson-selection-bg-color);
+    color: var(--sphinx-lesson-selection-fg-color);
+}
+
+/*** For Webkit ***/
+::-webkit-selection {
+    background-color: var(--sphinx-lesson-selection-bg-color);
+    color: var(--sphinx-lesson-selection-fg-color);
 }
