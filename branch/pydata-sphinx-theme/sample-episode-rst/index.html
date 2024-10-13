@@ -1,0 +1,498 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sample episode in ReST &#8212; Sphinx-lesson  documentation</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx_tabs/semantic-ui-2.4.1/segment.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx_tabs/semantic-ui-2.4.1/menu.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx_tabs/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx_lesson.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/minipres.js"></script>
+    <script src="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.js"></script>
+    <script src="../_static/sphinx_tabs/tabs.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="next" title="Markdown transforms" href="../md-transforms/" />
+    <link rel="prev" title="Figures" href="../figures/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
+
+    <a class="navbar-brand" href="../">
+    
+      <p class="title">Sphinx-lesson</p>
+    
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../getting-started/">Getting started</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../installation/">Installation</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../building/">Building the site</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../changelog/">Changelog</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../md-and-rst/">Markdown and ReST</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../toctree/">Table of Contents tree</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../directives/">Directives</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../figures/">Figures</a>
+        </li>
+        
+        <li class="nav-item active">
+            <a class="nav-link" href="">Sample episode in ReST</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../md-transforms/">Markdown transforms</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../jupyter/">Jupyter notebook page</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../executing-code/">Try executing code cells in markdown</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../substitutions-replacements/">Substitutions and replacement variables</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../gh-action/">Deployment with Github Actions</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../presentation-mode/">Presentation mode</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../convert-old-lessons/">Converting an old lesson</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../cheatsheet/">Cheatsheet</a>
+        </li>
+        
+        
+      </ul>
+
+
+      
+
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/coderefinery/sphinx-lesson" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
+        
+        
+      </ul>
+    </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../search/" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+    <div class="bd-toc-item active">
+    
+  
+    <ul class="nav bd-sidenav">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+          
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+  
+  </nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#this-is-a-section" class="nav-link">This is a section</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#exercise-the-general-topic" class="nav-link">Exercise: the general topic</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#another-section" class="nav-link">Another section</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#a-subsection" class="nav-link">A subsection</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#other-directives" class="nav-link">Other directives</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#see-also" class="nav-link">See also</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+
+<div class="tocsection editthispage">
+    <a href="https://github.com/coderefinery/sphinx-lesson/edit/master/content/sample-episode-rst.rst">
+        <i class="fas fa-pencil-alt"></i> Edit this page
+    </a>
+</div>
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="sample-episode-in-rest">
+<h1>Sample episode in ReST<a class="headerlink" href="#sample-episode-in-rest" title="Permalink to this headline">¶</a></h1>
+<div class="admonition-questions questions admonition">
+<p class="admonition-title">Questions</p>
+<ul class="simple">
+<li><p>How does a typical lesson page look?</p></li>
+<li><p>Questions list questions to get the interest of learners</p></li>
+<li><p>point 2</p></li>
+<li><p>…</p></li>
+</ul>
+</div>
+<div class="admonition-objectives objectives admonition">
+<p class="admonition-title">Objectives</p>
+<ul class="simple">
+<li><p>Show a complete lesson page with all of the most common
+structures.</p></li>
+<li><p>Objectives list what you get out of the page (not just what
+you do)</p></li>
+<li><p>point 2</p></li>
+<li><p>…</p></li>
+</ul>
+</div>
+<p>Topic introduction here</p>
+<p>You really want to browse this page alongside the source of it, to see
+how this is implemented.  See the links at the to right of the page.</p>
+<div class="section" id="this-is-a-section">
+<h2>This is a section<a class="headerlink" href="#this-is-a-section" title="Permalink to this headline">¶</a></h2>
+<p>This is text.</p>
+<p>A code block with preceeding paragraph:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">multiprocessing</span>
+</pre></div>
+</div>
+<ul>
+<li><p>A bullet list</p></li>
+<li><p>Bullet list</p>
+<ul>
+<li><p>Sub-list:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">code</span> <span class="n">block</span> <span class="p">(</span><span class="n">note</span> <span class="n">indention</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>directive within a list (note indention)</p>
+</div>
+</li>
+</ul>
+<div class="sphinx-tabs docutils container">
+<div class="ui top attached tabular menu sphinx-menu docutils container">
+<div class="active item sphinx-data-tab-UHl0aG9u docutils container">
+<div class="docutils container">
+<p>Python</p>
+</div>
+</div>
+<div class="item sphinx-data-tab-Ug== docutils container">
+<div class="docutils container">
+<p>R</p>
+</div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-UHl0aG9u active docutils container">
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">bisect</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-Ug== docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">a</span> <span class="o">&lt;-</span> <span class="m">1</span> <span class="o">+</span> <span class="m">2</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="exercise-the-general-topic">
+<h2>Exercise: the general topic<a class="headerlink" href="#exercise-the-general-topic" title="Permalink to this headline">¶</a></h2>
+<p>Exercises get their own section, so that they can be linked and found
+in the table of contents.</p>
+<div class="admonition-exercise-title challenge admonition">
+<p class="admonition-title">1.1 Exercise title</p>
+<ol class="arabic simple">
+<li><p>Notice the exercise set has both an ID and
+number <code class="docutils literal notranslate"><span class="pre">SampleLesson-1</span></code> and description of what it contains.</p></li>
+</ol>
+</div>
+<div class="admonition-solution solution dropdown admonition">
+<p class="admonition-title">Solution</p>
+<ul class="simple">
+<li><p>Solution here.</p></li>
+</ul>
+</div>
+<div class="admonition-create-a-lesson challenge admonition">
+<p class="admonition-title">1.2 Create a lesson</p>
+<ol class="arabic simple" start="2">
+<li><p>Similarly, each exercise has a quick description title <code class="docutils literal notranslate"><span class="pre">Create</span>
+<span class="pre">a</span> <span class="pre">lesson</span></code> in bold.  These titles are useful so that helpers
+(and learners…) can quickly understand what the point is.</p></li>
+</ol>
+</div>
+<div class="admonition-solution solution dropdown admonition">
+<p class="admonition-title">Solution</p>
+<ul class="simple">
+<li><p>Solution to that one.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="another-section">
+<h2>Another section<a class="headerlink" href="#another-section" title="Permalink to this headline">¶</a></h2>
+<div class="admonition-instructor-note instructor-note admonition">
+<p class="admonition-title">Instructor note</p>
+<p>This is an instructor note.  It may be hidden or put to the sidebar
+in a later style.  You should use it for things that the instructor
+should see while teaching, but should be de-emphasized for the
+learners.</p>
+</div>
+<p>These tab synchronize with those above:</p>
+<div class="sphinx-tabs docutils container">
+<div class="ui top attached tabular menu sphinx-menu docutils container">
+<div class="active item sphinx-data-tab-UHl0aG9u docutils container">
+<div class="docutils container">
+<p>Python</p>
+</div>
+</div>
+<div class="item sphinx-data-tab-Ug== docutils container">
+<div class="docutils container">
+<p>R</p>
+</div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-UHl0aG9u active docutils container">
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cmath</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">/</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-Ug== docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">a</span> <span class="o">&lt;-</span> <span class="m">10</span> <span class="o">/</span> <span class="m">2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="a-subsection">
+<h3>A subsection<a class="headerlink" href="#a-subsection" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-default" id="id1">
+<img alt="../_images/sample-image.png" src="../_images/sample-image.png" />
+<p class="caption"><span class="caption-text">Figure caption here.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="id2">
+<img alt="../_images/sample-image.png" class="with-border" src="../_images/sample-image.png" />
+<p class="caption"><span class="caption-text">Figure caption here, which explains the content in text so that
+it’s accessible to screen readers.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="other-directives">
+<h2>Other directives<a class="headerlink" href="#other-directives" title="Permalink to this headline">¶</a></h2>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Test</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Test</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>Test</p>
+</div>
+</div>
+<div class="section" id="see-also">
+<h2>See also<a class="headerlink" href="#see-also" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Upstream information</p></li>
+<li><p>Another course</p></li>
+</ul>
+<div class="admonition-keypoints keypoints admonition">
+<p class="admonition-title">Keypoints</p>
+<ul class="simple">
+<li><p>What the learner should take away</p></li>
+<li><p>point 2</p></li>
+<li><p>…</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="../figures/" title="previous page">Figures</a>
+    <a class='right-next' id="next-link" href="../md-transforms/" title="next page">Markdown transforms</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    <p>
+          &copy; Copyright 2020, CodeRefinery.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.3.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
