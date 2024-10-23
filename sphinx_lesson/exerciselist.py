@@ -23,6 +23,8 @@ class exerciselist(nodes.General, nodes.Element):
 
     Gets replaced with contents in the second pass.
     """
+    include_classes = frozenset()
+    exclude_classes = frozenset()
     def __init__(self, *args,
                  include_classes=DEFAULT_EXERCISELIST_CLASSES,
                  exclude_classes=DEFAULT_EXERCISELIST_CLASSES_EXCLUDE):
