@@ -24,7 +24,7 @@ requires-python = ">=3.3"
 dynamic = ["version", "description"]
 dependencies = [
     # FIXME
-    "sphinx<8",    # https://github.com/coderefinery/train-the-trainer/pull/104
+    "sphinx<9",    # https://github.com/coderefinery/train-the-trainer/pull/104
     "sphinx_rtd_theme",
     "sphinx_copybutton",
     "sphinx_minipres",
