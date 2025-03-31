@@ -1,0 +1,2418 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Sphinx-lesson documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx_lesson.css" />
+    <link rel="stylesheet" type="text/css" href="_static/term_role_formatting.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx_rtd_theme_ext_color_contrast.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabs.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/minipres.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/tabs.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
+    <link rel="icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="#">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">None</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting started</span></p>
+<ul class="nav bd-sidenav">
+
+
+
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic syntax</span></p>
+<ul class="nav bd-sidenav">
+
+
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul class="nav bd-sidenav">
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced features</span></p>
+<ul class="nav bd-sidenav">
+
+
+
+
+
+
+
+
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Extras</span></p>
+<ul class="nav bd-sidenav">
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/coderefinery/sphinx-lesson" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/coderefinery/sphinx-lesson/issues/new?title=Issue%20on%20page%20%2Findex.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>sphinx-lesson: structured lessons with Sphinx</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting started</span></p>
+<ul class="visible nav section-nav flex-column">
+<li class="toctree-l1 toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#document-getting-started">Getting started</a></li>
+<li class="toctree-l1 toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#document-installation">Installation</a></li>
+<li class="toctree-l1 toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#document-contributing-to-a-lesson">Quickstart: Contributing to a lesson</a></li>
+<li class="toctree-l1 toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#document-building">Building the lesson</a></li>
+<li class="toctree-l1 toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#document-changelog">Changelog</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic syntax</span></p>
+<ul class="nav section-nav flex-column">
+<li class="toctree-l1 nav-item toc-entry"><a class="reference internal nav-link" href="#document-md-and-rst">Markdown and ReST</a></li>
+<li class="toctree-l1 nav-item toc-entry"><a class="reference internal nav-link" href="#document-toctree">Table of Contents tree</a></li>
+<li class="toctree-l1 nav-item toc-entry"><a class="reference internal nav-link" href="#document-directives">Directives</a></li>
+<li class="toctree-l1 nav-item toc-entry"><a class="reference internal nav-link" href="#document-figures">Figures</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul class="nav section-nav flex-column">
+<li class="toctree-l1 nav-item toc-entry"><a class="reference internal nav-link" href="#document-sample-episode-myst">Sample episode in MyST (Markdown)</a></li>
+<li class="toctree-l1 nav-item toc-entry"><a class="reference internal nav-link" href="#document-sample-episode-rst">Sample episode in ReST</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced features</span></p>
+<ul class="nav section-nav flex-column">
+<li class="toctree-l1 nav-item toc-entry"><a class="reference internal nav-link" href="#document-intersphinx">Intersphinx: easy linking</a></li>
+<li class="toctree-l1 nav-item toc-entry"><a class="reference internal nav-link" href="#document-md-transforms">Markdown transforms</a></li>
+<li class="toctree-l1 nav-item toc-entry"><a class="reference internal nav-link" href="#document-jupyter">Jupyter notebook page</a></li>
+<li class="toctree-l1 nav-item toc-entry"><a class="reference internal nav-link" href="#document-executing-code">Executing code cells in MyST markdown</a></li>
+<li class="toctree-l1 nav-item toc-entry"><a class="reference internal nav-link" href="#document-substitutions-replacements">Substitutions and replacement variables</a></li>
+<li class="toctree-l1 nav-item toc-entry"><a class="reference internal nav-link" href="#document-gh-action">Deployment with Github Actions</a></li>
+<li class="toctree-l1 nav-item toc-entry"><a class="reference internal nav-link" href="#document-presentation-mode">Presentation mode</a></li>
+<li class="toctree-l1 nav-item toc-entry"><a class="reference internal nav-link" href="#document-indexing">Indexing</a></li>
+<li class="toctree-l1 nav-item toc-entry"><a class="reference internal nav-link" href="#document-exercise-list">Exercise list</a></li>
+<li class="toctree-l1 nav-item toc-entry"><a class="reference internal nav-link" href="#document-convert-old-lessons">Converting an old lesson</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Extras</span></p>
+<ul class="nav section-nav flex-column">
+<li class="toctree-l1 nav-item toc-entry"><a class="reference internal nav-link" href="#document-cheatsheet">Cheatsheet</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="sphinx-lesson-structured-lessons-with-sphinx">
+<h1>sphinx-lesson: structured lessons with Sphinx<a class="headerlink" href="#sphinx-lesson-structured-lessons-with-sphinx" title="Link to this heading">#</a></h1>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>See a real demo lesson at
+<a class="reference external" href="https://coderefinery.github.io/github-without-command-line/">https://coderefinery.github.io/github-without-command-line/</a>.</p>
+</div>
+<p>sphinx-lesson is a set of Sphinx extensions and themes for creating
+interactive, hands-on lessons.  It was originally made to replace the
+CodeRefinery jekyll themes, but is designed to be used by others.</p>
+<p>The broad idea is that making teaching materials should be quite
+similar to good software documentation.  Sphinx-lesson adds a model
+and a few nice extras to bring them closer together.</p>
+<p>As the name says, it is based on the <a class="reference external" href="https://www.sphinx-doc.org/">Sphinx documentation generator</a>.  It is also inspired by and based on
+<a class="reference external" href="https://jupyterbook.org/">jupyter-book</a>, but both is jupyter-book
+and isn’t.  It <em>is</em> because jupyter-book is based on Sphinx and
+modular, we reuse all of those same Sphinx extensions which
+jupyter-book has made.  It <em>isn’t</em> jupyter-book because we configure
+Sphinx directly, instead of wrapping it through jupyter-book
+configuration and building.  Thus, we get full control and high
+compatibility.</p>
+<p>Features:</p>
+<ul class="simple">
+<li><p>Separate content and presentation: easy to adjust theme or control
+the parts independently.</p></li>
+<li><p>Based on jupyter-book, cross-compatible.</p></li>
+<li><p>Built with Sphinx, providing a structured, controlled output.</p></li>
+<li><p>Distributed as Python pip packages</p></li>
+<li><p>Markdown and ReStructured equally supported as input formats (yes, including all
+directives).</p></li>
+<li><p>Jupyter notebooks as an input format.  Can execute code (in jupyter
+and other formats, too)</p></li>
+<li><p>Transparent transformation of jekyll-style markdown styles into
+CommonMark with directives (mainly of use for old CodeRefinery lessons)</p></li>
+<li><p>Also renders with sphinx-book-theme (theme of jupyterbook)
+(<a class="reference external" href="https://coderefinery.github.io/sphinx-lesson/branch/sphinx-book-theme/">preview</a>)
+and other Sphinx themes.</p></li>
+</ul>
+<p>This is in heavy internal use, and about ready for other users who are
+interested.</p>
+<div class="admonition-prerequisites prerequisites admonition" id="prerequisites-0">
+<p class="admonition-title">Prerequisites</p>
+<ul class="simple">
+<li><p>If you know Sphinx, it helps some.  If not, it’s easy to copy</p></li>
+<li><p>Markdown or ReStructured text</p></li>
+<li><p>Hosting is usually by github-pages</p></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<span id="document-getting-started"></span><section id="getting-started">
+<h2>Getting started<a class="headerlink" href="#getting-started" title="Link to this heading">#</a></h2>
+<section id="from-a-template-repository">
+<h3>From a template repository<a class="headerlink" href="#from-a-template-repository" title="Link to this heading">#</a></h3>
+<p>You can get started by making a Sphinx project and configuring the
+extension.  We recommend you use the sphinx-lesson-template repository
+(<a class="github reference external" href="https://github.com/coderefinery/sphinx-lesson-template">coderefinery/sphinx-lesson-template</a>).</p>
+<p>This template repository is updated with new copies of base files as
+the lesson develops - you might want to check back for them, later.</p>
+</section>
+<section id="convert-an-existing-jekyll-lesson">
+<h3>Convert an existing jekyll lesson<a class="headerlink" href="#convert-an-existing-jekyll-lesson" title="Link to this heading">#</a></h3>
+<p>See <a class="reference internal" href="#document-convert-old-lessons"><span class="doc">Converting an old lesson</span></a>.  This hasn’t been used in years so may
+be out of date.</p>
+</section>
+<section id="from-scratch">
+<h3>From scratch<a class="headerlink" href="#from-scratch" title="Link to this heading">#</a></h3>
+<p>See the next page, <a class="reference internal" href="#document-installation"><span class="doc">Installation</span></a>, for raw Python packages to
+install and how to configure a arbitrary Sphinx project.</p>
+</section>
+<section id="github-pages-initial-commit">
+<h3>Github Pages initial commit<a class="headerlink" href="#github-pages-initial-commit" title="Link to this heading">#</a></h3>
+<p>The included Github Actions file will automatically push to Github
+Pages, but due to some quirk/bugs in gh-pages <em>the very first
+non-human gh-pages push won’t enable Github Pages</em>.  So, you have to
+do one push yourself (or go to settings and disable-enable gh-pages
+the first time).</p>
+<p>You can make an empty commit to gh-pages this way, which will trigger
+the gh-pages deployment (and everything will be automatic after that):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="o">-</span><span class="n">b</span> <span class="n">gh</span><span class="o">-</span><span class="n">pages</span> <span class="n">origin</span><span class="o">/</span><span class="n">gh</span><span class="o">-</span><span class="n">pages</span>
+<span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s1">&#39;empty commit to trigger gh-pages&#39;</span> <span class="o">--</span><span class="n">allow</span><span class="o">-</span><span class="n">empty</span>
+<span class="n">git</span> <span class="n">push</span>
+</pre></div>
+</div>
+</section>
+<section id="demo-lessons">
+<h3>Demo lessons<a class="headerlink" href="#demo-lessons" title="Link to this heading">#</a></h3>
+<p>This guide can’t currently stand alone.  It is probably good to look
+at and copy from existing lessons for some things:</p>
+<ul class="simple">
+<li><p>Python for Scientific Computing uses many of the features:
+<a class="reference external" href="https://aaltoscicomp.github.io/python-for-scicomp/">https://aaltoscicomp.github.io/python-for-scicomp/</a> .</p></li>
+<li><p>Github without the command line is a complete lesson using the
+theme: <a class="reference external" href="https://coderefinery.github.io/github-without-command-line/">https://coderefinery.github.io/github-without-command-line/</a> .</p></li>
+</ul>
+</section>
+</section>
+<span id="document-installation"></span><section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading">#</a></h2>
+<section id="sphinx-python-package">
+<h3>Sphinx Python package<a class="headerlink" href="#sphinx-python-package" title="Link to this heading">#</a></h3>
+<p>This is distributed as a normal Sphinx extension, so it is easy to
+use.  To use it, install <code class="docutils literal notranslate"><span class="pre">sphinx_lesson</span></code> via PyPI.</p>
+<p>Then, enable the extension in your Sphinx <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>.  This will both
+define our special directives, and load the other required extensions
+(<code class="docutils literal notranslate"><span class="pre">myst_nb</span></code>).  The <code class="docutils literal notranslate"><span class="pre">myst_nb</span></code> extension can be configured normally:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;sphinx_lesson&#39;</span><span class="p">,</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="html-theme">
+<h3>HTML theme<a class="headerlink" href="#html-theme" title="Link to this heading">#</a></h3>
+<p>We are in theory compatible with any theme, but are most tested with
+the sphinx_rtd_theme (which you need to set yourself):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme</span> <span class="o">=</span> <span class="s1">&#39;sphinx_rtd_theme&#39;</span>
+</pre></div>
+</div>
+<p>The Jupyter Book (Executable Books Project) Sphinx theme
+(<a class="reference external" href="https://sphinx-book-theme.readthedocs.io/en/latest/">sphinx-book-theme</a>) has some
+very nice features and also deserves some consideration.  Using it
+should be clear: <code class="docutils literal notranslate"><span class="pre">html_theme</span> <span class="pre">=</span> <span class="pre">&quot;sphinx_book_theme&quot;</span></code>.  You can see a
+preview of it <a class="reference external" href="https://coderefinery.github.io/sphinx-lesson/branch/sphinx-book-theme/">as a branch on github-pages</a>.</p>
+</section>
+<section id="under-the-hood">
+<h3>Under the hood<a class="headerlink" href="#under-the-hood" title="Link to this heading">#</a></h3>
+<p>Adding <code class="docutils literal notranslate"><span class="pre">sphinx_lesson</span></code> as an extension adds these sub-extensions, and
+you could selectively enable only the parts you want:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">sphinx_lesson.directives</span></code> - see <a class="reference internal" href="#document-directives"><span class="doc">Directives</span></a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sphinx_lesson.md_transforms</span></code> - see <a class="reference internal" href="#document-md-transforms"><span class="doc">Markdown transforms</span></a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sphinx_lesson.exerciselist</span></code> - see <a class="reference internal" href="#document-exercise-list"><span class="doc">Exercise list</span></a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sphinx_lesson.term_role_formatting</span></code> - makes glossary term
+references bold</p></li>
+<li><p>Enables the <a class="reference external" href="https://myst-nb.readthedocs.io/en/latest/">myst_notebook extension</a>, which also enables
+<a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/index.html">myst_parser</a>
+(included as a dependencies)</p></li>
+<li><p>Enables the <a class="reference external" href="https://github.com/executablebooks/sphinx-copybutton">sphinx-copybutton extension</a>
+(included as a dependency)</p></li>
+<li><p>Same for <a class="reference external" href="https://sphinx-tabs.readthedocs.io/">sphinx-tabs</a></p></li>
+<li><p>Same for <a class="reference external" href="https://pypi.org/project/sphinx-togglebutton/">sphinx-togglebutton</a></p></li>
+</ul>
+</section>
+</section>
+<span id="document-contributing-to-a-lesson"></span><section id="quickstart-contributing-to-a-lesson">
+<h2>Quickstart: Contributing to a lesson<a class="headerlink" href="#quickstart-contributing-to-a-lesson" title="Link to this heading">#</a></h2>
+<p>If you are at this page, you might want to quickly contribute to some
+existing material using the <code class="docutils literal notranslate"><span class="pre">sphinx-lesson</span></code> format.  Luckily, this
+is fairly easy:</p>
+<ul class="simple">
+<li><p>Get the source</p></li>
+<li><p>Edit the material in the <code class="docutils literal notranslate"><span class="pre">content/</span></code> directory</p></li>
+<li><p>(optional) Set up the Python environment and preview</p></li>
+<li><p>Send your contribution</p></li>
+</ul>
+<p>In summary, each lesson is like a Python project, with the lesson
+content as its documentation in the <code class="docutils literal notranslate"><span class="pre">content/</span></code> directory (and no
+Python code).  Everything is fairly standard: it uses the Sphinx
+documentation system, which is a popular, extendable tool.  We have
+only minor extensions to make it suitable to lessons.</p>
+<p>Instead of going through this process, you can also open an issue
+instead with your proposed change, and let someone else add it.</p>
+<section id="get-the-lesson-material">
+<h3>Get the lesson material<a class="headerlink" href="#get-the-lesson-material" title="Link to this heading">#</a></h3>
+<p>You need to consult with the lesson you would like to edit.  If this
+is using the <code class="docutils literal notranslate"><span class="pre">git</span></code> version control system on Github, you could clone
+it like this:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>clone<span class="w"> </span>git://github.com/ORGANIZATION/LESSON.git
+</pre></div>
+</div>
+<p><a class="reference external" href="https://coderefinery.github.io/git-intro/">CodeRefinery’s git-intro lesson</a> explains more.</p>
+</section>
+<section id="edit-the-material">
+<h3>Edit the material<a class="headerlink" href="#edit-the-material" title="Link to this heading">#</a></h3>
+<p>The material is in the <code class="docutils literal notranslate"><span class="pre">content/</span></code> directory.  Depending on the
+lesson, in may be in MyST Markdown, ReStructured Text, or Jupyter
+notebooks.</p>
+<section id="restructured-text-and-myst-markdown">
+<h4>ReStructured Text and MyST Markdown<a class="headerlink" href="#restructured-text-and-myst-markdown" title="Link to this heading">#</a></h4>
+<p>You will probably copy existing examples, but you can also see
+<a class="reference internal" href="#document-md-and-rst"><span class="doc">our quick guide</span></a>.  The main thing to note is that
+this is not unstructured Markdown, but there are particular
+(non-display) <strong>directives</strong> and <strong>roles</strong> to tag blocks and inline
+text.  (In fact, “markdown” is a broad concept and everyone uses some
+different extensions of it).</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#document-directives"><span class="doc">sphinx-lesson directives for markup</span></a></p></li>
+<li><p><a class="reference internal" href="#document-md-and-rst"><span class="doc">Markdown and ReST</span></a></p></li>
+<li><p><a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/using/syntax.html">MyST reference</a></p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#rst-primer" title="(in Sphinx v8.3.0)"><span class="xref std std-ref">ReStructured Text reference</span></a></p></li>
+</ul>
+<p><em>Do not worry about getting syntax right</em>.  Send your improvement, and
+editing is easy and you will learn something.</p>
+</section>
+<section id="jupyter-notebooks">
+<h4>Jupyter notebooks<a class="headerlink" href="#jupyter-notebooks" title="Link to this heading">#</a></h4>
+<p>Jupyter notebooks are a common format for computational narratives,
+and can be natively used with Sphinx via <a class="reference external" href="https://myst-nb.readthedocs.io/">myst-nb</a>.  Note that you should use MyST
+Markdown directives and roles (see previous section) in the notebook
+to give structure to the material.</p>
+<p>Again, <em>do not worry about getting the syntax right</em>.  This is the
+least important part of things.</p>
+</section>
+</section>
+<section id="build-and-test-locally">
+<h3>Build and test locally<a class="headerlink" href="#build-and-test-locally" title="Link to this heading">#</a></h3>
+<p>Generic: The <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> file includes all Python dependencies
+to build the lesson.  The lesson can be built with <code class="docutils literal notranslate"><span class="pre">sphinx-build</span> <span class="pre">-M</span> <span class="pre">html</span> <span class="pre">content/</span> <span class="pre">_build</span></code>, or <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code> if you have Make installed.</p>
+<p>Or in more detail:</p>
+<p>Create a virtual environment to install the requirements (a conda
+environment would work just as well):</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv/
+<span class="gp">$ </span><span class="nb">source</span><span class="w"> </span>venv/bin/activate
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>if <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">-m</span> <span class="pre">venv</span> <span class="pre">venv/</span></code> does not work, try with <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">venv</span> <span class="pre">venv/</span></code></p>
+</div>
+<p>Then upgrade pip inside the virtual environment and install dependencies (it is recommended that conda base environment is deactivated):</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>pip
+<span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</pre></div>
+</div>
+<p>You can build it using either of these commands:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sphinx-build<span class="w"> </span>-M<span class="w"> </span>html<span class="w"> </span>content/<span class="w"> </span>_build
+<span class="gp">$ </span>make<span class="w"> </span>html<span class="w">    </span><span class="c1"># if you have make installed</span>
+</pre></div>
+</div>
+<p>And then view it with your web browser.  Remove the <code class="docutils literal notranslate"><span class="pre">_build</span></code>
+directory to force a clean rebuild (or <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">clean</span></code>).</p>
+<p>Or you can use the <strong>Sphinx autobuilder</strong>, which will start a process
+that rebuilds it on every change, and starts a web server to view it.
+It will tell you how to access the server:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sphinx-autobuild<span class="w"> </span>content/<span class="w"> </span>_build/
+<span class="go">...</span>
+<span class="go">[I ...] Serving on http://127.0.0.1:8000</span>
+</pre></div>
+</div>
+</section>
+<section id="sending-your-changes-back">
+<h3>Sending your changes back<a class="headerlink" href="#sending-your-changes-back" title="Link to this heading">#</a></h3>
+<p>This depends on the project, but can be done using Github pull
+requests.  <a class="reference external" href="https://coderefinery.github.io/git-collaborative/">CodeRefinery’s git-collaborative lesson</a> goes into
+details about pull requests.</p>
+</section>
+<section id="other-things-to-keep-in-mind">
+<h3>Other things to keep in mind<a class="headerlink" href="#other-things-to-keep-in-mind" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Make sure that you have rights to submit your change.  In general,
+if you reuse anything else that already exists, explain this in your
+pull request.</p></li>
+<li><p><em>Content and ideas are more important than markup</em>.  Don’t worry
+about doing something wrong, that is why we have review!</p></li>
+<li><p>Many different people use the lessons.  Ask before doing things that
+make the lesson too specific to your use case.</p></li>
+</ul>
+</section>
+</section>
+<span id="document-building"></span><section id="building-the-lesson">
+<h2>Building the lesson<a class="headerlink" href="#building-the-lesson" title="Link to this heading">#</a></h2>
+<p>It is built the normal Sphinx ways.  Using Sphinx directly, one would
+run:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sphinx-build<span class="w"> </span>-M<span class="w"> </span>html<span class="w"> </span>content/<span class="w"> </span>_build
+</pre></div>
+</div>
+<p>If you have <code class="docutils literal notranslate"><span class="pre">make</span></code> installed, you can:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>make<span class="w"> </span>html
+<span class="gp">#</span><span class="c1"># or</span>
+<span class="gp">$ </span>make<span class="w"> </span>dirhtml
+<span class="gp">#</span><span class="c1"># full build</span>
+<span class="gp">$ </span>make<span class="w"> </span>clean<span class="w"> </span>html
+</pre></div>
+</div>
+<p>However, there are different ways to set up a Sphinx project.
+CodeRefinery lessons puts the results in <code class="docutils literal notranslate"><span class="pre">_build/</span></code>.</p>
+</section>
+<span id="document-changelog"></span><section id="changelog">
+<h2>Changelog<a class="headerlink" href="#changelog" title="Link to this heading">#</a></h2>
+<p>This isn’t very up to date right now.  There haven’t been significant
+backwards-incompatible changes, so this hasn’t been kept in earnest.</p>
+<section id="id1">
+<h3>0.8.0<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>First PyPI release</p></li>
+</ul>
+</section>
+</section>
+</div>
+<div class="toctree-wrapper compound">
+<span id="document-md-and-rst"></span><section id="markdown-and-rest">
+<h2>Markdown and ReST<a class="headerlink" href="#markdown-and-rest" title="Link to this heading">#</a></h2>
+<p>Sites can be written in Markdown on ReStructured Text.  Actually, in
+theory any format that has a Sphinx parser could be used, however you
+will be slightly limited without directive support.</p>
+<p>The most important thing to note is that: To make a structured lesson,
+one needs to write in something a bit more structured than HTML.</p>
+<section id="markdown">
+<h3>Markdown<a class="headerlink" href="#markdown" title="Link to this heading">#</a></h3>
+<p>Markdown is the most common syntax for CodeRefinery lessons.  It’s not
+raw markdown but the MyST flavor, which has <em>much</em> more structured
+directives than plain markdown.  These come straight from Sphinx and
+what we use to</p>
+<p><a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/using/syntax.html">MyST syntax reference</a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>What is Markdown?  Markdown isn’t a single language.  Its native form
+is a simple syntax for HTML, and isn’t very structured.  There are many different
+flavors, some of which add extra syntax which gets it closer to
+enough, but for our purposes these are different enough that they
+should count as different languages (as similar as “markdown” and
+ReST).  Since the Markdown creator says that <a class="reference external" href="https://en.wikipedia.org/wiki/Markdown#CommonMark">Markdown shouldn’t
+evolve or be strictly defined</a>, Markdown is
+essentially a dead syntax: we should always specific which living
+sub-syntax you are referring to.</p>
+<p>sphinx-lesson uses the <a class="reference external" href="https://github.com/executablebooks/myst-parser">MyST-parser</a> (MarkedlY Structured Text),
+which is both completely compatible with CommonMark, and also supports
+<em>all ReStructured Text directives</em>, unlike most other non-ReST Sphinx
+parsers.  Thus, we finally have a way to write equivalent ReST and
+Markdown without any compromises (though other CommonMark parsers
+aren’t expected to know Sphinx directives).</p>
+</div>
+</section>
+<section id="restructured-text">
+<h3>ReStructured Text<a class="headerlink" href="#restructured-text" title="Link to this heading">#</a></h3>
+<p>ReStructured Text has native support for roles and directives, which
+makes it a more structured language such as LaTeX, rather than HTML.
+It came before Sphinx, but Sphinx made it even more popular.</p>
+<p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html">ReST reference (from Sphinx)</a></p>
+</section>
+<section id="md-and-rest-syntax">
+<h3>MD and ReST syntax<a class="headerlink" href="#md-and-rest-syntax" title="Link to this heading">#</a></h3>
+<p>This is a brief comparison of basic syntax:</p>
+<p>ReST syntax (Sphinx has a good <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html">restructured text primer</a>:</p>
+<p>MyST markdown syntax:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="ge">*italic*</span>
+<span class="gs">**bold**</span>
+<span class="sb">`literal`</span>
+<span class="gh"># Heading</span>
+
+[<span class="nt">inline link</span>](<span class="na">https://example.com</span>)
+[<span class="nt">link to page</span>](<span class="na">relative-page-path</span>)
+
+structured links:
+{doc}`link to page &lt;page-filename&gt;`
+{ref}`page anchor link &lt;ref-name&gt;`
+{py:mod}`intersphinx link &lt;multiprocessing&gt;`
+
+
+<span class="sb">```</span>
+<span class="sb">code block</span>
+<span class="sb">```</span>
+</pre></div>
+</div>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="ge">*italic*</span>
+<span class="gs">**bold**</span>
+<span class="s">``literal``</span>
+
+<span class="gh">Heading</span>
+<span class="gh">-------</span>
+
+<span class="s">`inline link </span><span class="si">&lt;https://example.com&gt;</span><span class="s">`__</span>
+<span class="s">`out-of-line link </span><span class="si">&lt;example_&gt;</span><span class="s">`__</span>
+
+<span class="p">..</span> <span class="nt">_example:</span> https://example.com
+
+<span class="na">:doc:</span><span class="nv">`page-filename`</span>
+<span class="na">:ref:</span><span class="nv">`ref-name`</span>
+<span class="na">:py:mod:</span><span class="nv">`multiprocessing`</span>
+
+<span class="na">:doc:</span><span class="nv">`link to page &lt;page-filename&gt;`</span>
+<span class="na">:ref:</span><span class="nv">`page anchor link &lt;ref-name&gt;`</span>
+<span class="na">:py:mod:</span><span class="nv">`intersphinx link &lt;multiprocessing&gt;`</span>
+
+
+<span class="se">::</span>
+
+<span class="s">   code block that is standalone (two</span>
+<span class="s">   colons before it and indented)</span>
+
+Code block after paragraph<span class="se">::</span>
+
+<span class="s">  The paragraph will end with</span>
+<span class="s">  a single colon.</span>
+</pre></div>
+</div>
+<p>The most interesting difference is the use of single backquote for
+literals in Markdown, and double in ReST.  This is because ReST uses
+single quotes for <em>roles</em> - notice how there is a dedicated syntax for
+inter-page links, references, and so on (it can be configured to
+“figure it out” if you want).  This is very important for
+things like verifying referential integrity of all of our pages.  But
+this is configurable with <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-default_role">default_role</a>:
+set to <code class="docutils literal notranslate"><span class="pre">any</span></code> to automatically detect documents/references/anthing,
+or <code class="docutils literal notranslate"><span class="pre">literal</span></code> to automatically be the same as literal text.</p>
+</section>
+<section id="directives">
+<h3>Directives<a class="headerlink" href="#directives" title="Link to this heading">#</a></h3>
+<p>A core part of any Sphinx site is the directives: this provides
+structured parsing for blocks of text.  For example, we have an
+<code class="docutils literal notranslate"><span class="pre">exercise</span></code> directive, which formats a text block into an exercise
+callout.  This is not just a CSS class, it can do anything during the
+build phase (but in practice we don’t do such complex things).</p>
+<section id="myst-directives">
+<h4>MyST directives<a class="headerlink" href="#myst-directives" title="Link to this heading">#</a></h4>
+<p>MyST-parser directives are done like this:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>:::{exercise}
+:option: value
+
+content
+:::
+</pre></div>
+</div>
+</section>
+<section id="rest-directives">
+<h4>ReST directives<a class="headerlink" href="#rest-directives" title="Link to this heading">#</a></h4>
+<p>ReST directives are done like this:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">exercise</span><span class="p">::</span> Optional title, some default otherwise
+   <span class="nc">:option:</span> value
+
+   This is the body
+
+   You can put <span class="ge">*arbitrary syntax*</span> here.
+</pre></div>
+</div>
+</section>
+</section>
+<section id="roles">
+<h3>Roles<a class="headerlink" href="#roles" title="Link to this heading">#</a></h3>
+<p>Roles are for inline text elements.  A lot like directives, they can
+be as simple as styling or do arbitrary transformations in Python.</p>
+<section id="rest-roles">
+<h4>ReST roles<a class="headerlink" href="#rest-roles" title="Link to this heading">#</a></h4>
+<p>Like this:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="na">:rolename:</span><span class="nv">`interpreted text`</span>
+</pre></div>
+</div>
+</section>
+<section id="myst-roles">
+<h4>MyST roles<a class="headerlink" href="#myst-roles" title="Link to this heading">#</a></h4>
+<p>Like this:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>{rolename}`interpreted text`
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<span id="document-toctree"></span><section id="table-of-contents-tree">
+<h2>Table of Contents tree<a class="headerlink" href="#table-of-contents-tree" title="Link to this heading">#</a></h2>
+<p>Pages are not found by globbing a pattern: you can explicitly define a
+table of contents list.  There must be one master toctree in the index
+document, but then they can be nested down.  For the purposes of
+sphinx-lesson, we probably don’t need such features</p>
+<p>MyST:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{toctree}
+---
+caption: Episodes
+maxdepth: 1
+---
+
+basics
+creating-using-web
+creating-using-desktop
+contributing
+doi
+websites
+```
+</pre></div>
+</div>
+<p>ReST:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">toctree</span><span class="p">::</span>
+<span class="n">caption</span><span class="p">:</span> <span class="n">Episodes</span>
+<span class="n">maxdepth</span><span class="p">:</span> <span class="mi">1</span>
+
+<span class="n">basics</span>
+<span class="n">creating</span><span class="o">-</span><span class="n">using</span><span class="o">-</span><span class="n">web</span>
+<span class="n">creating</span><span class="o">-</span><span class="n">using</span><span class="o">-</span><span class="n">desktop</span>
+<span class="n">contributing</span>
+<span class="n">doi</span>
+<span class="n">websites</span>
+</pre></div>
+</div>
+<p>The pages are added by filename (no extension needed).  The name by
+default comes from the document title, but you can override it if you
+want.</p>
+<p>You can have multiple toctrees: check sphinx-test-lesson, we have one
+for the episodes, and one for extra material (like quick ref and
+instructor guide).</p>
+<section id="see-also">
+<h3>See also<a class="headerlink" href="#see-also" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Read more about the <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#table-of-contents">Sphinx toctree directive</a>.</p></li>
+</ul>
+</section>
+</section>
+<span id="document-directives"></span><section id="directives">
+<h2>Directives<a class="headerlink" href="#directives" title="Link to this heading">#</a></h2>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>In <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html">Sphinx/Docutils, directives have a different meaning</a>.
+Directives in sphinx-lesson are actually the special case of the
+generic directive class called <strong>admonitions</strong>.</p>
+</div>
+<p><strong>Directives</strong> are used to set off a certain block of text.  They can
+be used as an aside or block (e.g. <code class="docutils literal notranslate"><span class="pre">exercise</span></code>, <code class="docutils literal notranslate"><span class="pre">instructor-note</span></code>).
+If the content of the box would be long (e.g. an entire episode is a
+<code class="docutils literal notranslate"><span class="pre">type-along</span></code>, or an entire section is an <code class="docutils literal notranslate"><span class="pre">exercise</span></code>), you could use
+the <code class="docutils literal notranslate"><span class="pre">type-along</span></code> directive to introduce the start of it but not put
+all content in that directive.</p>
+<p>Sphinx and docutils calls these type of directives <strong>admonitions</strong>
+(and “directive” is a more general concept)</p>
+<section id="how-to-use">
+<h3>How to use<a class="headerlink" href="#how-to-use" title="Link to this heading">#</a></h3>
+<p>Example of <code class="docutils literal notranslate"><span class="pre">exercise</span></code>:</p>
+<div class="admonition-exercise exercise important admonition" id="exercise-0">
+<p class="admonition-title">Exercise</p>
+<p>Some body text</p>
+</div>
+<div class="admonition-custom-title exercise important admonition" id="exercise-1">
+<p class="admonition-title">Custom title</p>
+<p>Some body text</p>
+</div>
+<div class="admonition-exercise exercise important admonition-no-content admonition" id="exercise-2">
+<p class="admonition-title">Exercise</p>
+</div>
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p>Markdown</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{exercise}
+
+Some body text
+```
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{exercise} Custom title
+
+Some body text
+```
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{exercise}
+```
+</pre></div>
+</div>
+</td>
+<td><p>ReST:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">exercise</span><span class="p">::</span>
+
+   <span class="n">Some</span> <span class="n">body</span> <span class="n">text</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">exercise</span><span class="p">::</span> <span class="n">Custom</span> <span class="n">title</span>
+
+   <span class="n">Some</span> <span class="n">body</span> <span class="n">text</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">exercise</span><span class="p">::</span>
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>You notice these directives can have optional a custom title.  This is
+an addition from regular Sphinx admonitions, and is <em>not</em> usable in
+regular Sphinx admonition directives.  Also, unlike regular Sphinx
+admonitions, the content in our directives is optional, if you want to
+use it as a simple section header.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">solution</span></code> directive begins collapsed (via <a class="reference external" href="https://github.com/executablebooks/sphinx-togglebutton">sphinx-togglebutton</a>):</p>
+<div class="admonition-solution solution important dropdown admonition" id="solution-0">
+<p class="admonition-title">Solution</p>
+<p>This is a solution</p>
+</div>
+<p>Directives are implemented in the Python package
+<code class="docutils literal notranslate"><span class="pre">sphinx_lesson.directives</span></code> and can be used independently of the rest
+of <code class="docutils literal notranslate"><span class="pre">sphinx-lesson</span></code>.</p>
+</section>
+<section id="list">
+<h3>List<a class="headerlink" href="#list" title="Link to this heading">#</a></h3>
+<p>Many directives are available.</p>
+<p>The following directives are used for exercises/solutions/homework.
+They all render as green (“important” class:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">demo</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">exercise</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">solution</span></code> (toggleable, default hidden)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type-along</span></code> (most of the lessons are hands-on, so this is a bit
+redundant.  Use this when emphasizing a certain section is “follow
+along”, as opposed to watching or working alone.)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">homework</span></code></p></li>
+</ul>
+<p>Other miscellaneous directives:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">discussion</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instructor-note</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prerequisites</span></code></p></li>
+</ul>
+<p>The following are Sphinx default directives that may be especially
+useful to lessons.  These do <em>not</em> accept an optional Title argument,
+the title is hard-coded.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">see-also</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">note</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">important</span></code> (green)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">warning</span></code> (yellow)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">danger</span></code> (red</p></li>
+</ul>
+<p>The following are available, for compatibility with Carpentries styles:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">callout</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">challenge</span></code> (alias to <code class="docutils literal notranslate"><span class="pre">exercise</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">checklist</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">keypoints</span></code> (bottom of lesson)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">objectives</span></code> (top of lesson)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prereq</span></code> (use <code class="docutils literal notranslate"><span class="pre">prerequisites</span></code> instead)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">solution</span></code> (begins collapsed)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">testimonial</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">output</span></code> (use code blocks instead)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">questions</span></code> (top of lesson)</p></li>
+</ul>
+</section>
+<section id="gallery">
+<h3>Gallery<a class="headerlink" href="#gallery" title="Link to this heading">#</a></h3>
+<p>This is a demonstration of all major directives</p>
+<section id="sphinx-lesson">
+<h4>sphinx-lesson<a class="headerlink" href="#sphinx-lesson" title="Link to this heading">#</a></h4>
+<div class="admonition-demo demo admonition" id="demo-0">
+<p class="admonition-title">Demo</p>
+<p>demo</p>
+</div>
+<div class="admonition-demo demo admonition-no-content admonition" id="demo-1">
+<p class="admonition-title">Demo</p>
+</div>
+<div class="admonition-type-along type-along important admonition" id="type-along-0">
+<p class="admonition-title">Type-Along</p>
+<p>type-along</p>
+</div>
+<div class="admonition-type-along type-along important admonition-no-content admonition" id="type-along-1">
+<p class="admonition-title">Type-Along</p>
+</div>
+<div class="admonition-exercise exercise important admonition" id="exercise-3">
+<p class="admonition-title">Exercise</p>
+<p>exercise</p>
+</div>
+<div class="admonition-solution solution important dropdown admonition" id="solution-1">
+<p class="admonition-title">Solution</p>
+<p>solution</p>
+</div>
+<div class="admonition-homework homework important admonition" id="homework-0">
+<p class="admonition-title">Homework</p>
+<p>homework</p>
+</div>
+<div class="admonition-discussion discussion important admonition" id="discussion-0">
+<p class="admonition-title">Discussion</p>
+<p>discussion</p>
+</div>
+<div class="admonition-instructor-note instructor-note admonition" id="instructor-note-0">
+<p class="admonition-title">Instructor note</p>
+<p>instructor-note</p>
+</div>
+<div class="admonition-prerequisites prerequisites admonition" id="prerequisites-0">
+<p class="admonition-title">Prerequisites</p>
+<p>prerequisites</p>
+</div>
+</section>
+<section id="sphinx-default">
+<h4>Sphinx default<a class="headerlink" href="#sphinx-default" title="Link to this heading">#</a></h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>note</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>important</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>seealso</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>warning</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>danger</p>
+</div>
+</section>
+<section id="carpentries-holdovers">
+<h4>Carpentries holdovers<a class="headerlink" href="#carpentries-holdovers" title="Link to this heading">#</a></h4>
+<div class="admonition-questions questions admonition" id="questions-0">
+<p class="admonition-title">Questions</p>
+<p>questions</p>
+</div>
+<div class="admonition-objectives objectives admonition" id="objectives-0">
+<p class="admonition-title">Objectives</p>
+<p>objectives</p>
+</div>
+<div class="admonition-keypoints keypoints admonition" id="keypoints-0">
+<p class="admonition-title">Keypoints</p>
+<p>keypoints</p>
+</div>
+<div class="admonition-callout callout admonition" id="callout-0">
+<p class="admonition-title">Callout</p>
+<p>callout</p>
+</div>
+<div class="admonition-exercise exercise important admonition" id="exercise-4">
+<p class="admonition-title">Exercise</p>
+<p>challenge</p>
+</div>
+<div class="admonition-checklist checklist admonition" id="checklist-0">
+<p class="admonition-title">Checklist</p>
+<p>checklist</p>
+</div>
+<div class="admonition-prerequisites prerequisites admonition" id="prerequisites-1">
+<p class="admonition-title">Prerequisites</p>
+<p>prereq</p>
+</div>
+<div class="admonition-testimonial testimonial admonition" id="testimonial-0">
+<p class="admonition-title">Testimonial</p>
+<p>testimonial</p>
+</div>
+<div class="admonition-output output admonition" id="output-0">
+<p class="admonition-title">Output</p>
+<p>output</p>
+</div>
+</section>
+</section>
+</section>
+<span id="document-figures"></span><section id="figures">
+<h2>Figures<a class="headerlink" href="#figures" title="Link to this heading">#</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">figure</span></code> directive inserts an image and also provides a caption
+and other material.</p>
+<ul class="simple">
+<li><p>The path is the relative or absolute path <em>within the sphinx source
+directory</em>.</p></li>
+<li><p>You can give optional CSS classes, <code class="docutils literal notranslate"><span class="pre">with-border</span></code> gives it a black
+border.  Remove this if you don’t want it - the examples below
+include it.</p></li>
+</ul>
+<figure class="align-default" id="id1">
+<img alt="_images/sample-image.png" class="with-border" src="_images/sample-image.png" />
+<figcaption>
+<p><span class="caption-text">This is the caption.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>In ReST, this is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">figure</span><span class="p">::</span> <span class="n">img</span><span class="o">/</span><span class="n">sample</span><span class="o">-</span><span class="n">image</span><span class="o">.</span><span class="n">png</span>
+   <span class="p">:</span><span class="n">class</span><span class="p">:</span> <span class="k">with</span><span class="o">-</span><span class="n">border</span>
+
+   <span class="n">This</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">caption</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>In MyST Markdown, this is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{figure} img/sample-image.png
+---
+class: with-border
+---
+
+This is the figure caption.
+```
+</pre></div>
+</div>
+<p>When adding figures, optimize for narrow columns.  First off, many
+themes keep it in a small column but even if not, learners will
+usually need to keep the text in a small column anyway, to share the
+screen with their workspace.  If you are <code class="docutils literal notranslate"><span class="pre">690</span></code> or less, then
+sphinx_rtd_theme has no image scaling.  <code class="docutils literal notranslate"><span class="pre">600</span></code> or less may be best.
+If larger, then they may be scaled down (in some themes) or scroll
+left (others).</p>
+</section>
+</div>
+<div class="toctree-wrapper compound">
+<span id="document-sample-episode-myst"></span><section id="sample-episode-in-myst-markdown">
+<h2>Sample episode in MyST (Markdown)<a class="headerlink" href="#sample-episode-in-myst-markdown" title="Link to this heading">#</a></h2>
+<div class="admonition-questions questions admonition" id="questions-0">
+<p class="admonition-title">Questions</p>
+<ul class="simple">
+<li><p>What syntax is used to make a lesson?</p></li>
+<li><p>How do you structure a lesson effectively for teaching?</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">questions</span></code> are at the top of a lesson and provide a starting
+point for what you might learn.  It is usually a bulleted list.
+(The history is a holdover from carpentries-style lessons, and is
+not required.)</p>
+</div>
+<div class="admonition-objectives objectives admonition" id="objectives-0">
+<p class="admonition-title">Objectives</p>
+<ul class="simple">
+<li><p>Show a complete lesson page with all of the most common
+structures.</p></li>
+<li><p>…</p></li>
+</ul>
+<p>This is also a holdover from the carpentries-style.  It could
+usually be left off.</p>
+</div>
+<p>A first paragraph really motivating <em>why</em> you would need the material
+presented on this page, and why it is exciting.  Don’t go into details.</p>
+<p>Then, another paragraph going into the big picture of <em>what</em> you will
+do and <em>how</em> you will do it.  Not details, but enough so that someone
+knows the overall path.</p>
+<p>[For the syntax of ReST, you really want to browse this page alongside the
+source of it, to see how this is implemented.  See the links at the to
+right of the page.]</p>
+<section id="section-titles-should-be-enough-to-understand-the-page">
+<h3>Section titles should be enough to understand the page<a class="headerlink" href="#section-titles-should-be-enough-to-understand-the-page" title="Link to this heading">#</a></h3>
+<p>The first paragraph of each section should again summarize what you
+will do in it.</p>
+<p>Top-level section titles are the map through the page and should make
+sense together.</p>
+<p>This is text.</p>
+<p>A code block with preceeding paragraph:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">multiprocessing</span>
+</pre></div>
+</div>
+<ul>
+<li><p>A bullet list</p></li>
+<li><p>Bullet list</p>
+<ul>
+<li><p>Sub-list:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">code</span> <span class="n">block</span> <span class="p">(</span><span class="n">note</span> <span class="n">indention</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>directive within a list (note indention)</p>
+</div>
+</li>
+</ul>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-UHl0aG9u" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="0">Python</button><button aria-controls="panel-0-Ug==" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-Ug==" name="Ug==" role="tab" tabindex="-1">R</button></div><div aria-labelledby="tab-0-UHl0aG9u" class="sphinx-tabs-panel code-tab group-tab" id="panel-0-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">bisect</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-Ug==" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-0-Ug==" name="Ug==" role="tabpanel" tabindex="0"><div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">a</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">2</span>
+</pre></div>
+</div>
+</div></div>
+<div class="admonition-this-is-a-discussion-directive discussion important admonition" id="discussion-0">
+<p class="admonition-title">This is a <code class="docutils literal notranslate"><span class="pre">discussion</span></code> directive</p>
+<p>Discussion content.</p>
+</div>
+</section>
+<section id="exercise-the-general-topic">
+<h3>Exercise: [the general topic]<a class="headerlink" href="#exercise-the-general-topic" title="Link to this heading">#</a></h3>
+<p>These exercises will show basic exercise conventions.  It might be
+useful for the first paragraph of a multi-exercise section to tie them
+together to the overall point, but that isn’t necessary.</p>
+<p>[Exercises get their own section, so that they can be linked and found
+in the table of contents.]</p>
+<div class="admonition-rest-1-imperative-statement-of-what-will-happen-in-the-exercise exercise important admonition" id="exercise-0">
+<p class="admonition-title">ReST-1 Imperative statement of what will happen in the exercise.</p>
+<p>An intro paragraph about the exercise, if not obvious.  Expect that
+learners and exercise leaders will end up here without having
+browsed the lesson above.  Make sure that they understand the
+general idea of what is going on and <em>why</em> the exercise exists
+(what the learning objective is roughly, for example there is a big
+difference between making a commit and focusing on writing a good
+commit message and knowing the command line arguments!)</p>
+<ol class="arabic simple">
+<li><p>Bullet list if multiple parts.</p></li>
+<li><p>Despite the names, most exercises are not really “exercises” in
+that the are difficult.  Most are rather direct applications of
+what has been learned (unless they are <code class="docutils literal notranslate"><span class="pre">(advanced)</span></code>).</p></li>
+<li><p>When writing the exercise steps, try to make it clear enough
+that a helper/exercise leader who knows the general tools
+somewhat well (but doesn’t know the lesson) can lead the
+exercise just by looking at the text in the box.</p>
+<ul class="simple">
+<li><p>Of course that’s not always possible, sometimes they actually
+are difficult.</p></li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="admonition-solution solution important dropdown admonition" id="solution-0">
+<p class="admonition-title">Solution</p>
+<ul class="simple">
+<li><p>Solution here.</p></li>
+</ul>
+</div>
+<div class="admonition-optional-rest-2-imperative-statement-of-what-will-happen-in-the-exercise exercise important admonition" id="exercise-1">
+<p class="admonition-title">(optional) ReST-2 Imperative statement of what will happen in the exercise.</p>
+<ol class="arabic simple">
+<li><p>Optional exercises are prefixed with <code class="docutils literal notranslate"><span class="pre">(optional)</span></code></p></li>
+<li><p>It’s better to have more exercises be optional than many that
+are made optional ad-hoc.  Every instructor may do something
+different, but it’s better to seem like you are covering all the
+main material than seem like you are skipping parts.</p></li>
+</ol>
+</div>
+<div class="admonition-solution solution important dropdown admonition" id="solution-1">
+<p class="admonition-title">Solution</p>
+<ul class="simple">
+<li><p>Solution to that one.</p></li>
+</ul>
+</div>
+<div class="admonition-optional-rest-3-exercise-with-embedded-solution exercise important admonition" id="exercise-2">
+<p class="admonition-title">(optional) ReST-3: Exercise with embedded solution</p>
+<ol class="arabic simple">
+<li><p>This exercise has the solution within its box itself.  This is a
+stylistic difference more than anything.</p></li>
+</ol>
+<div class="admonition-solution solution important dropdown admonition" id="solution-2">
+<p class="admonition-title">Solution</p>
+<ul class="simple">
+<li><p>Solution to that one.</p></li>
+</ul>
+</div>
+</div>
+<div class="admonition-advanced-rest-4-exercise-with-embedded-solution exercise important admonition" id="exercise-3">
+<p class="admonition-title">(advanced) ReST-4: Exercise with embedded solution</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">(advanced)</span></code> is the tag for things which really require
+figuring out stuff on your own.  Can also be <code class="docutils literal notranslate"><span class="pre">(advanced,</span> <span class="pre">optional)</span></code> but that’s sort of implied.</p></li>
+<li><p>This also demonstrates an exercise with a <a class="reference internal" href="#document-index"><span class="doc">link</span></a>,
+or <a class="reference internal" href="index.html#exerciselist-recommendations"><span class="std std-ref">internal reference</span></a>.</p></li>
+</ol>
+</div>
+</section>
+<section id="this-entire-section-is-an-exercise">
+<h3>This entire section is an exercise<a class="headerlink" href="#this-entire-section-is-an-exercise" title="Link to this heading">#</a></h3>
+<div class="dropdown admonition">
+<p class="admonition-title">Exercise leader setup</p>
+<p>This admonition is a drop-down and can be used for instructor or
+exercise-leader specific setup.  (see also / compare with
+<code class="docutils literal notranslate"><span class="pre">instructor-note</span></code>.</p>
+</div>
+<div class="admonition-in-this-section-we-will-do-something exercise important admonition" id="exercise-4">
+<p class="admonition-title">In this section, we will [do something]</p>
+<p>Standard intro paragraph of the exercise.</p>
+<p>Describe how this exercise is following everything that is in this
+section.</p>
+</div>
+<p>Do this.</p>
+<p>Then do that.</p>
+<p>And so on.</p>
+</section>
+<section id="another-section">
+<h3>Another section<a class="headerlink" href="#another-section" title="Link to this heading">#</a></h3>
+<div class="admonition-instructor-note instructor-note admonition" id="instructor-note-0">
+<p class="admonition-title">Instructor note</p>
+<p>This is an instructor note.  It may be hidden, collapsed, or put to
+the sidebar in a later style.  You should use it for things that
+the instructor should see while teaching, but should be
+de-emphasized for the learners.  Still, we don’t hide them for
+learners (instructors often present from the same view.)</p>
+</div>
+<p>These tab synchronize with those above:</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-UHl0aG9u" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-1-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="0">Python</button><button aria-controls="panel-1-Ug==" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-1-Ug==" name="Ug==" role="tab" tabindex="-1">R</button></div><div aria-labelledby="tab-1-UHl0aG9u" class="sphinx-tabs-panel code-tab group-tab" id="panel-1-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">cmath</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">/</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-1-Ug==" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-1-Ug==" name="Ug==" role="tabpanel" tabindex="0"><div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">a</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="m">2</span>
+</pre></div>
+</div>
+</div></div>
+<div class="dropdown admonition">
+<p class="admonition-title">Advanced info that should be hidden</p>
+<p>Any advanced information can be hidden behind any admonition by
+adding a <code class="docutils literal notranslate"><span class="pre">dropdown</span></code> class to it (syntax: <code class="docutils literal notranslate"><span class="pre">:class:</span> <span class="pre">dropdown</span></code> as
+first line separated by a space).</p>
+<p>This can be useful for advanced info that should not be show in the
+main body of text..</p>
+</div>
+<section id="a-subsection">
+<h4>A subsection<a class="headerlink" href="#a-subsection" title="Link to this heading">#</a></h4>
+<p>Subsections are fine, use them as you want.  But make sure the main
+sections tell the story and provide a good table of contents to the
+episode.</p>
+<figure class="align-default" id="id1">
+<img alt="_images/sample-image.png" src="_images/sample-image.png" />
+<figcaption>
+<p><span class="caption-text">Figure caption here.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id2">
+<img alt="_images/sample-image.png" class="with-border" src="_images/sample-image.png" />
+<figcaption>
+<p><span class="caption-text">Figure caption here, which explains the content in text so that
+it’s accessible to screen readers.</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="other-directives">
+<h3>Other directives<a class="headerlink" href="#other-directives" title="Link to this heading">#</a></h3>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>A reference to something else.  Usually used at the top of a
+section or page to highlight that the main source of information is
+somewhere else.  Regular-importance “see also” is usually at a
+section at the bottom of the page or an a regular paragraph text.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>This is used for things that should be highlighted to prevent
+significant confusion.  It’s not <em>that</em> often used.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Something which may result in data loss, security, or massive
+confusion.  It’s not <em>that</em> often used.</p>
+</div>
+</section>
+<section id="what-s-next">
+<h3>What’s next?<a class="headerlink" href="#what-s-next" title="Link to this heading">#</a></h3>
+<p>Pointers to what someone can learn about next to expand on this topic,
+if relevant.</p>
+</section>
+<section id="summary">
+<h3>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h3>
+<p>A summary of what you learned.</p>
+</section>
+<section id="see-also">
+<h3>See also<a class="headerlink" href="#see-also" title="Link to this heading">#</a></h3>
+<p>A “see also” section is good practice to show that you have researched
+the topic well and your lesson becomes a hub pointing to the other
+best possible resources.</p>
+<ul class="simple">
+<li><p>Upstream information</p></li>
+<li><p>Another course</p></li>
+</ul>
+<div class="admonition-keypoints keypoints admonition" id="keypoints-0">
+<p class="admonition-title">Keypoints</p>
+<ul class="simple">
+<li><p>What the learner should take away</p></li>
+<li><p>point 2</p></li>
+<li><p>…</p></li>
+</ul>
+<p>This is another holdover from the carpentries style.  This perhaps
+is better done in a “summary” section.</p>
+</div>
+</section>
+</section>
+<span id="document-sample-episode-rst"></span><section id="sample-episode-in-rest">
+<h2>Sample episode in ReST<a class="headerlink" href="#sample-episode-in-rest" title="Link to this heading">#</a></h2>
+<div class="admonition-questions questions admonition" id="questions-0">
+<p class="admonition-title">Questions</p>
+<ul class="simple">
+<li><p>What syntax is used to make a lesson?</p></li>
+<li><p>How do you structure a lesson effectively for teaching?</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">questions</span></code> are at the top of a lesson and provide a starting
+point for what you might learn.  It is usually a bulleted list.
+(The history is a holdover from carpentries-style lessons, and is
+not required.)</p>
+</div>
+<div class="admonition-objectives objectives admonition" id="objectives-0">
+<p class="admonition-title">Objectives</p>
+<ul class="simple">
+<li><p>Show a complete lesson page with all of the most common
+structures.</p></li>
+<li><p>…</p></li>
+</ul>
+<p>This is also a holdover from the carpentries-style.  It could
+usually be left off.</p>
+</div>
+<p>A first paragraph really motivating <em>why</em> you would need the material
+presented on this page, and why it is exciting.  Don’t go into details.</p>
+<p>Then, another paragraph going into the big picture of <em>what</em> you will
+do and <em>how</em> you will do it.  Not details, but enough so that someone
+knows the overall path.</p>
+<p>[For the syntax of ReST, you really want to browse this page alongside the
+source of it, to see how this is implemented.  See the links at the to
+right of the page.]</p>
+<section id="section-titles-should-be-enough-to-understand-the-page">
+<h3>Section titles should be enough to understand the page<a class="headerlink" href="#section-titles-should-be-enough-to-understand-the-page" title="Link to this heading">#</a></h3>
+<p>The first paragraph of each section should again summarize what you
+will do in it.</p>
+<p>Top-level section titles are the map through the page and should make
+sense together.</p>
+<p>This is text.</p>
+<p>A code block with preceeding paragraph:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">multiprocessing</span>
+</pre></div>
+</div>
+<ul>
+<li><p>A bullet list</p></li>
+<li><p>Bullet list</p>
+<ul>
+<li><p>Sub-list:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">code</span> <span class="n">block</span> <span class="p">(</span><span class="n">note</span> <span class="n">indention</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>directive within a list (note indention)</p>
+</div>
+</li>
+</ul>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-UHl0aG9u" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="0">Python</button><button aria-controls="panel-0-Ug==" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-Ug==" name="Ug==" role="tab" tabindex="-1">R</button></div><div aria-labelledby="tab-0-UHl0aG9u" class="sphinx-tabs-panel code-tab group-tab" id="panel-0-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">bisect</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-Ug==" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-0-Ug==" name="Ug==" role="tabpanel" tabindex="0"><div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">a</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">2</span>
+</pre></div>
+</div>
+</div></div>
+<div class="admonition-this-is-a-discussion-directive discussion important admonition" id="discussion-0">
+<p class="admonition-title">This is a <cite>discussion</cite> directive</p>
+<p>Discussion content.</p>
+</div>
+</section>
+<section id="exercise-the-general-topic">
+<h3>Exercise: [the general topic]<a class="headerlink" href="#exercise-the-general-topic" title="Link to this heading">#</a></h3>
+<p>These exercises will show basic exercise conventions.  It might be
+useful for the first paragraph of a multi-exercise section to tie them
+together to the overall point, but that isn’t necessary.</p>
+<p>[Exercises get their own section, so that they can be linked and found
+in the table of contents.]</p>
+<div class="admonition-rest-1-imperative-statement-of-what-will-happen-in-the-exercise exercise important admonition" id="exercise-0">
+<p class="admonition-title">ReST-1 Imperative statement of what will happen in the exercise.</p>
+<p>An intro paragraph about the exercise, if not obvious.  Expect that
+learners and exercise leaders will end up here without having
+browsed the lesson above.  Make sure that they understand the
+general idea of what is going on and <em>why</em> the exercise exists
+(what the learning objective is roughly, for example there is a big
+difference between making a commit and focusing on writing a good
+commit message and knowing the command line arguments!)</p>
+<ol class="arabic simple">
+<li><p>Bullet list if multiple parts.</p></li>
+<li><p>Despite the names, most exercises are not really “exercises” in
+that the are difficult.  Most are rather direct applications of
+what has been learned (unless they are <code class="docutils literal notranslate"><span class="pre">(advanced)</span></code>).</p></li>
+<li><p>When writing the exercise steps, try to make it clear enough
+that a helper/exercise leader who knows the general tools
+somewhat well (but doesn’t know the lesson) can lead the
+exercise just by looking at the text in the box.</p>
+<ul class="simple">
+<li><p>Of course that’s not always possible, sometimes they actually
+are difficult.</p></li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="admonition-solution solution important dropdown admonition" id="solution-0">
+<p class="admonition-title">Solution</p>
+<ul class="simple">
+<li><p>Solution here.</p></li>
+</ul>
+</div>
+<div class="admonition-optional-rest-2-imperative-statement-of-what-will-happen-in-the-exercise exercise important admonition" id="exercise-1">
+<p class="admonition-title">(optional) ReST-2 Imperative statement of what will happen in the exercise.</p>
+<ol class="arabic simple">
+<li><p>Optional exercises are prefixed with <code class="docutils literal notranslate"><span class="pre">(optional)</span></code></p></li>
+<li><p>It’s better to have more exercises be optional than many that
+are made optional ad-hoc.  Every instructor may do something
+different, but it’s better to seem like you are covering all the
+main material than seem like you are skipping parts.</p></li>
+</ol>
+</div>
+<div class="admonition-solution solution important dropdown admonition" id="solution-1">
+<p class="admonition-title">Solution</p>
+<ul class="simple">
+<li><p>Solution to that one.</p></li>
+</ul>
+</div>
+<div class="admonition-optional-rest-3-exercise-with-embedded-solution exercise important admonition" id="exercise-2">
+<p class="admonition-title">(optional) ReST-3: Exercise with embedded solution</p>
+<ol class="arabic simple">
+<li><p>This exercise has the solution within its box itself.  This is a
+stylistic difference more than anything.</p></li>
+</ol>
+<div class="admonition-solution solution important dropdown admonition" id="solution-2">
+<p class="admonition-title">Solution</p>
+<ul class="simple">
+<li><p>Solution to that one.</p></li>
+</ul>
+</div>
+</div>
+<div class="admonition-advanced-rest-4-exercise-with-embedded-solution exercise important admonition" id="exercise-3">
+<p class="admonition-title">(advanced) ReST-4: Exercise with embedded solution</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">(advanced)</span></code> is the tag for things which really require
+figuring out stuff on your own.  Can also be <code class="docutils literal notranslate"><span class="pre">(advanced,</span>
+<span class="pre">optional)</span></code> but that’s sort of implied.</p></li>
+<li><p>This also demonstrates an exercise with a <a class="reference internal" href="#document-index"><span class="doc">link</span></a>,
+or <a class="reference internal" href="index.html#exerciselist-recommendations"><span class="std std-ref">internal reference</span></a>.</p></li>
+</ol>
+</div>
+</section>
+<section id="this-entire-section-is-an-exercise">
+<h3>This entire section is an exercise<a class="headerlink" href="#this-entire-section-is-an-exercise" title="Link to this heading">#</a></h3>
+<div class="dropdown admonition">
+<p class="admonition-title">Exercise leader setup</p>
+<p>This admonition is a drop-down and can be used for instructor or
+exercise-leader specific setup.  (see also / compare with
+<code class="docutils literal notranslate"><span class="pre">instructor-note</span></code>.</p>
+</div>
+<div class="admonition-in-this-section-we-will-do-something exercise important admonition" id="exercise-4">
+<p class="admonition-title">In this section, we will [do something]</p>
+<p>Standard intro paragraph of the exercise.</p>
+<p>Describe how this exercise is following everything that is in this
+section.</p>
+</div>
+<p>Do this.</p>
+<p>Then do that.</p>
+<p>And so on.</p>
+</section>
+<section id="another-section">
+<h3>Another section<a class="headerlink" href="#another-section" title="Link to this heading">#</a></h3>
+<div class="admonition-instructor-note instructor-note admonition" id="instructor-note-0">
+<p class="admonition-title">Instructor note</p>
+<p>This is an instructor note.  It may be hidden, collapsed, or put to
+the sidebar in a later style.  You should use it for things that
+the instructor should see while teaching, but should be
+de-emphasized for the learners.  Still, we don’t hide them for
+learners (instructors often present from the same view.)</p>
+</div>
+<p>These tab synchronize with those above:</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-UHl0aG9u" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-1-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="0">Python</button><button aria-controls="panel-1-Ug==" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-1-Ug==" name="Ug==" role="tab" tabindex="-1">R</button></div><div aria-labelledby="tab-1-UHl0aG9u" class="sphinx-tabs-panel code-tab group-tab" id="panel-1-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">cmath</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">/</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-1-Ug==" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-1-Ug==" name="Ug==" role="tabpanel" tabindex="0"><div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">a</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="m">2</span>
+</pre></div>
+</div>
+</div></div>
+<div class="dropdown admonition">
+<p class="admonition-title">Advanced info that should be hidden</p>
+<p>Any advanced information can be hidden behind any admonition by
+adding a <code class="docutils literal notranslate"><span class="pre">dropdown</span></code> class to it (syntax: <code class="docutils literal notranslate"><span class="pre">:class:</span> <span class="pre">dropdown</span></code> as
+first line separated by a space).</p>
+<p>This can be useful for advanced info that should not be show in the
+main body of text..</p>
+</div>
+<section id="a-subsection">
+<h4>A subsection<a class="headerlink" href="#a-subsection" title="Link to this heading">#</a></h4>
+<p>Subsections are fine, use them as you want.  But make sure the main
+sections tell the story and provide a good table of contents to the
+episode.</p>
+<figure class="align-default" id="id1">
+<img alt="_images/sample-image.png" src="_images/sample-image.png" />
+<figcaption>
+<p><span class="caption-text">Figure caption here.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id2">
+<img alt="_images/sample-image.png" class="with-border" src="_images/sample-image.png" />
+<figcaption>
+<p><span class="caption-text">Figure caption here, which explains the content in text so that
+it’s accessible to screen readers.</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="other-directives">
+<h3>Other directives<a class="headerlink" href="#other-directives" title="Link to this heading">#</a></h3>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>A reference to something else.  Usually used at the top of a
+section or page to highlight that the main source of information is
+somewhere else.  Regular-importance “see also” is usually at a
+section at the bottom of the page or an a regular paragraph text.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>This is used for things that should be highlighted to prevent
+significant confusion.  It’s not <em>that</em> often used.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Something which may result in data loss, security, or massive
+confusion.  It’s not <em>that</em> often used.</p>
+</div>
+</section>
+<section id="what-s-next">
+<h3>What’s next?<a class="headerlink" href="#what-s-next" title="Link to this heading">#</a></h3>
+<p>Pointers to what someone can learn about next to expand on this topic,
+if relevant.</p>
+</section>
+<section id="summary">
+<h3>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h3>
+<p>A summary of what you learned.</p>
+</section>
+<section id="see-also">
+<h3>See also<a class="headerlink" href="#see-also" title="Link to this heading">#</a></h3>
+<p>A “see also” section is good practice to show that you have researched
+the topic well and your lesson becomes a hub pointing to the other
+best possible resources.</p>
+<ul class="simple">
+<li><p>Upstream information</p></li>
+<li><p>Another course</p></li>
+</ul>
+<div class="admonition-keypoints keypoints admonition" id="keypoints-0">
+<p class="admonition-title">Keypoints</p>
+<ul class="simple">
+<li><p>What the learner should take away</p></li>
+<li><p>point 2</p></li>
+<li><p>…</p></li>
+</ul>
+<p>This is another holdover from the carpentries style.  This perhaps
+is better done in a “summary” section.</p>
+</div>
+</section>
+</section>
+</div>
+<div class="toctree-wrapper compound">
+<span id="document-intersphinx"></span><section id="intersphinx-easy-linking">
+<h2>Intersphinx: easy linking<a class="headerlink" href="#intersphinx-easy-linking" title="Link to this heading">#</a></h2>
+<p>There is a common problem: you want to link to documentation in other
+sites, for example the documentation of <code class="docutils literal notranslate"><span class="pre">list.sort</span></code>.  Isn’t it nice
+to have a structured way to do this so you don’t have to a) look up a
+URL yourself b) risk having links break?  Well, what do you know,
+Sphinx has a native solution for this: <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html#module-sphinx.ext.intersphinx" title="(in Sphinx v8.3.0)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">Intersphinx</span></code></a>.</p>
+<section id="enable-the-extension">
+<h3>Enable the extension<a class="headerlink" href="#enable-the-extension" title="Link to this heading">#</a></h3>
+<p>It’s built into Sphinx, and in the sphinx-lesson-template <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> but
+commented out.  Enable it:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;sphinx.ext.intersphinx&#39;</span><span class="p">)</span>
+<span class="n">intersphinx_mapping</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s1">&#39;python&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;https://docs.python.org/3&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+  <span class="p">}</span>
+</pre></div>
+</div>
+<p>Configuration details and how to link to other sites are found at
+<a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html#module-sphinx.ext.intersphinx" title="(in Sphinx v8.3.0)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">the</span> <span class="pre">docs</span> <span class="pre">for</span> <span class="pre">intersphinx</span></code></a>.
+For most Sphinx-documented projects, use the URL of the documentation
+base.  See “Usage” below for how to verify the URLs.</p>
+</section>
+<section id="usage">
+<h3>Usage<a class="headerlink" href="#usage" title="Link to this heading">#</a></h3>
+<p>Just like <code class="docutils literal notranslate"><span class="pre">:doc:</span></code> is a structured way to link to other documents,
+there are other <strong>domains</strong> of links, such as <code class="docutils literal notranslate"><span class="pre">:py:class:</span></code>,
+<code class="docutils literal notranslate"><span class="pre">:py:meth:</span></code>, and so on.  So we can link to documentation of a class
+or method like this:</p>
+<div class="admonition-rendered-note-the-links admonition">
+<p class="admonition-title">Rendered (note the links)</p>
+<p>The <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a> class <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list.sort" title="(in Python v3.13)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">sort</span></code></a> method.</p>
+</div>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span># Restructured Text
+The <span class="na">:py:class:</span><span class="nv">`list`</span> class <span class="na">:py:meth:</span><span class="nv">`sort &lt;list.sort&gt;`</span> method.
+</pre></div>
+</div>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="gh"># MyST markdown</span>
+The {py:class}`list` class {py:meth}`sort &lt;list.sort&gt;` method.
+</pre></div>
+</div>
+<p>Note that this is structured information, and thus has no concept in
+Markdown, only MyST “markdown”.  This is, in fact, a major reason why
+plain markdown is not that great for structured documentation.</p>
+</section>
+<section id="available-linking-domains-and-roles">
+<h3>Available linking domains and roles<a class="headerlink" href="#available-linking-domains-and-roles" title="Link to this heading">#</a></h3>
+<p>Of course, the domains are extendable.  Presumably, when you use
+sphinx-lesson, you will be referring to other things.  The most
+common roles in the Python domain are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">:py:mod:</span></code>: modules, e.g. <a class="reference external" href="https://docs.python.org/3/library/multiprocessing.html#module-multiprocessing" title="(in Python v3.13)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">multiprocessing</span></code></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:py:func:</span></code>: modules, e.g. <a class="reference external" href="https://docs.python.org/3/library/itertools.html#itertools.combinations" title="(in Python v3.13)"><code class="xref py py-func docutils literal notranslate"><span class="pre">itertools.combinations()</span></code></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:py:class:</span></code>: modules, e.g. <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:py:meth:</span></code>: modules, e.g. <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list.sort" title="(in Python v3.13)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">list.sort()</span></code></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:py:attr:</span></code>: modules, e.g. <a class="reference external" href="https://docs.python.org/3/library/re.html#re.Pattern.groups" title="(in Python v3.13)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">re.Pattern.groups</span></code></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:py:data:</span></code>: modules, e.g. <a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.MINYEAR" title="(in Python v3.13)"><code class="xref py py-data docutils literal notranslate"><span class="pre">datetime.MINYEAR</span></code></a></p></li>
+<li><p>Also <code class="docutils literal notranslate"><span class="pre">:py:exc:</span></code>, <code class="docutils literal notranslate"><span class="pre">:py:data:</span></code>, <code class="docutils literal notranslate"><span class="pre">:py:obj:</span></code>, <code class="docutils literal notranslate"><span class="pre">::</span></code>, <code class="docutils literal notranslate"><span class="pre">::</span></code></p></li>
+<li><p>There are also built-in domains for C, C++, JavaScript (see
+<a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html">the info on Sphinx domains</a> for what the roles are).
+Others are  added by Sphinx extensions.</p></li>
+</ul>
+<p>You can list all available reference targets at some doc using a
+command line command.  You can get the URL from the conf.py file (and
+use this to verify URLs before you put it in the conf.py file):</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># Note we need to append `objects.inv`:</span>
+python<span class="w"> </span>-m<span class="w"> </span>sphinx.ext.intersphinx<span class="w"> </span>https://docs.python.org/3/objects.inv
+<span class="c1"># In conf.py: &#39;python&#39;: (&#39;https://docs.python.org/3&#39;, None),</span>
+</pre></div>
+</div>
+<p>You usually use the fully qualified name of an object, for example
+<code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.plot</span></code>.  In Python this is usually pretty obvious,
+due to clear namespacing.  You’ll have to look at other languages
+yourself.</p>
+</section>
+<section id="see-also">
+<h3>See also<a class="headerlink" href="#see-also" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html">Sphinx: domains</a> - how to
+document classes/functions to be referrable this way, and link to them.</p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html#module-sphinx.ext.intersphinx" title="(in Sphinx v8.3.0)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">Intersphinx</span></code></a>.</p></li>
+</ul>
+</section>
+</section>
+<span id="document-md-transforms"></span><section id="markdown-transforms">
+<h2>Markdown transforms<a class="headerlink" href="#markdown-transforms" title="Link to this heading">#</a></h2>
+<p><strong>This is mostly obsolete and unmaintained now that almost everything
+is transitioned to MyST-markdown.  If this is important for you, get
+in touch and we can revive it.</strong></p>
+<p>To ease the transition from other Markdown dialects (like the one used
+in software-carpentry), we implement some transformations in Sphinx
+which happen as source preprocessing.
+These are implemented in the <code class="docutils literal notranslate"><span class="pre">sphinx_lessons.md_transforms</span></code> module
+and are implemented using regular expressions, so they are a
+bit fragile.</p>
+<section id="code-fences">
+<h3>Code fences<a class="headerlink" href="#code-fences" title="Link to this heading">#</a></h3>
+<p>Code fence syntax is translated to CommonMark.  Input:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```
+blah
+```
+{: output}
+</pre></div>
+</div>
+<p>Output:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{output}
+blah
+```
+</pre></div>
+</div>
+</section>
+<section id="block-quotes">
+<h3>Block quotes<a class="headerlink" href="#block-quotes" title="Link to this heading">#</a></h3>
+<p>Transform CSS styles into MyST directives (implemented as code
+fences.  Input:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="c1">## some-heading</span>
+<span class="o">&gt;</span> <span class="n">text</span>
+<span class="o">&gt;</span> <span class="n">text</span>
+<span class="p">{:</span> <span class="o">.</span><span class="n">block</span><span class="o">-</span><span class="n">class</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Output:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{block-class} some-heading
+text
+text
+```
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">block-class</span></code> is the directive name (we maintain compatibility
+with old jekyll-common)</p>
+</section>
+<section id="raw-html-images">
+<h3>Raw HTML images<a class="headerlink" href="#raw-html-images" title="Link to this heading">#</a></h3>
+<p>Raw HTML isn’t a good idea in portable formats.  Plus, in the old
+jekyll formats, bad relative path handling caused absolute paths to be
+embedded a lot.  Transform this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">img</span> <span class="n">src</span><span class="o">=</span><span class="s2">&quot;/path/to/img.png&quot;</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>into this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{figure} /path/to/img.png
+```
+</pre></div>
+</div>
+<p>Exclude any possible <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">...</span> <span class="pre">}}</span></code> template variables used to
+semi-hard code absolute paths.</p>
+</section>
+</section>
+<span id="document-jupyter"></span><section id="jupyter-notebook-page">
+<h2>Jupyter notebook page<a class="headerlink" href="#jupyter-notebook-page" title="Link to this heading">#</a></h2>
+<p>This is a raw Jupyter notebook page, in <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> format.</p>
+<section id="usage">
+<h3>Usage<a class="headerlink" href="#usage" title="Link to this heading">#</a></h3>
+<p>Basic code execution works:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>hostname
+<span class="nb">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>fv-az1336-577
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>45
+</pre></div>
+</div>
+</div>
+</div>
+<p>Directives work as well, since it is recursively executed by the same parser as normal Markdown files.  Of course, Sphinx directives won’t be interperted within Jupyter itself, but that is probably OK for development purposes:</p>
+<div class="admonition-exercise exercise important admonition" id="exercise-0">
+<p class="admonition-title">Exercise</p>
+<p>This is a challenge block</p>
+</div>
+<p>You can learn more about this at the <a class="reference external" href="https://myst-nb.readthedocs.io/en/latest/use/execute.html">myst-nb docs</a>.  Most this applies equally to the <code class="docutils literal notranslate"><span class="pre">.md</span></code> files.</p>
+</section>
+<section id="configuration">
+<h3>Configuration<a class="headerlink" href="#configuration" title="Link to this heading">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">nb_execution_mode</span></code> variable in conf.py controls execution.  Currently, we don’t set a default for this, which makes it <code class="docutils literal notranslate"><span class="pre">auto</span></code>.  You can read more about this <a class="reference external" href="https://myst-nb.readthedocs.io/en/latest/computation/execute.html">upstream</a>.  Possible values include:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">off</span></code>: don’t execute</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">auto</span></code>: exceute *only if there are missing outputs</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">force</span></code>: always re-execute</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cache</span></code>: always execute, but cache the output. Don’t re-execute if the input is unchanged.</p></li>
+</ul>
+</section>
+</section>
+<span id="document-executing-code"></span><section id="executing-code-cells-in-myst-markdown">
+<h2>Executing code cells in MyST markdown<a class="headerlink" href="#executing-code-cells-in-myst-markdown" title="Link to this heading">#</a></h2>
+<p>This is a <code class="docutils literal notranslate"><span class="pre">.md</span></code> file that has a special header and a <code class="docutils literal notranslate"><span class="pre">{code-cell}</span></code>
+directive, that lets it</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>hostname
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>fv-az1336-577
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can see how this works <a class="reference external" href="https://myst-nb.readthedocs.io/en/latest/use/markdown.html">on the myst-nb
+docs</a>.</p>
+</section>
+<span id="document-substitutions-replacements"></span><section id="substitutions-and-replacement-variables">
+<h2>Substitutions and replacement variables<a class="headerlink" href="#substitutions-and-replacement-variables" title="Link to this heading">#</a></h2>
+<p>Like most languages, ReST and MyST both have direct ways to substitute
+variables to locally customize lessons.  While this works for simple
+cases, this can quickly become difficult to manage with the “main
+copy” of possibly important content being separated from the main
+body, and keeping the substitutions up to date.</p>
+<p><a class="reference external" href="https://github.com/NordicHPC/sphinx_ext_substitution">sphinx_ext_substitution</a> tries to
+solve these problems by keeping the default values within the document
+and providing tools to manage the substitution as the context changes
+over time.  It is tested with ReST and should work with MyST as well.</p>
+</section>
+<span id="document-gh-action"></span><section id="deployment-with-github-actions">
+<h2>Deployment with Github Actions<a class="headerlink" href="#deployment-with-github-actions" title="Link to this heading">#</a></h2>
+<p>In sphinx-lesson-template (and this lesson…), there is a <code class="docutils literal notranslate"><span class="pre">.github/workflows/sphinx.yml</span></code> file
+that contains a Github Action that:</p>
+<ul class="simple">
+<li><p>Installs dependencies</p></li>
+<li><p>Builds the project with Sphinx</p></li>
+<li><p>Deploys it</p>
+<ul>
+<li><p>If branch = <code class="docutils literal notranslate"><span class="pre">main</span></code>, deploy to github pages normally</p></li>
+<li><p>For other branches, deploy to github-pages but put the result in
+the <code class="docutils literal notranslate"><span class="pre">branch/{branch-name}</span></code> subdirectory.  If the branch name has
+a <code class="docutils literal notranslate"><span class="pre">/</span></code> in it, replace it with <code class="docutils literal notranslate"><span class="pre">--</span></code>.</p></li>
+<li><p>Keep all previous deployments, but remove branch subdirectories
+for branches that no longer exist.</p></li>
+</ul>
+</li>
+</ul>
+<p>This allows you to view builds from pull requests or other branches.</p>
+<section id="usage">
+<h3>Usage<a class="headerlink" href="#usage" title="Link to this heading">#</a></h3>
+<p>It is recommended to copy from
+<a class="reference external" href="https://github.com/coderefinery/sphinx-lesson-template/">sphinx-lesson-template</a>,
+since that is the primary copy that is updated with all of the latest developments.</p>
+<p>Direct link:
+<a class="github reference external" href="https://github.com/coderefinery/sphinx-lesson-template/blob/main/.github/workflows/sphinx.yml">coderefinery/sphinx-lesson-template</a></p>
+</section>
+</section>
+<span id="document-presentation-mode"></span><section id="presentation-mode">
+<h2>Presentation mode<a class="headerlink" href="#presentation-mode" title="Link to this heading">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is a technical demo, included by default to make it easy to
+use.  It may be removed in a future release.</p>
+</div>
+<p>Using <a class="reference external" href="https://github.com/coderefinery/sphinx-minipres">minipres</a>,
+any web page can be turned into a presentation.  As usual, there is
+nothing very specific to sphinx-lesson about this, but currently
+minipres is only tested on <code class="docutils literal notranslate"><span class="pre">sphinx_rtd_theme</span></code>, but theoretically can
+work on others.</p>
+<p>Using minipres, you only have to write one page: the material your
+students read.  Then, you hide the unnecessary elements (table of
+contents), focus on one section, and provide a quick way to jump
+between sections.  Then you can get the focused attention of a
+presentation and the readability of a single page.</p>
+<p>How it works:</p>
+<ul class="simple">
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">?minipres</span></code> to the URL of any page, and it goes into
+presentation mode.</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">?plain</span></code> to the URL of any page to go to plain mode.</p></li>
+</ul>
+<p>In presentation mode:</p>
+<ul class="simple">
+<li><p>The sidebars are removed (this is the only thing that happens in
+<code class="docutils literal notranslate"><span class="pre">plain</span></code> mode).</p></li>
+<li><p>Extra space is added between each section (HTML headings), so that
+you focus on one section at a time</p></li>
+<li><p>The <strong>left/right arrow keys</strong> scroll between sections.</p></li>
+</ul>
+<p>Examples:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="../sample-episode-rst/?minipres">View this page as an example of minipres</a>.</p></li>
+<li><p><a class="reference external" href="../sample-episode-rst/?plain">View this page in “plain” mode</a>.</p></li>
+</ul>
+</section>
+<span id="document-indexing"></span><section id="indexing">
+<h2>Indexing<a class="headerlink" href="#indexing" title="Link to this heading">#</a></h2>
+<p>An index lets you efficiently look up any topic.  In the age of
+full-text search, you are right to wonder what the point of indexes
+are.  They could be seen as companion of cheatsheet: instead of
+searching and hoping you find the hright place, you can index the
+actual locations to which one would refer.</p>
+<p>As you might expect, there is nothing special to in sphinx-lesson
+about indexing: see the Sphinx documentation on <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-index" title="(in Sphinx v8.3.0)"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">index</span></code></a>.</p>
+<section id="basic-concepts">
+<span id="index-0"></span><h3>Basic concepts<a class="headerlink" href="#basic-concepts" title="Link to this heading">#</a></h3>
+<p><strong>Headings</strong> are the terms which can be looked up in the index.  When
+choosing headings, consider:</p>
+<ul class="simple">
+<li><p>What is useful to a reader to locate</p></li>
+<li><p>How would a reader look it up? For example, <code class="docutils literal notranslate"><span class="pre">commit</span></code> or
+<code class="docutils literal notranslate"><span class="pre">committing</span></code> is useful, but <code class="docutils literal notranslate"><span class="pre">how</span> <span class="pre">to</span> <span class="pre">commit</span></code> is not.  Phrase it
+with the most important terms first (big-endian)</p></li>
+<li><p>And index can have sub-entries.  For example, under the entry
+<code class="docutils literal notranslate"><span class="pre">git</span></code>, there can be subentries for each git command, such as
+<code class="docutils literal notranslate"><span class="pre">commit</span></code>.</p></li>
+</ul>
+</section>
+<section id="syntax">
+<h3>Syntax<a class="headerlink" href="#syntax" title="Link to this heading">#</a></h3>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>The Sphinx documentation on <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-index" title="(in Sphinx v8.3.0)"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">index</span></code></a>.</p>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">index</span></code> directive and role are the main ways to add index
+entries.  The semicolon (<code class="docutils literal notranslate"><span class="pre">;</span></code>) character separates entries and
+subentries.</p>
+<section id="index-a-block-with-a-directive">
+<span id="index-1"></span><h4>Index a block with a directive<a class="headerlink" href="#index-a-block-with-a-directive" title="Link to this heading">#</a></h4>
+<p>MyST:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{index} commit; amend
+<span class="sb">```</span>
+
+<span class="sb">```{index}</span>
+<span class="sb">commit</span>
+<span class="sb">commit; mesage</span>
+<span class="sb">pair: commit; amend</span>
+<span class="sb">```</span>
+</pre></div>
+</div>
+<p>ReST:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">index</span><span class="p">::</span> commit; amend
+</pre></div>
+</div>
+<p>Or ReST, multiple:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">index</span><span class="p">::</span>
+   commit
+   commit; message
+   pair: commit; amend
+</pre></div>
+</div>
+</section>
+<section id="index-a-single-word-with-the-role">
+<h4>Index a single word with the role<a class="headerlink" href="#index-a-single-word-with-the-role" title="Link to this heading">#</a></h4>
+<p id="index-2">MyST:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>Simple entry: {index}<span class="nv">`commit`</span>
+Pair entry: {index}<span class="nv">`loop variables &lt;pair: commit; amend&gt;`</span>
+</pre></div>
+</div>
+<p id="index-3">ReST:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>This sentence has an index entry for <span class="na">:index:</span><span class="nv">`commit`</span>.  If you want the
+indexed term to be different, standard syntax applies such as
+<span class="na">:index:</span><span class="nv">`loop variables &lt;pair: commit; amend&gt;`</span>.
+</pre></div>
+</div>
+</section>
+<section id="styles-of-indexes">
+<h4>Styles of indexes<a class="headerlink" href="#styles-of-indexes" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">TERM</span></code>, same as below</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">single:</span> <span class="pre">TERM</span></code> (the default): create just a single entry</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pair:</span> <span class="pre">TERM;</span> <span class="pre">TERM</span></code>: create entries for <code class="docutils literal notranslate"><span class="pre">x;</span> <span class="pre">y</span></code> and <code class="docutils literal notranslate"><span class="pre">y;</span> <span class="pre">x</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">see:</span> <span class="pre">TOPIC;</span> <span class="pre">OTHER</span></code>: creates a “see other” entry for “topic”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seealso:</span> <span class="pre">TOPIC;</span> <span class="pre">OTHER</span></code>: creates a “seealso” entry, like above</p></li>
+</ul>
+</section>
+</section>
+<section id="glossaries">
+<h3>Glossaries<a class="headerlink" href="#glossaries" title="Link to this heading">#</a></h3>
+<p>If you make a glossary using the <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-glossary" title="(in Sphinx v8.3.0)"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">glossary</span> <span class="pre">directive</span></code></a>, the terms automatically get added to the index</p>
+</section>
+<section id="see-also">
+<h3>See also<a class="headerlink" href="#see-also" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-index" title="(in Sphinx v8.3.0)"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">index</span></code></a> directive</p></li>
+<li><p>Sphinx <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-glossary" title="(in Sphinx v8.3.0)"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">glossary</span></code></a></p></li>
+</ul>
+</section>
+</section>
+<span id="document-exercise-list"></span><section id="exercise-list">
+<h2>Exercise list<a class="headerlink" href="#exercise-list" title="Link to this heading">#</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">exercise-list</span></code> directive inserts a list of all exercise and
+solution <a class="reference internal" href="#document-directives"><span class="doc">directives</span></a> (and maybe more).  This can be
+useful as an overall summary of the entire lesson flow, onboarding new
+instructors and helpers, and more.</p>
+<section id="usage">
+<h3>Usage<a class="headerlink" href="#usage" title="Link to this heading">#</a></h3>
+<p>MyST:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{exerciselist}```
+</pre></div>
+</div>
+<p>ReST:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">exerciselist</span><span class="p">::</span>
+</pre></div>
+</div>
+<p>One can give the optional directive arguments to specify lists of
+admonition classes to include (default: <code class="docutils literal notranslate"><span class="pre">exercise</span></code>, <code class="docutils literal notranslate"><span class="pre">solution</span></code>,
+<code class="docutils literal notranslate"><span class="pre">exerciselist-include</span></code>) or exclude (default:
+<code class="docutils literal notranslate"><span class="pre">exerciselist-exclude</span></code>) if you want to (any <a class="reference internal" href="#document-directives"><span class="doc">directives</span></a> which match any <code class="docutils literal notranslate"><span class="pre">include</span></code>, and do not match any
+<code class="docutils literal notranslate"><span class="pre">exclude</span></code> are included).  Specify the options this way (ReST):</p>
+<p>MyST:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{exerciselist}
+:include: exercise solution instructor-note
+:exclude: exclude-this
+```
+
+:::{exercise} Exercise title
+:class: exclude-this
+
+Exercise content
+:::
+</pre></div>
+</div>
+<p>ReST:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">exerciselist</span><span class="p">::</span>
+   <span class="nc">:include:</span> exercise solution instructor-note
+   <span class="nc">:exclude:</span> exclude-this
+
+<span class="p">..</span> <span class="ow">exercise</span><span class="p">::</span> Exercise title
+   <span class="nc">:class:</span> exclude-this
+
+   Exercise content
+</pre></div>
+</div>
+<p>This feature is new as of early 2022, there may be possible problems
+in it still - please report.  Currently, only sphinx-lesson
+admonitions can be included due to technical considerations (see
+source for hint on fixing).</p>
+</section>
+<section id="recommendations-to-make-a-useful-list">
+<span id="exerciselist-recommendations"></span><h3>Recommendations to make a useful list<a class="headerlink" href="#recommendations-to-make-a-useful-list" title="Link to this heading">#</a></h3>
+<ul>
+<li><p>Context is important!  Give your exercises a name other than the
+default of “Exercise”, so that someone quickly scanning the exercise
+list can follow the overall flow.</p>
+<ul class="simple">
+<li><p>Making good summaries is really an important skill for organizing
+anything - give this the attention it needs.</p></li>
+<li><p>Think of an exercise leader or helper coming to help someone, seeing
+the exercise, and needing to help someone: not just what to do,
+but what the core lesson and task is, so that they can focus on
+giving the right help (and telling the learners what they don’t
+need to worry about).</p></li>
+<li><p>Context can be both in the exercise title and in the exercise body
+itself.</p></li>
+</ul>
+</li>
+<li><p>Name the exercises well.  Best is to think of it like a version
+control commit: an imperative sentence stating what the person will
+do in the exercise.  For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Make</span> <span class="n">your</span> <span class="n">first</span> <span class="n">git</span> <span class="n">commit</span>
+<span class="n">Resolve</span> <span class="n">the</span> <span class="n">conflict</span>
+</pre></div>
+</div>
+</li>
+<li><p>In the title, include any other important information (see below):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Create a setup.py file for your package (15 min)
+(optional) Install your package in editable mode using ``pip install -e`` (5 min)
+(advanced) Also create packaging using pyproject.toml and compare (20 min)
+</pre></div>
+</div>
+</li>
+<li><p>Consider giving your exercises permanent identifiers.  They are
+intentionally not
+auto-numbered yet (what happens when more exercises are
+added/removed?), but if you give them an ID, they will be findable
+even later.  Suggestion is <code class="docutils literal notranslate"><span class="pre">Episodetopic-N</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Basic-1: Verify git is installed
+Basic-2: Initialize the repository
+Conflicts-2: Create a new branch for the other commit.
+Internals-1: (advanced): Inspect individual objects with ``git cat-file``
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>It could include not just what you do, but a bit about why you are
+doing it and what you are learning.</p></li>
+</ul>
+</li>
+<li><p>The list includes only <code class="docutils literal notranslate"><span class="pre">exercise</span></code>, <code class="docutils literal notranslate"><span class="pre">type-along</span></code>, and <code class="docutils literal notranslate"><span class="pre">solution</span></code>.  For
+backwards compatibility, <code class="docutils literal notranslate"><span class="pre">challenge</span></code> is also included.</p></li>
+<li><p>Optional or advanced exercises should clearly state it in the
+exercise title, since people will browse the list separate from the
+main lesson material.</p></li>
+<li><p>Try to minimize use of <code class="docutils literal notranslate"><span class="pre">:include:</span></code> and <code class="docutils literal notranslate"><span class="pre">:exclude:</span></code> and use the
+defaults and adjust your directives to match sphinx-lesson
+semantics.  Excess use of this may over-optimize for particular
+workshops</p></li>
+</ul>
+</section>
+<section id="example">
+<h3>Example<a class="headerlink" href="#example" title="Link to this heading">#</a></h3>
+<p><strong>This section contains the exercise list of sphinx-lesson.  Since
+sphinx-lesson has many examples of exercises, the list below is
+confusing and doesn’t make a lot of sense.  You can see a better
+example at <a class="reference external" href="https://coderefinery.github.io/git-intro/exercises/">git-intro’s exercise
+list</a>.</strong></p>
+<p><strong>Example begins:</strong></p>
+</section>
+</section>
+<span id="document-convert-old-lessons"></span><section id="converting-an-old-lesson">
+<h2>Converting an old lesson<a class="headerlink" href="#converting-an-old-lesson" title="Link to this heading">#</a></h2>
+<p><strong>This was the old CodeRefinery procedure.  It is now unmaintained
+but might be useful for someone.  Let us know if you need it revived.</strong></p>
+<section id="convert-a-jekyll-lesson">
+<h3>Convert a Jekyll lesson<a class="headerlink" href="#convert-a-jekyll-lesson" title="Link to this heading">#</a></h3>
+<p>This brings in the necessary files</p>
+<p>Add the template lesson as a new remote:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">s</span><span class="o">-</span><span class="n">l</span><span class="o">-</span><span class="n">t</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">coderefinery</span><span class="o">/</span><span class="n">sphinx</span><span class="o">-</span><span class="n">lesson</span><span class="o">-</span><span class="n">template</span><span class="o">.</span><span class="n">git</span>
+<span class="n">git</span> <span class="n">fetch</span> <span class="n">s</span><span class="o">-</span><span class="n">l</span><span class="o">-</span><span class="n">t</span>
+</pre></div>
+</div>
+<p>Check out some basic files into your working directory.  Warning: if
+you add a <code class="docutils literal notranslate"><span class="pre">.github/workflows/sphinx.yml</span></code> file, even a push to a
+branch will <strong>override github pages</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">s</span><span class="o">-</span><span class="n">l</span><span class="o">-</span><span class="n">t</span><span class="o">/</span><span class="n">main</span> <span class="o">--</span> <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="n">s</span><span class="o">-</span><span class="n">l</span><span class="o">-</span><span class="n">t</span><span class="o">/</span><span class="n">main</span> <span class="o">--</span> <span class="o">.</span><span class="n">github</span><span class="o">/</span><span class="n">workflows</span><span class="o">/</span><span class="n">sphinx</span><span class="o">.</span><span class="n">yml</span>
+</pre></div>
+</div>
+<p>If you need more Sphinx files:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">s</span><span class="o">-</span><span class="n">l</span><span class="o">-</span><span class="n">t</span><span class="o">/</span><span class="n">main</span> <span class="o">--</span> <span class="n">content</span><span class="o">/</span><span class="n">conf</span><span class="o">.</span><span class="n">py</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="n">s</span><span class="o">-</span><span class="n">l</span><span class="o">-</span><span class="n">t</span><span class="o">/</span><span class="n">main</span> <span class="o">--</span> <span class="o">.</span><span class="n">gitignore</span> <span class="n">Makefile</span> <span class="n">make</span><span class="o">.</span><span class="n">bat</span>
+</pre></div>
+</div>
+<p>If you need the full content (only <code class="docutils literal notranslate"><span class="pre">index.rst</span></code> for now):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">s</span><span class="o">-</span><span class="n">l</span><span class="o">-</span><span class="n">t</span><span class="o">/</span><span class="n">main</span> <span class="o">--</span> <span class="n">content</span><span class="o">/</span>
+</pre></div>
+</div>
+<p>(if jekyll conversion) Move content over:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">mv</span> <span class="n">_episodes</span><span class="o">/*</span> <span class="n">content</span><span class="o">/</span>
+</pre></div>
+</div>
+<p>(if jekyll conversion) Copy stuff from <code class="docutils literal notranslate"><span class="pre">index.md</span></code> into <code class="docutils literal notranslate"><span class="pre">content/index.rst</span></code>.</p>
+<p>(if jekyll conversion) Remove old jekyll stuff:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">rm</span> <span class="n">jekyll</span><span class="o">-</span><span class="n">common</span><span class="o">/</span> <span class="n">index</span><span class="o">.</span><span class="n">md</span> <span class="n">_config</span><span class="o">.</span><span class="n">yml</span> <span class="n">Gemfile</span> <span class="o">.</span><span class="n">gitmodules</span>
+</pre></div>
+</div>
+<p>Set up github pages (first commit to trigger CI), see <a class="reference internal" href="#document-installation"><span class="doc">Installation</span></a>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="o">-</span><span class="n">b</span> <span class="n">gh</span><span class="o">-</span><span class="n">pages</span> <span class="n">origin</span><span class="o">/</span><span class="n">gh</span><span class="o">-</span><span class="n">pages</span>
+<span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s1">&#39;empty commit to trigger gh-pages&#39;</span> <span class="o">--</span><span class="n">allow</span><span class="o">-</span><span class="n">empty</span>
+<span class="n">git</span> <span class="n">push</span>
+</pre></div>
+</div>
+<p>Do all the rest of the fixing… all the bad, non-portable,
+non-relative markdown and so on.  This is the hard part.  Common
+problems:</p>
+<ul class="simple">
+<li><p>Non-consecutive section headings</p></li>
+<li><p>Multiple top-level section headings (there should be one top-level
+section heading that is the page title)</p></li>
+<li><p>Weird relative links (most work though)</p></li>
+</ul>
+<p>You can also update your local view of the default branch:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="nb">set</span><span class="o">-</span><span class="n">head</span> <span class="n">origin</span> <span class="o">--</span><span class="n">auto</span>
+</pre></div>
+</div>
+</section>
+<section id="joint-history">
+<h3>Joint history<a class="headerlink" href="#joint-history" title="Link to this heading">#</a></h3>
+<p>This option joins the histories of the two repositories, so that you
+could merge from the template repository to keep your files up to
+date.  <strong>This may not currently work</strong>, and also may not have any
+value (but is kept here for reference until later).</p>
+<p>Merge the two unrelated histories:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git remote add template https://github.com/coderefinery/sphinx-lesson-template
+$ git fetch template
+$ git merge template/main --allow-unrelated-histories
+# Resolve any possible merge conflicts
+$ git checkout --theirs .gitignore
+$ git checkout --ours LICENSE
+$ git add .gitignore LICENSE
+$ git commit -m &#39;merge sphinx-lesson history to this lesson&#39;
+</pre></div>
+</div>
+<p>Then proceed like the previous section shows.</p>
+</section>
+</section>
+</div>
+<div class="toctree-wrapper compound">
+<span id="document-cheatsheet"></span><section id="cheatsheet">
+<h2>Cheatsheet<a class="headerlink" href="#cheatsheet" title="Link to this heading">#</a></h2>
+<p>Nothing here yet.  See the sample episodes:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/coderefinery/sphinx-lesson/blob/master/content/sample-episode-myst.md?plain=1">MyST markdown</a></p></li>
+<li><p><a class="reference external" href="https://github.com/coderefinery/sphinx-lesson/blob/master/content/sample-episode-rst.rst?plain=1">ReST</a></p></li>
+</ul>
+</section>
+</div>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting started</span></p>
+<ul class="visible nav section-nav flex-column">
+<li class="toctree-l1 toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#document-getting-started">Getting started</a></li>
+<li class="toctree-l1 toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#document-installation">Installation</a></li>
+<li class="toctree-l1 toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#document-contributing-to-a-lesson">Quickstart: Contributing to a lesson</a></li>
+<li class="toctree-l1 toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#document-building">Building the lesson</a></li>
+<li class="toctree-l1 toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#document-changelog">Changelog</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic syntax</span></p>
+<ul class="nav section-nav flex-column">
+<li class="toctree-l1 nav-item toc-entry"><a class="reference internal nav-link" href="#document-md-and-rst">Markdown and ReST</a></li>
+<li class="toctree-l1 nav-item toc-entry"><a class="reference internal nav-link" href="#document-toctree">Table of Contents tree</a></li>
+<li class="toctree-l1 nav-item toc-entry"><a class="reference internal nav-link" href="#document-directives">Directives</a></li>
+<li class="toctree-l1 nav-item toc-entry"><a class="reference internal nav-link" href="#document-figures">Figures</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul class="nav section-nav flex-column">
+<li class="toctree-l1 nav-item toc-entry"><a class="reference internal nav-link" href="#document-sample-episode-myst">Sample episode in MyST (Markdown)</a></li>
+<li class="toctree-l1 nav-item toc-entry"><a class="reference internal nav-link" href="#document-sample-episode-rst">Sample episode in ReST</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced features</span></p>
+<ul class="nav section-nav flex-column">
+<li class="toctree-l1 nav-item toc-entry"><a class="reference internal nav-link" href="#document-intersphinx">Intersphinx: easy linking</a></li>
+<li class="toctree-l1 nav-item toc-entry"><a class="reference internal nav-link" href="#document-md-transforms">Markdown transforms</a></li>
+<li class="toctree-l1 nav-item toc-entry"><a class="reference internal nav-link" href="#document-jupyter">Jupyter notebook page</a></li>
+<li class="toctree-l1 nav-item toc-entry"><a class="reference internal nav-link" href="#document-executing-code">Executing code cells in MyST markdown</a></li>
+<li class="toctree-l1 nav-item toc-entry"><a class="reference internal nav-link" href="#document-substitutions-replacements">Substitutions and replacement variables</a></li>
+<li class="toctree-l1 nav-item toc-entry"><a class="reference internal nav-link" href="#document-gh-action">Deployment with Github Actions</a></li>
+<li class="toctree-l1 nav-item toc-entry"><a class="reference internal nav-link" href="#document-presentation-mode">Presentation mode</a></li>
+<li class="toctree-l1 nav-item toc-entry"><a class="reference internal nav-link" href="#document-indexing">Indexing</a></li>
+<li class="toctree-l1 nav-item toc-entry"><a class="reference internal nav-link" href="#document-exercise-list">Exercise list</a></li>
+<li class="toctree-l1 nav-item toc-entry"><a class="reference internal nav-link" href="#document-convert-old-lessons">Converting an old lesson</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Extras</span></p>
+<ul class="nav section-nav flex-column">
+<li class="toctree-l1 nav-item toc-entry"><a class="reference internal nav-link" href="#document-cheatsheet">Cheatsheet</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By CodeRefinery
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2020-2024, CodeRefinery.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

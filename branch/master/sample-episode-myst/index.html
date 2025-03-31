@@ -1,0 +1,436 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sample episode in MyST (Markdown) &mdash; Sphinx-lesson  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_lesson.css?v=e9df6548" />
+      <link rel="stylesheet" type="text/css" href="../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+      <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=a5c4661c" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=187304be"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/minipres.js?v=a0d29692"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../_static/tabs.js?v=3030b3cb"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="next" title="Sample episode in ReST" href="../sample-episode-rst/" />
+    <link rel="prev" title="Figures" href="../figures/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Sphinx-lesson
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation/">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing-to-a-lesson/">Quickstart: Contributing to a lesson</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../building/">Building the lesson</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog/">Changelog</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Basic syntax</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../md-and-rst/">Markdown and ReST</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../toctree/">Table of Contents tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../directives/">Directives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../figures/">Figures</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Sample episode in MyST (Markdown)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#section-titles-should-be-enough-to-understand-the-page">Section titles should be enough to understand the page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#exercise-the-general-topic">Exercise: [the general topic]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#this-entire-section-is-an-exercise">This entire section is an exercise</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#another-section">Another section</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#a-subsection">A subsection</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#other-directives">Other directives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-s-next">What’s next?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#see-also">See also</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../sample-episode-rst/">Sample episode in ReST</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced features</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intersphinx/">Intersphinx: easy linking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../md-transforms/">Markdown transforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jupyter/">Jupyter notebook page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../executing-code/">Executing code cells in MyST markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../substitutions-replacements/">Substitutions and replacement variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gh-action/">Deployment with Github Actions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../presentation-mode/">Presentation mode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indexing/">Indexing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exercise-list/">Exercise list</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../convert-old-lessons/">Converting an old lesson</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extras</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cheatsheet/">Cheatsheet</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Sphinx-lesson</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Sample episode in MyST (Markdown)</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/coderefinery/sphinx-lesson/blob/master/content/sample-episode-myst.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="sample-episode-in-myst-markdown">
+<h1>Sample episode in MyST (Markdown)<a class="headerlink" href="#sample-episode-in-myst-markdown" title="Link to this heading"></a></h1>
+<div class="admonition-questions questions admonition" id="questions-0">
+<p class="admonition-title">Questions</p>
+<ul class="simple">
+<li><p>What syntax is used to make a lesson?</p></li>
+<li><p>How do you structure a lesson effectively for teaching?</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">questions</span></code> are at the top of a lesson and provide a starting
+point for what you might learn.  It is usually a bulleted list.
+(The history is a holdover from carpentries-style lessons, and is
+not required.)</p>
+</div>
+<div class="admonition-objectives objectives admonition" id="objectives-0">
+<p class="admonition-title">Objectives</p>
+<ul class="simple">
+<li><p>Show a complete lesson page with all of the most common
+structures.</p></li>
+<li><p>…</p></li>
+</ul>
+<p>This is also a holdover from the carpentries-style.  It could
+usually be left off.</p>
+</div>
+<p>A first paragraph really motivating <em>why</em> you would need the material
+presented on this page, and why it is exciting.  Don’t go into details.</p>
+<p>Then, another paragraph going into the big picture of <em>what</em> you will
+do and <em>how</em> you will do it.  Not details, but enough so that someone
+knows the overall path.</p>
+<p>[For the syntax of ReST, you really want to browse this page alongside the
+source of it, to see how this is implemented.  See the links at the to
+right of the page.]</p>
+<section id="section-titles-should-be-enough-to-understand-the-page">
+<h2>Section titles should be enough to understand the page<a class="headerlink" href="#section-titles-should-be-enough-to-understand-the-page" title="Link to this heading"></a></h2>
+<p>The first paragraph of each section should again summarize what you
+will do in it.</p>
+<p>Top-level section titles are the map through the page and should make
+sense together.</p>
+<p>This is text.</p>
+<p>A code block with preceeding paragraph:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">multiprocessing</span>
+</pre></div>
+</div>
+<ul>
+<li><p>A bullet list</p></li>
+<li><p>Bullet list</p>
+<ul>
+<li><p>Sub-list:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">code</span> <span class="n">block</span> <span class="p">(</span><span class="n">note</span> <span class="n">indention</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>directive within a list (note indention)</p>
+</div>
+</li>
+</ul>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-UHl0aG9u" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="0">Python</button><button aria-controls="panel-0-Ug==" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-Ug==" name="Ug==" role="tab" tabindex="-1">R</button></div><div aria-labelledby="tab-0-UHl0aG9u" class="sphinx-tabs-panel code-tab group-tab" id="panel-0-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">bisect</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-Ug==" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-0-Ug==" name="Ug==" role="tabpanel" tabindex="0"><div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">a</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">2</span>
+</pre></div>
+</div>
+</div></div>
+<div class="admonition-this-is-a-discussion-directive discussion important admonition" id="discussion-0">
+<p class="admonition-title">This is a <code class="docutils literal notranslate"><span class="pre">discussion</span></code> directive</p>
+<p>Discussion content.</p>
+</div>
+</section>
+<section id="exercise-the-general-topic">
+<h2>Exercise: [the general topic]<a class="headerlink" href="#exercise-the-general-topic" title="Link to this heading"></a></h2>
+<p>These exercises will show basic exercise conventions.  It might be
+useful for the first paragraph of a multi-exercise section to tie them
+together to the overall point, but that isn’t necessary.</p>
+<p>[Exercises get their own section, so that they can be linked and found
+in the table of contents.]</p>
+<div class="admonition-rest-1-imperative-statement-of-what-will-happen-in-the-exercise exercise important admonition" id="exercise-0">
+<p class="admonition-title">ReST-1 Imperative statement of what will happen in the exercise.</p>
+<p>An intro paragraph about the exercise, if not obvious.  Expect that
+learners and exercise leaders will end up here without having
+browsed the lesson above.  Make sure that they understand the
+general idea of what is going on and <em>why</em> the exercise exists
+(what the learning objective is roughly, for example there is a big
+difference between making a commit and focusing on writing a good
+commit message and knowing the command line arguments!)</p>
+<ol class="arabic simple">
+<li><p>Bullet list if multiple parts.</p></li>
+<li><p>Despite the names, most exercises are not really “exercises” in
+that the are difficult.  Most are rather direct applications of
+what has been learned (unless they are <code class="docutils literal notranslate"><span class="pre">(advanced)</span></code>).</p></li>
+<li><p>When writing the exercise steps, try to make it clear enough
+that a helper/exercise leader who knows the general tools
+somewhat well (but doesn’t know the lesson) can lead the
+exercise just by looking at the text in the box.</p>
+<ul class="simple">
+<li><p>Of course that’s not always possible, sometimes they actually
+are difficult.</p></li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="admonition-solution solution important dropdown admonition" id="solution-0">
+<p class="admonition-title">Solution</p>
+<ul class="simple">
+<li><p>Solution here.</p></li>
+</ul>
+</div>
+<div class="admonition-optional-rest-2-imperative-statement-of-what-will-happen-in-the-exercise exercise important admonition" id="exercise-1">
+<p class="admonition-title">(optional) ReST-2 Imperative statement of what will happen in the exercise.</p>
+<ol class="arabic simple">
+<li><p>Optional exercises are prefixed with <code class="docutils literal notranslate"><span class="pre">(optional)</span></code></p></li>
+<li><p>It’s better to have more exercises be optional than many that
+are made optional ad-hoc.  Every instructor may do something
+different, but it’s better to seem like you are covering all the
+main material than seem like you are skipping parts.</p></li>
+</ol>
+</div>
+<div class="admonition-solution solution important dropdown admonition" id="solution-1">
+<p class="admonition-title">Solution</p>
+<ul class="simple">
+<li><p>Solution to that one.</p></li>
+</ul>
+</div>
+<div class="admonition-optional-rest-3-exercise-with-embedded-solution exercise important admonition" id="exercise-2">
+<p class="admonition-title">(optional) ReST-3: Exercise with embedded solution</p>
+<ol class="arabic simple">
+<li><p>This exercise has the solution within its box itself.  This is a
+stylistic difference more than anything.</p></li>
+</ol>
+<div class="admonition-solution solution important dropdown admonition" id="solution-2">
+<p class="admonition-title">Solution</p>
+<ul class="simple">
+<li><p>Solution to that one.</p></li>
+</ul>
+</div>
+</div>
+<div class="admonition-advanced-rest-4-exercise-with-embedded-solution exercise important admonition" id="exercise-3">
+<p class="admonition-title">(advanced) ReST-4: Exercise with embedded solution</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">(advanced)</span></code> is the tag for things which really require
+figuring out stuff on your own.  Can also be <code class="docutils literal notranslate"><span class="pre">(advanced,</span> <span class="pre">optional)</span></code> but that’s sort of implied.</p></li>
+<li><p>This also demonstrates an exercise with a <a class="reference internal" href="../"><span class="doc">link</span></a>,
+or <a class="reference internal" href="../exercise-list/#exerciselist-recommendations"><span class="std std-ref">internal reference</span></a>.</p></li>
+</ol>
+</div>
+</section>
+<section id="this-entire-section-is-an-exercise">
+<h2>This entire section is an exercise<a class="headerlink" href="#this-entire-section-is-an-exercise" title="Link to this heading"></a></h2>
+<div class="dropdown admonition">
+<p class="admonition-title">Exercise leader setup</p>
+<p>This admonition is a drop-down and can be used for instructor or
+exercise-leader specific setup.  (see also / compare with
+<code class="docutils literal notranslate"><span class="pre">instructor-note</span></code>.</p>
+</div>
+<div class="admonition-in-this-section-we-will-do-something exercise important admonition" id="exercise-4">
+<p class="admonition-title">In this section, we will [do something]</p>
+<p>Standard intro paragraph of the exercise.</p>
+<p>Describe how this exercise is following everything that is in this
+section.</p>
+</div>
+<p>Do this.</p>
+<p>Then do that.</p>
+<p>And so on.</p>
+</section>
+<section id="another-section">
+<h2>Another section<a class="headerlink" href="#another-section" title="Link to this heading"></a></h2>
+<div class="admonition-instructor-note instructor-note admonition" id="instructor-note-0">
+<p class="admonition-title">Instructor note</p>
+<p>This is an instructor note.  It may be hidden, collapsed, or put to
+the sidebar in a later style.  You should use it for things that
+the instructor should see while teaching, but should be
+de-emphasized for the learners.  Still, we don’t hide them for
+learners (instructors often present from the same view.)</p>
+</div>
+<p>These tab synchronize with those above:</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-UHl0aG9u" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-1-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="0">Python</button><button aria-controls="panel-1-Ug==" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-1-Ug==" name="Ug==" role="tab" tabindex="-1">R</button></div><div aria-labelledby="tab-1-UHl0aG9u" class="sphinx-tabs-panel code-tab group-tab" id="panel-1-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">cmath</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">/</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-1-Ug==" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-1-Ug==" name="Ug==" role="tabpanel" tabindex="0"><div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">a</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="m">2</span>
+</pre></div>
+</div>
+</div></div>
+<div class="dropdown admonition">
+<p class="admonition-title">Advanced info that should be hidden</p>
+<p>Any advanced information can be hidden behind any admonition by
+adding a <code class="docutils literal notranslate"><span class="pre">dropdown</span></code> class to it (syntax: <code class="docutils literal notranslate"><span class="pre">:class:</span> <span class="pre">dropdown</span></code> as
+first line separated by a space).</p>
+<p>This can be useful for advanced info that should not be show in the
+main body of text..</p>
+</div>
+<section id="a-subsection">
+<h3>A subsection<a class="headerlink" href="#a-subsection" title="Link to this heading"></a></h3>
+<p>Subsections are fine, use them as you want.  But make sure the main
+sections tell the story and provide a good table of contents to the
+episode.</p>
+<figure class="align-default" id="id1">
+<img alt="../_images/sample-image.png" src="../_images/sample-image.png" />
+<figcaption>
+<p><span class="caption-text">Figure caption here.</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id2">
+<img alt="../_images/sample-image.png" class="with-border" src="../_images/sample-image.png" />
+<figcaption>
+<p><span class="caption-text">Figure caption here, which explains the content in text so that
+it’s accessible to screen readers.</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="other-directives">
+<h2>Other directives<a class="headerlink" href="#other-directives" title="Link to this heading"></a></h2>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>A reference to something else.  Usually used at the top of a
+section or page to highlight that the main source of information is
+somewhere else.  Regular-importance “see also” is usually at a
+section at the bottom of the page or an a regular paragraph text.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>This is used for things that should be highlighted to prevent
+significant confusion.  It’s not <em>that</em> often used.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Something which may result in data loss, security, or massive
+confusion.  It’s not <em>that</em> often used.</p>
+</div>
+</section>
+<section id="what-s-next">
+<h2>What’s next?<a class="headerlink" href="#what-s-next" title="Link to this heading"></a></h2>
+<p>Pointers to what someone can learn about next to expand on this topic,
+if relevant.</p>
+</section>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading"></a></h2>
+<p>A summary of what you learned.</p>
+</section>
+<section id="see-also">
+<h2>See also<a class="headerlink" href="#see-also" title="Link to this heading"></a></h2>
+<p>A “see also” section is good practice to show that you have researched
+the topic well and your lesson becomes a hub pointing to the other
+best possible resources.</p>
+<ul class="simple">
+<li><p>Upstream information</p></li>
+<li><p>Another course</p></li>
+</ul>
+<div class="admonition-keypoints keypoints admonition" id="keypoints-0">
+<p class="admonition-title">Keypoints</p>
+<ul class="simple">
+<li><p>What the learner should take away</p></li>
+<li><p>point 2</p></li>
+<li><p>…</p></li>
+</ul>
+<p>This is another holdover from the carpentries style.  This perhaps
+is better done in a “summary” section.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../figures/" class="btn btn-neutral float-left" title="Figures" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../sample-episode-rst/" class="btn btn-neutral float-right" title="Sample episode in ReST" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2024, CodeRefinery.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
