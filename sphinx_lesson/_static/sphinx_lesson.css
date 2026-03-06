@@ -101,3 +101,15 @@ body.wy-body-for-nav img.with-border {
     background-color: var(--sphinx-lesson-selection-bg-color);
     color: var(--sphinx-lesson-selection-fg-color);
 }
+
+/* Workaround for https://github.com/executablebooks/sphinx-togglebutton/issues/75
+ * Remove when fixed */
+button.toggle-button::before {
+  vertical-align: top;
+  color: white;
+}
+.tb-icon {
+  height: 1.1em;
+  width: 1.1em;
+  color: white;
+}
