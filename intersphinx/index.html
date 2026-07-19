@@ -1,0 +1,243 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Intersphinx: easy linking &mdash; Sphinx-lesson  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_lesson.css?v=e9df6548" />
+      <link rel="stylesheet" type="text/css" href="../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=187304be"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/minipres.js?v=a0d29692"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="next" title="Markdown transforms" href="../md-transforms/" />
+    <link rel="prev" title="Sample episode in ReST" href="../sample-episode-rst/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Sphinx-lesson
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation/">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing-to-a-lesson/">Quickstart: Contributing to a lesson</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../building/">Building the lesson</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog/">Changelog</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Basic syntax</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../md-and-rst/">Markdown and ReST</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../toctree/">Table of Contents tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../directives/">Directives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../figures/">Figures</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../sample-episode-myst/">Sample episode in MyST (Markdown)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sample-episode-rst/">Sample episode in ReST</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced features</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Intersphinx: easy linking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#enable-the-extension">Enable the extension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#available-linking-domains-and-roles">Available linking domains and roles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#see-also">See also</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../md-transforms/">Markdown transforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jupyter/">Jupyter notebook page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../executing-code/">Executing code cells in MyST markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../substitutions-replacements/">Substitutions and replacement variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gh-action/">Deployment with Github Actions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../presentation-mode/">Presentation mode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indexing/">Indexing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exercise-list/">Exercise list</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../convert-old-lessons/">Converting an old lesson</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extras</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cheatsheet/">Cheatsheet</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Sphinx-lesson</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Intersphinx: easy linking</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/coderefinery/sphinx-lesson/blob/master/content/intersphinx.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="intersphinx-easy-linking">
+<h1>Intersphinx: easy linking<a class="headerlink" href="#intersphinx-easy-linking" title="Link to this heading"></a></h1>
+<p>There is a common problem: you want to link to documentation in other
+sites, for example the documentation of <code class="docutils literal notranslate"><span class="pre">list.sort</span></code>.  Isn’t it nice
+to have a structured way to do this so you don’t have to a) look up a
+URL yourself b) risk having links break?  Well, what do you know,
+Sphinx has a native solution for this: <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html#module-sphinx.ext.intersphinx" title="(in Sphinx v8.3.0)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">Intersphinx</span></code></a>.</p>
+<section id="enable-the-extension">
+<h2>Enable the extension<a class="headerlink" href="#enable-the-extension" title="Link to this heading"></a></h2>
+<p>It’s built into Sphinx, and in the sphinx-lesson-template <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> but
+commented out.  Enable it:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;sphinx.ext.intersphinx&#39;</span><span class="p">)</span>
+<span class="n">intersphinx_mapping</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s1">&#39;python&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;https://docs.python.org/3&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+  <span class="p">}</span>
+</pre></div>
+</div>
+<p>Configuration details and how to link to other sites are found at
+<a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html#module-sphinx.ext.intersphinx" title="(in Sphinx v8.3.0)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">the</span> <span class="pre">docs</span> <span class="pre">for</span> <span class="pre">intersphinx</span></code></a>.
+For most Sphinx-documented projects, use the URL of the documentation
+base.  See “Usage” below for how to verify the URLs.</p>
+</section>
+<section id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Link to this heading"></a></h2>
+<p>Just like <code class="docutils literal notranslate"><span class="pre">:doc:</span></code> is a structured way to link to other documents,
+there are other <strong>domains</strong> of links, such as <code class="docutils literal notranslate"><span class="pre">:py:class:</span></code>,
+<code class="docutils literal notranslate"><span class="pre">:py:meth:</span></code>, and so on.  So we can link to documentation of a class
+or method like this:</p>
+<div class="admonition-rendered-note-the-links admonition">
+<p class="admonition-title">Rendered (note the links)</p>
+<p>The <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a> class <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list.sort" title="(in Python v3.13)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">sort</span></code></a> method.</p>
+</div>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span># Restructured Text
+The <span class="na">:py:class:</span><span class="nv">`list`</span> class <span class="na">:py:meth:</span><span class="nv">`sort &lt;list.sort&gt;`</span> method.
+</pre></div>
+</div>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="gh"># MyST markdown</span>
+The {py:class}`list` class {py:meth}`sort &lt;list.sort&gt;` method.
+</pre></div>
+</div>
+<p>Note that this is structured information, and thus has no concept in
+Markdown, only MyST “markdown”.  This is, in fact, a major reason why
+plain markdown is not that great for structured documentation.</p>
+</section>
+<section id="available-linking-domains-and-roles">
+<h2>Available linking domains and roles<a class="headerlink" href="#available-linking-domains-and-roles" title="Link to this heading"></a></h2>
+<p>Of course, the domains are extendable.  Presumably, when you use
+sphinx-lesson, you will be referring to other things.  The most
+common roles in the Python domain are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">:py:mod:</span></code>: modules, e.g. <a class="reference external" href="https://docs.python.org/3/library/multiprocessing.html#module-multiprocessing" title="(in Python v3.13)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">multiprocessing</span></code></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:py:func:</span></code>: modules, e.g. <a class="reference external" href="https://docs.python.org/3/library/itertools.html#itertools.combinations" title="(in Python v3.13)"><code class="xref py py-func docutils literal notranslate"><span class="pre">itertools.combinations()</span></code></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:py:class:</span></code>: modules, e.g. <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:py:meth:</span></code>: modules, e.g. <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list.sort" title="(in Python v3.13)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">list.sort()</span></code></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:py:attr:</span></code>: modules, e.g. <a class="reference external" href="https://docs.python.org/3/library/re.html#re.Pattern.groups" title="(in Python v3.13)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">re.Pattern.groups</span></code></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:py:data:</span></code>: modules, e.g. <a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.MINYEAR" title="(in Python v3.13)"><code class="xref py py-data docutils literal notranslate"><span class="pre">datetime.MINYEAR</span></code></a></p></li>
+<li><p>Also <code class="docutils literal notranslate"><span class="pre">:py:exc:</span></code>, <code class="docutils literal notranslate"><span class="pre">:py:data:</span></code>, <code class="docutils literal notranslate"><span class="pre">:py:obj:</span></code>, <code class="docutils literal notranslate"><span class="pre">::</span></code>, <code class="docutils literal notranslate"><span class="pre">::</span></code></p></li>
+<li><p>There are also built-in domains for C, C++, JavaScript (see
+<a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html">the info on Sphinx domains</a> for what the roles are).
+Others are  added by Sphinx extensions.</p></li>
+</ul>
+<p>You can list all available reference targets at some doc using a
+command line command.  You can get the URL from the conf.py file (and
+use this to verify URLs before you put it in the conf.py file):</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># Note we need to append `objects.inv`:</span>
+python<span class="w"> </span>-m<span class="w"> </span>sphinx.ext.intersphinx<span class="w"> </span>https://docs.python.org/3/objects.inv
+<span class="c1"># In conf.py: &#39;python&#39;: (&#39;https://docs.python.org/3&#39;, None),</span>
+</pre></div>
+</div>
+<p>You usually use the fully qualified name of an object, for example
+<code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.plot</span></code>.  In Python this is usually pretty obvious,
+due to clear namespacing.  You’ll have to look at other languages
+yourself.</p>
+</section>
+<section id="see-also">
+<h2>See also<a class="headerlink" href="#see-also" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html">Sphinx: domains</a> - how to
+document classes/functions to be referrable this way, and link to them.</p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html#module-sphinx.ext.intersphinx" title="(in Sphinx v8.3.0)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">Intersphinx</span></code></a>.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../sample-episode-rst/" class="btn btn-neutral float-left" title="Sample episode in ReST" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../md-transforms/" class="btn btn-neutral float-right" title="Markdown transforms" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2024, CodeRefinery.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

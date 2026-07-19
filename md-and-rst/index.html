@@ -1,0 +1,326 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Markdown and ReST &mdash; Sphinx-lesson  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_lesson.css?v=e9df6548" />
+      <link rel="stylesheet" type="text/css" href="../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=187304be"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/minipres.js?v=a0d29692"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="next" title="Table of Contents tree" href="../toctree/" />
+    <link rel="prev" title="Changelog" href="../changelog/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Sphinx-lesson
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation/">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing-to-a-lesson/">Quickstart: Contributing to a lesson</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../building/">Building the lesson</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog/">Changelog</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Basic syntax</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Markdown and ReST</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#markdown">Markdown</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#restructured-text">ReStructured Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#md-and-rest-syntax">MD and ReST syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#directives">Directives</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#myst-directives">MyST directives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rest-directives">ReST directives</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#roles">Roles</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#rest-roles">ReST roles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#myst-roles">MyST roles</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../toctree/">Table of Contents tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../directives/">Directives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../figures/">Figures</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../sample-episode-myst/">Sample episode in MyST (Markdown)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sample-episode-rst/">Sample episode in ReST</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced features</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intersphinx/">Intersphinx: easy linking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../md-transforms/">Markdown transforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jupyter/">Jupyter notebook page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../executing-code/">Executing code cells in MyST markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../substitutions-replacements/">Substitutions and replacement variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gh-action/">Deployment with Github Actions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../presentation-mode/">Presentation mode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indexing/">Indexing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exercise-list/">Exercise list</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../convert-old-lessons/">Converting an old lesson</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extras</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cheatsheet/">Cheatsheet</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Sphinx-lesson</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Markdown and ReST</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/coderefinery/sphinx-lesson/blob/master/content/md-and-rst.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="markdown-and-rest">
+<h1>Markdown and ReST<a class="headerlink" href="#markdown-and-rest" title="Link to this heading"></a></h1>
+<p>Sites can be written in Markdown on ReStructured Text.  Actually, in
+theory any format that has a Sphinx parser could be used, however you
+will be slightly limited without directive support.</p>
+<p>The most important thing to note is that: To make a structured lesson,
+one needs to write in something a bit more structured than HTML.</p>
+<section id="markdown">
+<h2>Markdown<a class="headerlink" href="#markdown" title="Link to this heading"></a></h2>
+<p>Markdown is the most common syntax for CodeRefinery lessons.  It’s not
+raw markdown but the MyST flavor, which has <em>much</em> more structured
+directives than plain markdown.  These come straight from Sphinx and
+what we use to</p>
+<p><a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/using/syntax.html">MyST syntax reference</a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>What is Markdown?  Markdown isn’t a single language.  Its native form
+is a simple syntax for HTML, and isn’t very structured.  There are many different
+flavors, some of which add extra syntax which gets it closer to
+enough, but for our purposes these are different enough that they
+should count as different languages (as similar as “markdown” and
+ReST).  Since the Markdown creator says that <a class="reference external" href="https://en.wikipedia.org/wiki/Markdown#CommonMark">Markdown shouldn’t
+evolve or be strictly defined</a>, Markdown is
+essentially a dead syntax: we should always specific which living
+sub-syntax you are referring to.</p>
+<p>sphinx-lesson uses the <a class="reference external" href="https://github.com/executablebooks/myst-parser">MyST-parser</a> (MarkedlY Structured Text),
+which is both completely compatible with CommonMark, and also supports
+<em>all ReStructured Text directives</em>, unlike most other non-ReST Sphinx
+parsers.  Thus, we finally have a way to write equivalent ReST and
+Markdown without any compromises (though other CommonMark parsers
+aren’t expected to know Sphinx directives).</p>
+</div>
+</section>
+<section id="restructured-text">
+<h2>ReStructured Text<a class="headerlink" href="#restructured-text" title="Link to this heading"></a></h2>
+<p>ReStructured Text has native support for roles and directives, which
+makes it a more structured language such as LaTeX, rather than HTML.
+It came before Sphinx, but Sphinx made it even more popular.</p>
+<p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html">ReST reference (from Sphinx)</a></p>
+</section>
+<section id="md-and-rest-syntax">
+<h2>MD and ReST syntax<a class="headerlink" href="#md-and-rest-syntax" title="Link to this heading"></a></h2>
+<p>This is a brief comparison of basic syntax:</p>
+<p>ReST syntax (Sphinx has a good <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html">restructured text primer</a>:</p>
+<p>MyST markdown syntax:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="ge">*italic*</span>
+<span class="gs">**bold**</span>
+<span class="sb">`literal`</span>
+<span class="gh"># Heading</span>
+
+[<span class="nt">inline link</span>](<span class="na">https://example.com</span>)
+[<span class="nt">link to page</span>](<span class="na">relative-page-path</span>)
+
+structured links:
+{doc}`link to page &lt;page-filename&gt;`
+{ref}`page anchor link &lt;ref-name&gt;`
+{py:mod}`intersphinx link &lt;multiprocessing&gt;`
+
+
+<span class="sb">```</span>
+<span class="sb">code block</span>
+<span class="sb">```</span>
+</pre></div>
+</div>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="ge">*italic*</span>
+<span class="gs">**bold**</span>
+<span class="s">``literal``</span>
+
+<span class="gh">Heading</span>
+<span class="gh">-------</span>
+
+<span class="s">`inline link </span><span class="si">&lt;https://example.com&gt;</span><span class="s">`__</span>
+<span class="s">`out-of-line link </span><span class="si">&lt;example_&gt;</span><span class="s">`__</span>
+
+<span class="p">..</span> <span class="nt">_example:</span> https://example.com
+
+<span class="na">:doc:</span><span class="nv">`page-filename`</span>
+<span class="na">:ref:</span><span class="nv">`ref-name`</span>
+<span class="na">:py:mod:</span><span class="nv">`multiprocessing`</span>
+
+<span class="na">:doc:</span><span class="nv">`link to page &lt;page-filename&gt;`</span>
+<span class="na">:ref:</span><span class="nv">`page anchor link &lt;ref-name&gt;`</span>
+<span class="na">:py:mod:</span><span class="nv">`intersphinx link &lt;multiprocessing&gt;`</span>
+
+
+<span class="se">::</span>
+
+<span class="s">   code block that is standalone (two</span>
+<span class="s">   colons before it and indented)</span>
+
+Code block after paragraph<span class="se">::</span>
+
+<span class="s">  The paragraph will end with</span>
+<span class="s">  a single colon.</span>
+</pre></div>
+</div>
+<p>The most interesting difference is the use of single backquote for
+literals in Markdown, and double in ReST.  This is because ReST uses
+single quotes for <em>roles</em> - notice how there is a dedicated syntax for
+inter-page links, references, and so on (it can be configured to
+“figure it out” if you want).  This is very important for
+things like verifying referential integrity of all of our pages.  But
+this is configurable with <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-default_role">default_role</a>:
+set to <code class="docutils literal notranslate"><span class="pre">any</span></code> to automatically detect documents/references/anthing,
+or <code class="docutils literal notranslate"><span class="pre">literal</span></code> to automatically be the same as literal text.</p>
+</section>
+<section id="directives">
+<h2>Directives<a class="headerlink" href="#directives" title="Link to this heading"></a></h2>
+<p>A core part of any Sphinx site is the directives: this provides
+structured parsing for blocks of text.  For example, we have an
+<code class="docutils literal notranslate"><span class="pre">exercise</span></code> directive, which formats a text block into an exercise
+callout.  This is not just a CSS class, it can do anything during the
+build phase (but in practice we don’t do such complex things).</p>
+<section id="myst-directives">
+<h3>MyST directives<a class="headerlink" href="#myst-directives" title="Link to this heading"></a></h3>
+<p>MyST-parser directives are done like this:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>:::{exercise}
+:option: value
+
+content
+:::
+</pre></div>
+</div>
+</section>
+<section id="rest-directives">
+<h3>ReST directives<a class="headerlink" href="#rest-directives" title="Link to this heading"></a></h3>
+<p>ReST directives are done like this:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">exercise</span><span class="p">::</span> Optional title, some default otherwise
+   <span class="nc">:option:</span> value
+
+   This is the body
+
+   You can put <span class="ge">*arbitrary syntax*</span> here.
+</pre></div>
+</div>
+</section>
+</section>
+<section id="roles">
+<h2>Roles<a class="headerlink" href="#roles" title="Link to this heading"></a></h2>
+<p>Roles are for inline text elements.  A lot like directives, they can
+be as simple as styling or do arbitrary transformations in Python.</p>
+<section id="rest-roles">
+<h3>ReST roles<a class="headerlink" href="#rest-roles" title="Link to this heading"></a></h3>
+<p>Like this:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="na">:rolename:</span><span class="nv">`interpreted text`</span>
+</pre></div>
+</div>
+</section>
+<section id="myst-roles">
+<h3>MyST roles<a class="headerlink" href="#myst-roles" title="Link to this heading"></a></h3>
+<p>Like this:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>{rolename}`interpreted text`
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../changelog/" class="btn btn-neutral float-left" title="Changelog" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../toctree/" class="btn btn-neutral float-right" title="Table of Contents tree" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2024, CodeRefinery.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

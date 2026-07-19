@@ -1,0 +1,495 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exercise list &mdash; Sphinx-lesson  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_lesson.css?v=e9df6548" />
+      <link rel="stylesheet" type="text/css" href="../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=187304be"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/minipres.js?v=a0d29692"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="next" title="Converting an old lesson" href="../convert-old-lessons/" />
+    <link rel="prev" title="Indexing" href="../indexing/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Sphinx-lesson
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation/">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing-to-a-lesson/">Quickstart: Contributing to a lesson</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../building/">Building the lesson</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog/">Changelog</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Basic syntax</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../md-and-rst/">Markdown and ReST</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../toctree/">Table of Contents tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../directives/">Directives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../figures/">Figures</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../sample-episode-myst/">Sample episode in MyST (Markdown)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sample-episode-rst/">Sample episode in ReST</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced features</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intersphinx/">Intersphinx: easy linking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../md-transforms/">Markdown transforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jupyter/">Jupyter notebook page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../executing-code/">Executing code cells in MyST markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../substitutions-replacements/">Substitutions and replacement variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gh-action/">Deployment with Github Actions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../presentation-mode/">Presentation mode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indexing/">Indexing</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Exercise list</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#recommendations-to-make-a-useful-list">Recommendations to make a useful list</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../convert-old-lessons/">Converting an old lesson</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extras</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cheatsheet/">Cheatsheet</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Sphinx-lesson</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Exercise list</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/coderefinery/sphinx-lesson/blob/master/content/exercise-list.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="exercise-list">
+<h1>Exercise list<a class="headerlink" href="#exercise-list" title="Link to this heading"></a></h1>
+<p>The <code class="docutils literal notranslate"><span class="pre">exercise-list</span></code> directive inserts a list of all exercise and
+solution <a class="reference internal" href="../directives/"><span class="doc">directives</span></a> (and maybe more).  This can be
+useful as an overall summary of the entire lesson flow, onboarding new
+instructors and helpers, and more.</p>
+<section id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Link to this heading"></a></h2>
+<p>MyST:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{exerciselist}```
+</pre></div>
+</div>
+<p>ReST:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">exerciselist</span><span class="p">::</span>
+</pre></div>
+</div>
+<p>One can give the optional directive arguments to specify lists of
+admonition classes to include (default: <code class="docutils literal notranslate"><span class="pre">exercise</span></code>, <code class="docutils literal notranslate"><span class="pre">solution</span></code>,
+<code class="docutils literal notranslate"><span class="pre">exerciselist-include</span></code>) or exclude (default:
+<code class="docutils literal notranslate"><span class="pre">exerciselist-exclude</span></code>) if you want to (any <a class="reference internal" href="../directives/"><span class="doc">directives</span></a> which match any <code class="docutils literal notranslate"><span class="pre">include</span></code>, and do not match any
+<code class="docutils literal notranslate"><span class="pre">exclude</span></code> are included).  Specify the options this way (ReST):</p>
+<p>MyST:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{exerciselist}
+:include: exercise solution instructor-note
+:exclude: exclude-this
+```
+
+:::{exercise} Exercise title
+:class: exclude-this
+
+Exercise content
+:::
+</pre></div>
+</div>
+<p>ReST:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">exerciselist</span><span class="p">::</span>
+   <span class="nc">:include:</span> exercise solution instructor-note
+   <span class="nc">:exclude:</span> exclude-this
+
+<span class="p">..</span> <span class="ow">exercise</span><span class="p">::</span> Exercise title
+   <span class="nc">:class:</span> exclude-this
+
+   Exercise content
+</pre></div>
+</div>
+<p>This feature is new as of early 2022, there may be possible problems
+in it still - please report.  Currently, only sphinx-lesson
+admonitions can be included due to technical considerations (see
+source for hint on fixing).</p>
+</section>
+<section id="recommendations-to-make-a-useful-list">
+<span id="exerciselist-recommendations"></span><h2>Recommendations to make a useful list<a class="headerlink" href="#recommendations-to-make-a-useful-list" title="Link to this heading"></a></h2>
+<ul>
+<li><p>Context is important!  Give your exercises a name other than the
+default of “Exercise”, so that someone quickly scanning the exercise
+list can follow the overall flow.</p>
+<ul class="simple">
+<li><p>Making good summaries is really an important skill for organizing
+anything - give this the attention it needs.</p></li>
+<li><p>Think of an exercise leader or helper coming to help someone, seeing
+the exercise, and needing to help someone: not just what to do,
+but what the core lesson and task is, so that they can focus on
+giving the right help (and telling the learners what they don’t
+need to worry about).</p></li>
+<li><p>Context can be both in the exercise title and in the exercise body
+itself.</p></li>
+</ul>
+</li>
+<li><p>Name the exercises well.  Best is to think of it like a version
+control commit: an imperative sentence stating what the person will
+do in the exercise.  For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Make</span> <span class="n">your</span> <span class="n">first</span> <span class="n">git</span> <span class="n">commit</span>
+<span class="n">Resolve</span> <span class="n">the</span> <span class="n">conflict</span>
+</pre></div>
+</div>
+</li>
+<li><p>In the title, include any other important information (see below):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Create a setup.py file for your package (15 min)
+(optional) Install your package in editable mode using ``pip install -e`` (5 min)
+(advanced) Also create packaging using pyproject.toml and compare (20 min)
+</pre></div>
+</div>
+</li>
+<li><p>Consider giving your exercises permanent identifiers.  They are
+intentionally not
+auto-numbered yet (what happens when more exercises are
+added/removed?), but if you give them an ID, they will be findable
+even later.  Suggestion is <code class="docutils literal notranslate"><span class="pre">Episodetopic-N</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Basic-1: Verify git is installed
+Basic-2: Initialize the repository
+Conflicts-2: Create a new branch for the other commit.
+Internals-1: (advanced): Inspect individual objects with ``git cat-file``
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>It could include not just what you do, but a bit about why you are
+doing it and what you are learning.</p></li>
+</ul>
+</li>
+<li><p>The list includes only <code class="docutils literal notranslate"><span class="pre">exercise</span></code>, <code class="docutils literal notranslate"><span class="pre">type-along</span></code>, and <code class="docutils literal notranslate"><span class="pre">solution</span></code>.  For
+backwards compatibility, <code class="docutils literal notranslate"><span class="pre">challenge</span></code> is also included.</p></li>
+<li><p>Optional or advanced exercises should clearly state it in the
+exercise title, since people will browse the list separate from the
+main lesson material.</p></li>
+<li><p>Try to minimize use of <code class="docutils literal notranslate"><span class="pre">:include:</span></code> and <code class="docutils literal notranslate"><span class="pre">:exclude:</span></code> and use the
+defaults and adjust your directives to match sphinx-lesson
+semantics.  Excess use of this may over-optimize for particular
+workshops</p></li>
+</ul>
+</section>
+<section id="example">
+<h2>Example<a class="headerlink" href="#example" title="Link to this heading"></a></h2>
+<p><strong>This section contains the exercise list of sphinx-lesson.  Since
+sphinx-lesson has many examples of exercises, the list below is
+confusing and doesn’t make a lot of sense.  You can see a better
+example at <a class="reference external" href="https://coderefinery.github.io/git-intro/exercises/">git-intro’s exercise
+list</a>.</strong></p>
+<p><strong>Example begins:</strong></p>
+<section id="directives">
+<h3>Directives<a class="headerlink" href="#directives" title="Link to this heading"></a></h3>
+<p><a class="reference external" href="../directives/#exercise-0">In directives.md:</a></p>
+<div class="admonition-exercise exercise important admonition" id="exercise-0">
+<p class="admonition-title">Exercise</p>
+<p>Some body text</p>
+</div>
+<p><a class="reference external" href="../directives/#exercise-1">In directives.md:</a></p>
+<div class="admonition-custom-title exercise important admonition" id="exercise-1">
+<p class="admonition-title">Custom title</p>
+<p>Some body text</p>
+</div>
+<p><a class="reference external" href="../directives/#exercise-2">In directives.md:</a></p>
+<div class="admonition-exercise exercise important admonition-no-content admonition" id="exercise-2">
+<p class="admonition-title">Exercise</p>
+</div>
+<p><a class="reference external" href="../directives/#solution-0">In directives.md:</a></p>
+<div class="admonition-solution solution important dropdown admonition" id="solution-0">
+<p class="admonition-title">Solution</p>
+<p>This is a solution</p>
+</div>
+<p><a class="reference external" href="../directives/#exercise-3">In directives.md:</a></p>
+<div class="admonition-exercise exercise important admonition" id="exercise-3">
+<p class="admonition-title">Exercise</p>
+<p>exercise</p>
+</div>
+<p><a class="reference external" href="../directives/#solution-1">In directives.md:</a></p>
+<div class="admonition-solution solution important dropdown admonition" id="solution-1">
+<p class="admonition-title">Solution</p>
+<p>solution</p>
+</div>
+<p><a class="reference external" href="../directives/#exercise-4">In directives.md:</a></p>
+<div class="admonition-exercise exercise important admonition" id="exercise-4">
+<p class="admonition-title">Exercise</p>
+<p>challenge</p>
+</div>
+</section>
+<section id="sample-episode-in-myst-markdown">
+<h3>Sample episode in MyST (Markdown)<a class="headerlink" href="#sample-episode-in-myst-markdown" title="Link to this heading"></a></h3>
+<p><a class="reference external" href="../sample-episode-myst/#exercise-0">In sample-episode-myst.md:</a></p>
+<div class="admonition-rest-1-imperative-statement-of-what-will-happen-in-the-exercise exercise important admonition" id="exercise-0">
+<p class="admonition-title">ReST-1 Imperative statement of what will happen in the exercise.</p>
+<p>An intro paragraph about the exercise, if not obvious.  Expect that
+learners and exercise leaders will end up here without having
+browsed the lesson above.  Make sure that they understand the
+general idea of what is going on and <em>why</em> the exercise exists
+(what the learning objective is roughly, for example there is a big
+difference between making a commit and focusing on writing a good
+commit message and knowing the command line arguments!)</p>
+<ol class="arabic simple">
+<li><p>Bullet list if multiple parts.</p></li>
+<li><p>Despite the names, most exercises are not really “exercises” in
+that the are difficult.  Most are rather direct applications of
+what has been learned (unless they are <code class="docutils literal notranslate"><span class="pre">(advanced)</span></code>).</p></li>
+<li><p>When writing the exercise steps, try to make it clear enough
+that a helper/exercise leader who knows the general tools
+somewhat well (but doesn’t know the lesson) can lead the
+exercise just by looking at the text in the box.</p>
+<ul class="simple">
+<li><p>Of course that’s not always possible, sometimes they actually
+are difficult.</p></li>
+</ul>
+</li>
+</ol>
+</div>
+<p><a class="reference external" href="../sample-episode-myst/#solution-0">In sample-episode-myst.md:</a></p>
+<div class="admonition-solution solution important dropdown admonition" id="solution-0">
+<p class="admonition-title">Solution</p>
+<ul class="simple">
+<li><p>Solution here.</p></li>
+</ul>
+</div>
+<p><a class="reference external" href="../sample-episode-myst/#exercise-1">In sample-episode-myst.md:</a></p>
+<div class="admonition-optional-rest-2-imperative-statement-of-what-will-happen-in-the-exercise exercise important admonition" id="exercise-1">
+<p class="admonition-title">(optional) ReST-2 Imperative statement of what will happen in the exercise.</p>
+<ol class="arabic simple">
+<li><p>Optional exercises are prefixed with <code class="docutils literal notranslate"><span class="pre">(optional)</span></code></p></li>
+<li><p>It’s better to have more exercises be optional than many that
+are made optional ad-hoc.  Every instructor may do something
+different, but it’s better to seem like you are covering all the
+main material than seem like you are skipping parts.</p></li>
+</ol>
+</div>
+<p><a class="reference external" href="../sample-episode-myst/#solution-1">In sample-episode-myst.md:</a></p>
+<div class="admonition-solution solution important dropdown admonition" id="solution-1">
+<p class="admonition-title">Solution</p>
+<ul class="simple">
+<li><p>Solution to that one.</p></li>
+</ul>
+</div>
+<p><a class="reference external" href="../sample-episode-myst/#exercise-2">In sample-episode-myst.md:</a></p>
+<div class="admonition-optional-rest-3-exercise-with-embedded-solution exercise important admonition" id="exercise-2">
+<p class="admonition-title">(optional) ReST-3: Exercise with embedded solution</p>
+<ol class="arabic simple">
+<li><p>This exercise has the solution within its box itself.  This is a
+stylistic difference more than anything.</p></li>
+</ol>
+<div class="admonition-solution solution important dropdown admonition" id="solution-2">
+<p class="admonition-title">Solution</p>
+<ul class="simple">
+<li><p>Solution to that one.</p></li>
+</ul>
+</div>
+</div>
+<p><a class="reference external" href="../sample-episode-myst/#exercise-3">In sample-episode-myst.md:</a></p>
+<div class="admonition-advanced-rest-4-exercise-with-embedded-solution exercise important admonition" id="exercise-3">
+<p class="admonition-title">(advanced) ReST-4: Exercise with embedded solution</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">(advanced)</span></code> is the tag for things which really require
+figuring out stuff on your own.  Can also be <code class="docutils literal notranslate"><span class="pre">(advanced,</span> <span class="pre">optional)</span></code> but that’s sort of implied.</p></li>
+<li><p>This also demonstrates an exercise with a <a class="reference internal" href="../"><span class="doc">link</span></a>,
+or <a class="reference internal" href="../exercise-list/#exerciselist-recommendations"><span class="std std-ref">internal reference</span></a>.</p></li>
+</ol>
+</div>
+<p><a class="reference external" href="../sample-episode-myst/#exercise-4">In sample-episode-myst.md:</a></p>
+<div class="admonition-in-this-section-we-will-do-something exercise important admonition" id="exercise-4">
+<p class="admonition-title">In this section, we will [do something]</p>
+<p>Standard intro paragraph of the exercise.</p>
+<p>Describe how this exercise is following everything that is in this
+section.</p>
+</div>
+</section>
+<section id="sample-episode-in-rest">
+<h3>Sample episode in ReST<a class="headerlink" href="#sample-episode-in-rest" title="Link to this heading"></a></h3>
+<p><a class="reference external" href="../sample-episode-rst/#exercise-0">In sample-episode-rst.rst:</a></p>
+<div class="admonition-rest-1-imperative-statement-of-what-will-happen-in-the-exercise exercise important admonition" id="exercise-0">
+<p class="admonition-title">ReST-1 Imperative statement of what will happen in the exercise.</p>
+<p>An intro paragraph about the exercise, if not obvious.  Expect that
+learners and exercise leaders will end up here without having
+browsed the lesson above.  Make sure that they understand the
+general idea of what is going on and <em>why</em> the exercise exists
+(what the learning objective is roughly, for example there is a big
+difference between making a commit and focusing on writing a good
+commit message and knowing the command line arguments!)</p>
+<ol class="arabic simple">
+<li><p>Bullet list if multiple parts.</p></li>
+<li><p>Despite the names, most exercises are not really “exercises” in
+that the are difficult.  Most are rather direct applications of
+what has been learned (unless they are <code class="docutils literal notranslate"><span class="pre">(advanced)</span></code>).</p></li>
+<li><p>When writing the exercise steps, try to make it clear enough
+that a helper/exercise leader who knows the general tools
+somewhat well (but doesn’t know the lesson) can lead the
+exercise just by looking at the text in the box.</p>
+<ul class="simple">
+<li><p>Of course that’s not always possible, sometimes they actually
+are difficult.</p></li>
+</ul>
+</li>
+</ol>
+</div>
+<p><a class="reference external" href="../sample-episode-rst/#solution-0">In sample-episode-rst.rst:</a></p>
+<div class="admonition-solution solution important dropdown admonition" id="solution-0">
+<p class="admonition-title">Solution</p>
+<ul class="simple">
+<li><p>Solution here.</p></li>
+</ul>
+</div>
+<p><a class="reference external" href="../sample-episode-rst/#exercise-1">In sample-episode-rst.rst:</a></p>
+<div class="admonition-optional-rest-2-imperative-statement-of-what-will-happen-in-the-exercise exercise important admonition" id="exercise-1">
+<p class="admonition-title">(optional) ReST-2 Imperative statement of what will happen in the exercise.</p>
+<ol class="arabic simple">
+<li><p>Optional exercises are prefixed with <code class="docutils literal notranslate"><span class="pre">(optional)</span></code></p></li>
+<li><p>It’s better to have more exercises be optional than many that
+are made optional ad-hoc.  Every instructor may do something
+different, but it’s better to seem like you are covering all the
+main material than seem like you are skipping parts.</p></li>
+</ol>
+</div>
+<p><a class="reference external" href="../sample-episode-rst/#solution-1">In sample-episode-rst.rst:</a></p>
+<div class="admonition-solution solution important dropdown admonition" id="solution-1">
+<p class="admonition-title">Solution</p>
+<ul class="simple">
+<li><p>Solution to that one.</p></li>
+</ul>
+</div>
+<p><a class="reference external" href="../sample-episode-rst/#exercise-2">In sample-episode-rst.rst:</a></p>
+<div class="admonition-optional-rest-3-exercise-with-embedded-solution exercise important admonition" id="exercise-2">
+<p class="admonition-title">(optional) ReST-3: Exercise with embedded solution</p>
+<ol class="arabic simple">
+<li><p>This exercise has the solution within its box itself.  This is a
+stylistic difference more than anything.</p></li>
+</ol>
+<div class="admonition-solution solution important dropdown admonition" id="solution-2">
+<p class="admonition-title">Solution</p>
+<ul class="simple">
+<li><p>Solution to that one.</p></li>
+</ul>
+</div>
+</div>
+<p><a class="reference external" href="../sample-episode-rst/#exercise-3">In sample-episode-rst.rst:</a></p>
+<div class="admonition-advanced-rest-4-exercise-with-embedded-solution exercise important admonition" id="exercise-3">
+<p class="admonition-title">(advanced) ReST-4: Exercise with embedded solution</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">(advanced)</span></code> is the tag for things which really require
+figuring out stuff on your own.  Can also be <code class="docutils literal notranslate"><span class="pre">(advanced,</span>
+<span class="pre">optional)</span></code> but that’s sort of implied.</p></li>
+<li><p>This also demonstrates an exercise with a <a class="reference internal" href="../"><span class="doc">link</span></a>,
+or <a class="reference internal" href="../exercise-list/#exerciselist-recommendations"><span class="std std-ref">internal reference</span></a>.</p></li>
+</ol>
+</div>
+<p><a class="reference external" href="../sample-episode-rst/#exercise-4">In sample-episode-rst.rst:</a></p>
+<div class="admonition-in-this-section-we-will-do-something exercise important admonition" id="exercise-4">
+<p class="admonition-title">In this section, we will [do something]</p>
+<p>Standard intro paragraph of the exercise.</p>
+<p>Describe how this exercise is following everything that is in this
+section.</p>
+</div>
+</section>
+<section id="jupyter-notebook-page">
+<h3>Jupyter notebook page<a class="headerlink" href="#jupyter-notebook-page" title="Link to this heading"></a></h3>
+<p><a class="reference external" href="../jupyter/#exercise-0">In jupyter.ipynb:</a></p>
+<div class="admonition-exercise exercise important admonition" id="exercise-0">
+<p class="admonition-title">Exercise</p>
+<p>This is a challenge block</p>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../indexing/" class="btn btn-neutral float-left" title="Indexing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../convert-old-lessons/" class="btn btn-neutral float-right" title="Converting an old lesson" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2024, CodeRefinery.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
